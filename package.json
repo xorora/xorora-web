@@ -1,0 +1,46 @@
+{
+  "name": "xorora",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check --write --unsafe .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "bun --env-file=.env.local drizzle-kit generate",
+    "db:migrate": "bun --env-file=.env.local drizzle-kit migrate",
+    "db:seed": "bun --env-file=.env.local run scripts/seed-all.ts"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.44.0",
+    "lucide-react": "^0.525.0",
+    "next": "16.2.9",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.3.1",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.178.0",
+    "drizzle-kit": "^0.31.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}
