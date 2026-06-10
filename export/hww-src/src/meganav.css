@@ -1,0 +1,16 @@
+/* Xorora mega-nav — animation + responsive */
+@keyframes xoMnIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 940px) {
+  .xo-mn-links, .xo-mn-cta { display: none !important; }
+  .xo-mn-burger { display: inline-flex !important; }
+}
+@media (min-width: 941px) {
+  .xo-mn-mobile { display: none !important; }
+}
+/* collapse mega panels gracefully on small screens (only relevant if shown) */
+@media (max-width: 760px) {
+  .xo-mn-services { grid-template-columns: 1fr !important; }
+  .xo-mn-svc-grid { grid-template-columns: 1fr 1fr !important; }
+  .xo-mn-industries, .xo-mn-company { grid-template-columns: 1fr !important; }
+}

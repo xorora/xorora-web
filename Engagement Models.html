@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engagement Models | Fixed Scope, Variable Scope & Staff Augmentation | Xorora</title>
+<meta name="description" content="Xorora engagement models — fixed scope, variable scope (time & materials), and staff augmentation. Choose the model that matches your roadmap, budget, and team, and switch as your needs change.">
+<link rel="canonical" href="https://xorora.com/engagement-models">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Engagement Models | Xorora">
+<meta property="og:description" content="Fixed scope, variable scope, or embedded experts — engagement models built around how you build.">
+<meta property="og:url" content="https://xorora.com/engagement-models">
+<meta property="og:site_name" content="Xorora">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://xorora.com/#organization",
+      "name": "Xorora",
+      "url": "https://xorora.com/",
+      "logo": "https://xorora.com/assets/nav-logo-full.png",
+      "email": "partners@xorora.com",
+      "sameAs": ["https://www.linkedin.com/company/xorora"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://xorora.com/engagement-models#service",
+      "serviceType": "Software engagement models",
+      "name": "Engagement Models",
+      "provider": { "@id": "https://xorora.com/#organization" },
+      "areaServed": "Worldwide",
+      "description": "Flexible engagement models for software delivery: fixed scope, variable scope, and staff augmentation.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Engagement models",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fixed Scope" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Variable Scope" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Staff Augmentation" } }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://xorora.com/engagement-models#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://xorora.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://xorora.com/services" },
+        { "@type": "ListItem", "position": 3, "name": "Engagement Models", "item": "https://xorora.com/engagement-models" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="src/meganav.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  html, body { margin: 0; background: #02060F; }
+  * { box-sizing: border-box; }
+  ::selection { background: var(--tangerine-500); color: #fff; }
+  img { max-width: 100%; }
+  @keyframes emFade { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  /* premium hero entrance */
+  @keyframes emRise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  @keyframes emGlassIn { from { opacity: 0; transform: translateY(28px) scale(0.985); } to { opacity: 1; transform: none; } }
+  @keyframes emBloom { 0%, 100% { opacity: 0.85; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
+  @keyframes emHair { from { opacity: 0; transform: scaleX(0.2); } to { opacity: 1; transform: scaleX(1); } }
+  .em-rise { opacity: 0; animation: emRise 0.7s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .em-rise-1 { animation-delay: 0.05s; }
+  .em-rise-2 { animation-delay: 0.16s; }
+  .em-rise-3 { animation-delay: 0.27s; }
+  .em-rise-4 { animation-delay: 0.38s; }
+  .em-glass-in { opacity: 0; animation: emGlassIn 0.8s cubic-bezier(0.16,1,0.3,1) 0.32s forwards; }
+  .em-bloom { animation: emBloom 11s ease-in-out 1.2s infinite; transform-origin: 84% 30%; }
+  .em-hair { transform-origin: center; animation: emHair 1.1s cubic-bezier(0.16,1,0.3,1) 0.55s backwards; }
+  @media (prefers-reduced-motion: reduce) {
+    .em-rise, .em-glass-in, .em-hair { animation: none !important; opacity: 1 !important; transform: none !important; }
+    .em-bloom { animation: none !important; }
+  }
+  @media (max-width: 980px) {
+    .em-header-grid { grid-template-columns: 1fr !important; }
+    .em-models-grid, .em-reasons-grid, .em-cases-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (min-width: 981px) and (max-width: 1120px) {
+    .em-models-grid { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 720px) { .cs-navlinks { display: none !important; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="src/primitives.jsx"></script>
+<script type="text/babel" src="src/geometry.jsx"></script>
+<script type="text/babel" src="src/footer.jsx"></script>
+<script type="text/babel" src="src/meganav-data.jsx"></script>
+<script type="text/babel" src="src/letstalk-modal.jsx"></script>
+<script type="text/babel" src="src/meganav.jsx"></script>
+<script type="text/babel" src="cs/cs-lib.jsx"></script>
+<script type="text/babel" src="engagement/em.jsx"></script>
+</body>
+</html>

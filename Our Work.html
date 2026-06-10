@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xorora — Our Work</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="src/meganav.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  html, body { margin: 0; background: var(--navy-900); }
+  * { box-sizing: border-box; }
+  ::selection { background: var(--tangerine-500); color: #fff; }
+  img { max-width: 100%; }
+  .ow-beam { position: absolute; border-radius: 50%; filter: blur(60px); mix-blend-mode: screen; opacity: .5; }
+  .ow-beam-1 { width: 52vw; height: 52vw; left: -8vw; top: -16vw; background: radial-gradient(circle, rgba(88,120,235,.55), transparent 66%); animation: owDrift1 17s ease-in-out infinite; }
+  .ow-beam-2 { width: 46vw; height: 46vw; right: -10vw; top: -10vw; background: radial-gradient(circle, rgba(70,76,159,.6), transparent 66%); animation: owDrift2 21s ease-in-out infinite; }
+  .ow-beam-3 { width: 30vw; height: 30vw; left: 38vw; top: 4vw; background: radial-gradient(circle, rgba(242,107,33,.30), transparent 64%); animation: owDrift3 25s ease-in-out infinite; }
+  @keyframes owDrift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(14%,10%) scale(1.12); } }
+  @keyframes owDrift2 { 0%,100% { transform: translate(0,0) scale(1.05); } 50% { transform: translate(-12%,12%) scale(.92); } }
+  @keyframes owDrift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-16%,-8%) scale(1.18); } }
+  @media (prefers-reduced-motion: reduce) { .ow-beam { animation: none !important; } }
+
+  @media (max-width: 820px) {
+    .work-contact-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 720px) {
+    .cs-navlinks { display: none !important; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="src/primitives.jsx"></script>
+<script type="text/babel" src="src/geometry.jsx"></script>
+<script type="text/babel" src="src/techfield.jsx"></script>
+<script type="text/babel" src="src/footer.jsx"></script>
+<script type="text/babel" src="src/meganav-data.jsx"></script>
+<script type="text/babel" src="src/letstalk-modal.jsx"></script>
+<script type="text/babel" src="src/meganav.jsx"></script>
+<script type="text/babel" src="work/work-top.jsx"></script>
+<script type="text/babel" src="work/work-app.jsx"></script>
+</body>
+</html>

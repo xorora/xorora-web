@@ -1,0 +1,70 @@
+// Xorora — shared mega-navigation data
+window.XO_NAV = {
+  caseStudiesHref: 'Our Work.html',
+  services: [
+    { name: 'Consulting', icon: 'compass', href: 'Consulting.html', items: [
+      ['Discovery Workshop', 'search', 'Consulting.html'],
+      ['AI Consulting', 'brain-circuit', 'Consulting.html'],
+      ['Digital Transformation', 'refresh-cw', 'Consulting.html'],
+    ]},
+    { name: 'Engineering', icon: 'code-2', href: 'Engineering.html', items: [
+      ['AI Software Development', 'cpu', 'Engineering.html'],
+      ['Custom App Development', 'app-window', 'Engineering.html'],
+      ['Application Modernization', 'recycle', 'Engineering.html'],
+      ['MVP / POC Development', 'rocket', 'Engineering.html'],
+      ['CMS Development Services', 'layout-template', 'Engineering.html'],
+      ['UI/UX Services', 'pen-tool', 'Engineering.html'],
+    ]},
+    { name: 'Data & AI', icon: 'database', items: [
+      ['Data Analytics', 'chart-line'],
+      ['Data Engineering', 'database-zap'],
+      ['Cloud Engineering & Migration', 'cloud'],
+      ['AI Agent Development', 'bot'],
+      ['ML & Data Science Services', 'sigma'],
+      ['Workflow Automation Services', 'workflow'],
+    ]},
+    { name: 'Managed Services', icon: 'server-cog', items: [
+      ['DevOps', 'infinity'],
+      ['Cybersecurity', 'shield-check'],
+      ['IT Infrastructure', 'network'],
+    ]},
+    { name: 'Marketing Services', icon: 'megaphone', items: [
+      ['SEO', 'search-check'],
+      ['Local SEO', 'map-pin'],
+      ['Google Ads', 'badge-dollar-sign'],
+      ['Meta Ads', 'thumbs-up'],
+      ['Social Media Management', 'share-2'],
+      ['B2B Marketing', 'briefcase'],
+    ]},
+    { name: 'Engagement Model', icon: 'handshake', items: [
+      ['Fixed Scope', 'square-check'],
+      ['Variable Scope', 'sliders-horizontal'],
+      ['Staff Augmentation', 'users'],
+    ]},
+  ],
+  industries: [
+    { name: 'Healthcare', icon: 'heart-pulse', desc: 'Compliant, accessible systems that improve care delivery.', href: 'Health Tech.html' },
+    { name: 'Real Estate', icon: 'building-2', desc: 'Platforms that streamline property and tenant operations.', href: 'Real Estate.html' },
+    { name: 'Fintech', icon: 'landmark', desc: 'Secure infrastructure that manages risk and prevents fraud.', href: 'Fintech.html' },
+    { name: 'E-commerce', icon: 'shopping-cart', desc: 'Conversion-focused commerce engines built to scale.', href: 'Ecommerce.html' },
+    { name: 'Edtech', icon: 'graduation-cap', desc: 'Engaging learning platforms that scale to every student.', href: 'Edtech.html' },
+    { name: 'Logistics', icon: 'truck', desc: 'Real-time visibility and automation across the supply chain.', href: 'Logistics.html' },
+    { name: 'SaaS', icon: 'layout-grid', desc: 'Multi-tenant platforms engineered to scale from first customer to enterprise.', href: 'SaaS.html' },
+    { name: 'Startups', icon: 'rocket', desc: 'MVPs and investor-ready products built to ship fast and scale.', href: 'Startups.html' },
+    { name: 'Travel & Hospitality', icon: 'palmtree', desc: 'Booking platforms and guest experiences that lift occupancy and loyalty.', href: 'Travel & Hospitality.html' },
+  ],
+  company: [
+    { name: 'About Us', icon: 'building', desc: 'Who we are and how we partner.', href: 'About Us.html' },
+    { name: 'Blogs', icon: 'newspaper', desc: 'Field notes on shipping production AI.', href: 'Blog.html' },
+    { name: 'How we Work', icon: 'git-branch', desc: 'Our engineering process, end to end.', href: 'How We Work.html' },
+    { name: 'Awards & Recognition', icon: 'award', desc: 'The work the industry has noticed.' },
+  ],
+  featured: {
+    tag: 'FEATURED CASE STUDY',
+    title: 'From fragmented tools to unified AI voice operations',
+    desc: 'How we engineered four role-based portals on one shared backend — turning scattered operations into a commercially-ready product.',
+    img: window.__resources.featImg,
+    href: 'Unified AI Voice Operations Case Study.html',
+    stats: [['4', 'portals'], ['16mo', 'to production']],
+  },
+};
