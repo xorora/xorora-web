@@ -148,13 +148,16 @@
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
+/* Element-level defaults wrapped in @layer base so Tailwind utilities
+   (bg-navy-900, text-white, text-fg1, …) override them instead of being
+   beaten by unlayered rules. */
+@layer base {
 body {
   background: var(--bg);
   color: var(--fg1);
   font-family: var(--font-poppins), system-ui, sans-serif;
 }
 
-/* Semantic typography utilities */
 .xo-eyebrow {
   font-family: var(--font-poppins), system-ui, sans-serif;
   font-weight: 600;
@@ -250,6 +253,7 @@ code,
   background: var(--accent-soft);
   padding: 0.12em 0.4em;
   border-radius: var(--r-xs);
+}
 }
 
 /* Mega-nav — animation + responsive */

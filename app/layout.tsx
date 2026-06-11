@@ -27,7 +27,6 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      data-theme="dark"
       className={`${poppins.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-navy-900 font-sans text-white">
