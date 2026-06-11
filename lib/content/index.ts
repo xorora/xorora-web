@@ -1,4 +1,4 @@
-export { getSiteContent, requireSiteContent } from "./queries";
+export { requireSiteContent } from "./queries";
 export type {
   FaqItem,
   HomeServicesContent,

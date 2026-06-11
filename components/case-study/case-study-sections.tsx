@@ -6,8 +6,8 @@ import {
   Cloud,
   CreditCard,
   Database,
-  LayoutDashboard,
   Layers,
+  LayoutDashboard,
   type LucideIcon,
   Plug,
   Server,
@@ -32,6 +32,7 @@ const ARCH_ICONS: Record<string, LucideIcon> = {
   zap: Zap,
   cloud: Cloud,
 };
+
 import type {
   BulletItem,
   CaseStudySection,

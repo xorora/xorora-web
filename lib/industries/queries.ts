@@ -29,16 +29,6 @@ export interface IndustryNavItem {
   headerBg: string;
 }
 
-export async function listPublishedIndustries(): Promise<Industry[]> {
-  const rows = await db
-    .select()
-    .from(industries)
-    .where(eq(industries.status, "published"))
-    .orderBy(asc(industries.sortOrder));
-
-  return rows.map(mapIndustry);
-}
-
 export async function listPublishedIndustryNavItems(): Promise<
   IndustryNavItem[]
 > {

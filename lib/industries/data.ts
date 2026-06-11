@@ -1,9 +1,4 @@
-import {
-  INDUSTRY_SLUGS,
-  type IndustriesRecord,
-  type Industry,
-  type IndustrySlug,
-} from "./types";
+import type { IndustriesRecord } from "./types";
 
 export { INDUSTRY_SLUGS } from "./types";
 
@@ -2368,14 +2363,3 @@ const INDUSTRIES: IndustriesRecord = {
 };
 
 export { INDUSTRIES };
-
-export function getIndustryBySlug(slug: string): Industry | undefined {
-  if (!INDUSTRY_SLUGS.includes(slug as IndustrySlug)) {
-    return undefined;
-  }
-  return INDUSTRIES[slug as IndustrySlug];
-}
-
-export function getAllIndustrySlugs(): IndustrySlug[] {
-  return [...INDUSTRY_SLUGS];
-}

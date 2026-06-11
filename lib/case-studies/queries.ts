@@ -103,16 +103,6 @@ export async function listPublishedCaseStudies(): Promise<CaseStudyListItem[]> {
   }));
 }
 
-export async function getPublishedCaseStudySlugs(): Promise<string[]> {
-  const rows = await db
-    .select({ slug: caseStudies.slug })
-    .from(caseStudies)
-    .where(eq(caseStudies.status, "published"))
-    .orderBy(asc(caseStudies.sortOrder));
-
-  return rows.map((row) => row.slug);
-}
-
 export async function getFeaturedCaseStudy(): Promise<CaseStudy | null> {
   const [study] = await db
     .select()

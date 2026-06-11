@@ -1,14 +1,8 @@
 export type { CaseStudyCardData, CaseStudyTileData } from "./cards";
-export {
-  toCaseStudyCard,
-  toCaseStudyCards,
-  toCaseStudyTile,
-  toCaseStudyTiles,
-} from "./cards";
+export { toCaseStudyCards, toCaseStudyTiles } from "./cards";
 export {
   getCaseStudyBySlug,
   getFeaturedCaseStudy,
-  getPublishedCaseStudySlugs,
   listPublishedCaseStudies,
 } from "./queries";
 export type {

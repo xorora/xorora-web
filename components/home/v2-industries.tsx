@@ -72,10 +72,10 @@ function IndustryTile({
               className="h-6 w-6 text-white"
             />
           </span>
-          <h3 className="[text-shadow:0_2px_16px_rgba(0,0,0,0.4)] mb-2.5 font-bold font-sans text-[clamp(19px,1.6vw,22px)] text-white leading-tight tracking-tight">
+          <h3 className="mb-2.5 font-bold font-sans text-[clamp(19px,1.6vw,22px)] text-white leading-tight tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.4)]">
             {ind.name}
           </h3>
-          <p className="[text-shadow:0_1px_10px_rgba(0,0,0,0.4)] font-sans text-sm text-white/82 leading-relaxed">
+          <p className="font-sans text-sm text-white/82 leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.4)]">
             {ind.desc}
           </p>
           <span className="mt-auto inline-flex items-center gap-2 pt-[22px] font-sans font-semibold text-sm text-white transition-colors duration-200 group-hover:text-tangerine-400">

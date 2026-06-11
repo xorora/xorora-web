@@ -174,7 +174,7 @@ function ProcessStep({
           img={step.img}
           title={`${step.title} ${step.accent}`}
         />
-        <div className="gap-y-[18px] mt-4 grid grid-cols-2 gap-x-6 rounded-[var(--r-lg)] border border-border bg-slate-50 p-[clamp(20px,2.4vw,28px)]">
+        <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-[18px] rounded-[var(--r-lg)] border border-border bg-slate-50 p-[clamp(20px,2.4vw,28px)]">
           {step.meta.map(([key, value]) => (
             <div key={key}>
               <div

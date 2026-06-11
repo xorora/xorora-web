@@ -12,7 +12,6 @@
       "components/**",
       "lib/**",
       "scripts/**",
-      "styles/**",
       "proxy.ts",
       "next.config.ts",
       "tailwind.config.ts",

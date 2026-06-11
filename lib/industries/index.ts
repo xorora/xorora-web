@@ -1,8 +1,6 @@
 export {
   getAllIndustrySlugs,
   getIndustryBySlug,
-  getPublishedIndustrySlugs,
-  listPublishedIndustries,
   listPublishedIndustryNavItems,
 } from "./queries";
 export type {
