@@ -16,11 +16,11 @@ export function DaiHero() {
             <Database className="h-3.5 w-3.5" aria-hidden />
             AI &amp; Data Innovation
           </div>
-          <h1 className="mb-6 text-balance font-extrabold font-sans text-[clamp(36px,5vw,66px)] text-white leading-none tracking-[-0.03em]">
+          <h1 className="hero-reveal hero-reveal-1 mb-6 text-balance font-extrabold font-sans text-[clamp(36px,5vw,66px)] text-white leading-none tracking-[-0.03em]">
             Your partner in AI and data innovation
             <span className="text-tangerine-400">.</span>
           </h1>
-          <p className="mb-8 max-w-[520px] font-sans text-[18.5px] text-white/82 leading-relaxed">
+          <p className="hero-reveal hero-reveal-2 mb-8 max-w-[520px] font-sans text-[18.5px] text-white/82 leading-relaxed">
             We accelerate data and AI adoption to create practical outcomes that
             strengthen teams and organizations.
           </p>

@@ -13,14 +13,14 @@ export function EngHero() {
       <div className="svc-header-grid relative z-10 mx-auto grid max-w-[1240px] grid-cols-[1.08fr_0.92fr] items-center gap-[clamp(40px,5vw,72px)] px-8 py-[clamp(96px,11vw,140px)] pb-[clamp(64px,7vw,96px)]">
         <div>
           <ServiceBreadcrumb current="Engineering" />
-          <h1 className="mb-6 text-balance font-extrabold font-sans text-[clamp(36px,4.8vw,62px)] text-white leading-none tracking-[-0.03em]">
+          <h1 className="hero-reveal hero-reveal-1 mb-6 text-balance font-extrabold font-sans text-[clamp(36px,4.8vw,62px)] text-white leading-none tracking-[-0.03em]">
             Software engineering that{" "}
             <span className="bg-linear-to-br from-[#C3C6EC] via-[#8E94E0] to-tangerine-400 bg-clip-text text-transparent">
               ships and scales
             </span>
             <span className="text-tangerine-400">.</span>
           </h1>
-          <p className="mb-8 max-w-[520px] font-sans text-lg text-white/74 leading-relaxed">
+          <p className="hero-reveal hero-reveal-2 mb-8 max-w-[520px] font-sans text-lg text-white/74 leading-relaxed">
             From the first prototype to the platform your business runs on. We
             design, build, and harden production software, full stack, end to
             end.

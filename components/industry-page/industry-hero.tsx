@@ -30,13 +30,13 @@ export function IndustryHero({ industry }: IndustryHeroProps) {
         <div>
           <IndustryBreadcrumb name={name} />
 
-          <h1 className="mb-6 text-balance font-extrabold font-sans text-[clamp(36px,4.8vw,60px)] text-white leading-[1.02] tracking-tight">
+          <h1 className="hero-reveal hero-reveal-1 mb-6 text-balance font-extrabold font-sans text-[clamp(36px,4.8vw,60px)] text-white leading-[1.02] tracking-tight">
             {titleText}
             <span className="text-tangerine-400">.</span>
           </h1>
 
           {hero.subtitle && (
-            <p className="mb-9 max-w-[520px] font-sans text-lg text-white/74 leading-[1.62]">
+            <p className="hero-reveal hero-reveal-2 mb-9 max-w-[520px] font-sans text-lg text-white/74 leading-[1.62]">
               {hero.subtitle}
             </p>
           )}

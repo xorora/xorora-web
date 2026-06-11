@@ -379,6 +379,40 @@ code,
   }
 }
 
+/* Hero entrance reveal — service + industry hero heading & description.
+   Pure CSS so it always runs on load (no hydration flash). */
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-reveal {
+  opacity: 0;
+  animation: heroReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-reveal-1 {
+  animation-delay: 0.12s;
+}
+
+.hero-reveal-2 {
+  animation-delay: 0.26s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
 .lg {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(14px);

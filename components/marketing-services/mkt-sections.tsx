@@ -196,11 +196,11 @@ export function MktHero() {
         <div className="mkt-hero-grid grid grid-cols-[1.05fr_0.95fr] items-center gap-[clamp(40px,5vw,72px)]">
           <div>
             <MktEyebrow>Marketing Services</MktEyebrow>
-            <h1 className="mt-[26px] mb-6 font-extrabold font-sans text-[clamp(40px,5.5vw,68px)] text-white uppercase leading-tight tracking-[-0.02em]">
+            <h1 className="hero-reveal hero-reveal-1 mt-[26px] mb-6 font-extrabold font-sans text-[clamp(40px,5.5vw,68px)] text-white uppercase leading-tight tracking-[-0.02em]">
               We <span className="text-tangerine-400">engineer growth.</span> We
               don&apos;t guess at it.
             </h1>
-            <p className="mb-10 max-w-[540px] font-sans text-lg text-white/82 leading-relaxed">
+            <p className="hero-reveal hero-reveal-2 mb-10 max-w-[540px] font-sans text-lg text-white/82 leading-relaxed">
               Every channel is a system — instrumented, attributed, and tuned
               for pipeline, not vanity metrics. We build the conversion
               architecture that turns audience signal into qualified revenue.

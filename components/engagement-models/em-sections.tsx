@@ -98,11 +98,11 @@ export function EmHero() {
             <span className="h-[7px] w-[7px] rounded-full bg-tangerine-400 shadow-[0_0_8px_var(--tangerine-400)]" />
             Engagement Models
           </div>
-          <h1 className="mb-6 text-balance font-extrabold font-sans text-[clamp(38px,5.4vw,68px)] text-white leading-none tracking-[-0.03em]">
+          <h1 className="hero-reveal hero-reveal-1 mb-6 text-balance font-extrabold font-sans text-[clamp(38px,5.4vw,68px)] text-white leading-none tracking-[-0.03em]">
             Engagement models built around{" "}
             <span className="text-tangerine-400">how you build.</span>
           </h1>
-          <p className="mb-8 max-w-[580px] font-sans text-[clamp(17px,1.9vw,20px)] text-white/84 leading-relaxed">
+          <p className="hero-reveal hero-reveal-2 mb-8 max-w-[580px] font-sans text-[clamp(17px,1.9vw,20px)] text-white/84 leading-relaxed">
             Fixed scope, variable scope, or embedded experts — choose the model
             that matches your roadmap, your budget, and your team. Switch as
             your needs change.

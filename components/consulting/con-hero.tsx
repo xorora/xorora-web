@@ -13,11 +13,11 @@ export function ConHero() {
       <div className="svc-header-grid relative z-10 mx-auto grid max-w-[1240px] grid-cols-[1.08fr_0.92fr] items-center gap-[clamp(40px,5vw,72px)] px-8 py-[clamp(96px,11vw,140px)] pb-[clamp(64px,7vw,96px)]">
         <div>
           <ServiceBreadcrumb current="Consulting" />
-          <h1 className="mb-6 text-balance font-extrabold font-sans text-[clamp(34px,4.6vw,60px)] text-white leading-[1.02] tracking-[-0.03em]">
+          <h1 className="hero-reveal hero-reveal-1 mb-6 text-balance font-extrabold font-sans text-[clamp(34px,4.6vw,60px)] text-white leading-[1.02] tracking-[-0.03em]">
             IT consulting services that turn ambition into a{" "}
             <span className="text-tangerine-400">clear roadmap.</span>
           </h1>
-          <p className="mb-8 max-w-[520px] font-sans text-lg text-white/74 leading-relaxed">
+          <p className="hero-reveal hero-reveal-2 mb-8 max-w-[520px] font-sans text-lg text-white/74 leading-relaxed">
             From IT strategy consulting to AI consulting services and AI digital
             transformation services, we help you find the right problem to
             solve, then map the fastest, lowest-risk path to a product in
