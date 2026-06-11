@@ -89,8 +89,10 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
                 sizes="150px"
                 style={{ height: 28, width: "auto" }}
                 className={cn(
-                  "absolute left-0 h-auto w-auto transition-opacity duration-300",
-                  scrolled ? "opacity-0" : "opacity-100",
+                  "absolute left-0 h-auto w-auto origin-left transition-all duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform",
+                  scrolled
+                    ? "-translate-x-1.5 scale-90 opacity-0 blur-[2px]"
+                    : "translate-x-0 scale-100 opacity-100 blur-0",
                 )}
                 priority
               />
@@ -102,8 +104,10 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
                 sizes="40px"
                 style={{ height: 28, width: "auto" }}
                 className={cn(
-                  "absolute left-0 h-auto w-auto transition-opacity duration-300",
-                  scrolled ? "opacity-100" : "opacity-0",
+                  "absolute left-0 h-auto w-auto origin-left transition-all duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform",
+                  scrolled
+                    ? "translate-x-0 scale-100 opacity-100 blur-0"
+                    : "scale-50 opacity-0 blur-[2px]",
                 )}
                 priority
               />
