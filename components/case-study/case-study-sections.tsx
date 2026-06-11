@@ -1,10 +1,37 @@
 import {
   AlertCircle,
   ArrowUpRight,
+  BellRing,
   Check,
+  Cloud,
+  CreditCard,
+  Database,
+  LayoutDashboard,
+  Layers,
   type LucideIcon,
+  Plug,
+  Server,
+  ShieldCheck,
+  Sparkles,
+  Workflow,
+  Zap,
 } from "lucide-react";
+import { BrowserFrame } from "@/components/case-study/browser-frame";
 import { XWatermark } from "@/components/geometry/x-watermark";
+
+const ARCH_ICONS: Record<string, LucideIcon> = {
+  "layout-dashboard": LayoutDashboard,
+  server: Server,
+  "shield-check": ShieldCheck,
+  database: Database,
+  "credit-card": CreditCard,
+  plug: Plug,
+  workflow: Workflow,
+  sparkles: Sparkles,
+  "bell-ring": BellRing,
+  zap: Zap,
+  cloud: Cloud,
+};
 import type {
   BulletItem,
   CaseStudySection,
@@ -99,6 +126,17 @@ function OverviewSection({ content }: { content: CaseStudySectionContent }) {
           <ChipPills chips={content.chips} />
           {content.meta && <MetaGrid meta={content.meta} />}
         </div>
+        {content.image && (
+          <div className="cs-overview-art">
+            <BrowserFrame
+              src={content.image.src}
+              alt={content.image.alt}
+              url={content.image.url}
+              glow
+              tilt
+            />
+          </div>
+        )}
       </div>
     </LightSection>
   );
@@ -258,17 +296,39 @@ function SolutionSection({ content }: { content: CaseStudySectionContent }) {
         onDark
         className="mb-11"
       />
-      {bodyParagraphs && bodyParagraphs.length > 0 && (
-        <div className="cs-overview-grid mb-[clamp(44px,5vw,64px)] grid grid-cols-2 gap-[clamp(24px,3vw,40px)]">
-          {bodyParagraphs.map((paragraph) => (
-            <p
-              key={paragraph.slice(0, 40)}
-              className="m-0 font-sans text-base text-white/70 leading-[1.72]"
-            >
-              {paragraph}
-            </p>
-          ))}
+      {content.image ? (
+        <div className="cs-overview-grid mb-[clamp(44px,5vw,64px)] grid grid-cols-2 items-center gap-[clamp(28px,4vw,52px)]">
+          <div className="flex flex-col gap-5">
+            {bodyParagraphs?.map((paragraph) => (
+              <p
+                key={paragraph.slice(0, 40)}
+                className="m-0 font-sans text-base text-white/72 leading-[1.72]"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <BrowserFrame
+            src={content.image.src}
+            alt={content.image.alt}
+            url={content.image.url}
+            glow
+          />
         </div>
+      ) : (
+        bodyParagraphs &&
+        bodyParagraphs.length > 0 && (
+          <div className="cs-overview-grid mb-[clamp(44px,5vw,64px)] grid grid-cols-2 gap-[clamp(24px,3vw,40px)]">
+            {bodyParagraphs.map((paragraph) => (
+              <p
+                key={paragraph.slice(0, 40)}
+                className="m-0 font-sans text-base text-white/70 leading-[1.72]"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )
       )}
       {content.pipeline && <PipelineBanner pipeline={content.pipeline} />}
       <ChipPills chips={content.chips} />
@@ -296,20 +356,40 @@ function ArchitectureSection({
           color="rgba(120,150,240,0.05)"
           className="right-[-120px] bottom-[-160px]"
         />
-        <div className="relative grid gap-[18px] sm:grid-cols-2 lg:grid-cols-3">
-          {content.items?.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-[var(--r-lg)] border border-white/12 bg-white/[0.035] p-5"
-            >
-              <div className="mb-3 font-sans font-semibold text-base text-white leading-[1.1]">
-                {item.title}
+        <div className="relative">
+          {content.items?.map((item, index) => {
+            const Icon = (item.icon && ARCH_ICONS[item.icon]) || Layers;
+            return (
+              <div key={item.title}>
+                {index > 0 && (
+                  <div className="flex justify-center" aria-hidden>
+                    <div className="h-7 w-px bg-linear-to-b from-indigo-400/10 to-indigo-400/60" />
+                  </div>
+                )}
+                <div className="relative overflow-hidden rounded-[var(--r-lg)] border border-white/12 bg-white/[0.035] p-5">
+                  <div className="absolute inset-x-0 top-0 h-[3px] bg-linear-to-r from-indigo-400 to-indigo-700" />
+                  <div className="flex items-start gap-4">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[var(--r-md)] border border-indigo-300/30 bg-indigo-500/20 text-indigo-300">
+                      <Icon className="h-5 w-5" aria-hidden />
+                    </span>
+                    <div className="min-w-0">
+                      <div className="flex flex-wrap items-center gap-2.5">
+                        <span className="font-mono text-[11px] text-tangerine-400">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className="font-sans font-semibold text-base text-white leading-[1.1]">
+                          {item.title}
+                        </span>
+                      </div>
+                      <p className="m-0 mt-2 font-mono text-[11.5px] text-white/55 leading-[1.7]">
+                        {item.body}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p className="m-0 font-mono text-[11px] text-white/50 leading-[1.7]">
-                {item.body}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </DarkSection>

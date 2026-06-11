@@ -25,11 +25,18 @@ export interface BulletItem {
 export interface ArchitectureItem {
   title: string;
   body: string;
+  icon?: string;
 }
 
 export interface ServiceItem {
   icon?: string;
   name: string;
+}
+
+export interface SectionImage {
+  src: string;
+  alt: string;
+  url?: string;
 }
 
 export interface CaseStudySectionContent {
@@ -46,6 +53,7 @@ export interface CaseStudySectionContent {
   items?: ArchitectureItem[];
   services?: ServiceItem[];
   quote?: string;
+  image?: SectionImage;
 }
 
 export interface CaseStudyMetric {

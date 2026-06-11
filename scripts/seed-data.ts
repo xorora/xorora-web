@@ -82,6 +82,11 @@ export const seedCaseStudies: SeedCaseStudy[] = [
             { label: "Architecture", value: "Multi-portal SaaS" },
             { label: "Delivery model", value: "0 → 1, ground-up" },
           ],
+          image: {
+            src: "/assets/mocks/portal-business.webp",
+            alt: "Business operations portal",
+            url: "app.xorora.ai/business",
+          },
         },
       },
       {
@@ -129,26 +134,32 @@ export const seedCaseStudies: SeedCaseStudy[] = [
           items: [
             {
               title: "Client (role-based SPAs)",
+              icon: "layout-dashboard",
               body: "Business (operations & config), Sales (CRM & revenue), Developer (API & system control), Testing (QA & pre-deploy) — all React · TS · Vite.",
             },
             {
               title: "Unified REST API · shared backend",
+              icon: "server",
               body: "Environment-configured endpoints, one backbone for all portals.",
             },
             {
               title: "Auth & Access",
+              icon: "shield-check",
               body: "OTP flows, RBAC, per-portal scopes.",
             },
             {
               title: "State & Data",
+              icon: "database",
               body: "Redux Toolkit, RTK Query, react-hook-form, Zod.",
             },
             {
               title: "Billing",
+              icon: "credit-card",
               body: "Stripe subscriptions, unified across portals.",
             },
             {
               title: "External integrations",
+              icon: "plug",
               body: "Twilio, Vapi, Mapbox, IP Geolocation, Documso, ImgBB.",
             },
           ],
@@ -278,6 +289,11 @@ export const seedCaseStudies: SeedCaseStudy[] = [
               value: "0 → Production SaaS (founder-led, single-engineer build)",
             },
           ],
+          image: {
+            src: "/assets/regula/dashboard.webp",
+            alt: "Regula compliance dashboard",
+            url: "regula.app/dashboard",
+          },
         },
       },
       {
@@ -311,6 +327,11 @@ export const seedCaseStudies: SeedCaseStudy[] = [
           ],
           pipeline:
             "End-to-end monitoring pipeline (< 1 hour): 01 Target Setup (configure sources) → 02 Crawl (automated monitoring) → 03 Version Diff (change detection) → 04 AI Analysis (impact scoring) → 05 Alert (email / webhook).",
+          image: {
+            src: "/assets/regula/targets.webp",
+            alt: "Regulatory targets monitoring",
+            url: "regula.app/targets",
+          },
         },
       },
       {
@@ -323,26 +344,32 @@ export const seedCaseStudies: SeedCaseStudy[] = [
           items: [
             {
               title: "Application (multi-tenant SaaS)",
+              icon: "layout-dashboard",
               body: "Next.js 16 · React 19 full-stack app — NextAuth.js v5, Tailwind 4, shadcn/ui, deployed on Vercel. Compliance workspace, onboarding, billing.",
             },
             {
               title: "Orchestration",
+              icon: "workflow",
               body: "Inngest workflow engine — crawl scheduling, version diffing, AI analysis, alert delivery, with no queue infrastructure to manage.",
             },
             {
               title: "Processing",
+              icon: "sparkles",
               body: "Crawl4AI (extraction, anti-bot resilient) → Google Gemini (summarize, impact scoring).",
             },
             {
               title: "Data layer",
+              icon: "database",
               body: "PostgreSQL (Drizzle ORM), Upstash Redis (caching), AWS S3 (document & content store).",
             },
             {
               title: "Multi-channel alert delivery",
+              icon: "bell-ring",
               body: "Resend (email), Slack, MS Teams, and custom webhooks.",
             },
             {
               title: "Billing",
+              icon: "credit-card",
               body: "Stripe — subscription billing & usage controls.",
             },
           ],
@@ -461,6 +488,11 @@ export const seedCaseStudies: SeedCaseStudy[] = [
               value: "0 → Production SaaS (founder-led build)",
             },
           ],
+          image: {
+            src: "/assets/pingpanda/dashboard.webp",
+            alt: "PingPanda dashboard",
+            url: "app.pingpanda.io/dashboard",
+          },
         },
       },
       {
@@ -495,6 +527,11 @@ export const seedCaseStudies: SeedCaseStudy[] = [
             "Pipeline (send an event · get an alert · real-time): 01 Event Ingested (via API endpoint) → 02 Validated & Categorized (Zod + category rules) → 03 Quota Checked (per-plan enforcement) → 04 Discord Alert Sent (instant notification).",
           chips:
             "Event types supported: Sales Events (new signups, upgrades) · Incident Events (errors, failures, spikes) · Usage Events (quota hits, milestones).",
+          image: {
+            src: "/assets/pingpanda/events.webp",
+            alt: "PingPanda event API example",
+            url: "app.pingpanda.io/api-key",
+          },
         },
       },
       {
@@ -507,22 +544,27 @@ export const seedCaseStudies: SeedCaseStudy[] = [
           items: [
             {
               title: "Client",
+              icon: "layout-dashboard",
               body: "Next.js 15 App Router · React 19 — TypeScript, Tailwind CSS, TanStack Query, deployed on Vercel. Dashboard, API keys, usage.",
             },
             {
               title: "API",
+              icon: "zap",
               body: "Hono API layer — edge-compatible, API-key auth, Zod validation, per-plan quota enforcement.",
             },
             {
               title: "Data & identity",
+              icon: "database",
               body: "Prisma + Neon (serverless PostgreSQL), Neon Adapter (connection pooling), Clerk (auth & user sync).",
             },
             {
               title: "Billing & delivery",
+              icon: "credit-card",
               body: "Stripe (checkout, webhooks, plans) and Discord REST (rich formatted alerts).",
             },
             {
               title: "Deployment",
+              icon: "cloud",
               body: "Vercel serverless edge runtime.",
             },
           ],
