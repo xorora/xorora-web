@@ -118,7 +118,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
                     setOpen((value) => (value === trigger ? null : trigger));
                   }}
                   className={cn(
-                    "flex cursor-pointer items-center gap-1.5 rounded-r-md border-0 bg-transparent px-[15px] py-[9px] font-medium font-sans text-[14.5px] transition-colors duration-150",
+                    "flex cursor-pointer items-center gap-1.5 rounded-[var(--r-md)] border-0 bg-transparent px-[15px] py-[9px] font-medium font-sans text-[14.5px] transition-colors duration-150",
                     open === trigger ? "text-white" : "text-white/74",
                   )}
                 >
@@ -136,7 +136,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
                 href={nav.caseStudiesHref}
                 onMouseEnter={() => enter(null)}
                 className={cn(
-                  "rounded-r-md px-[15px] py-[9px] font-medium font-sans text-[14.5px] no-underline transition-colors duration-150 hover:text-white",
+                  "rounded-[var(--r-md)] px-[15px] py-[9px] font-medium font-sans text-[14.5px] no-underline transition-colors duration-150 hover:text-white",
                   current === "work" ? "text-white" : "text-white/74",
                 )}
               >
@@ -156,7 +156,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
             <button
               type="button"
               onClick={() => setMobile((value) => !value)}
-              className="xo-mn-burger hidden h-[42px] w-[42px] shrink-0 cursor-pointer items-center justify-center rounded-r-md border border-white/14 bg-white/8 text-white"
+              className="xo-mn-burger hidden h-[42px] w-[42px] shrink-0 cursor-pointer items-center justify-center rounded-[var(--r-md)] border border-white/14 bg-white/8 text-white"
               aria-label={mobile ? "Close menu" : "Open menu"}
             >
               {mobile ? (
@@ -176,7 +176,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
             className="xo-mn-panelwrap pointer-events-auto flex justify-center px-5 pt-2.5"
             aria-label={`${open} menu`}
           >
-            <div className="xo-mn-in w-full max-w-[1080px] overflow-hidden rounded-r-xl border border-white/12 bg-[rgba(8,12,30,0.96)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)] backdrop-blur-[20px]">
+            <div className="xo-mn-in w-full max-w-[1080px] overflow-hidden rounded-[var(--r-xl)] border border-white/12 bg-[rgba(8,12,30,0.96)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)] backdrop-blur-[20px]">
               {open === "Services" && (
                 <ServicesPanel
                   nav={nav}
@@ -215,7 +215,7 @@ function ServicesPanel({
 }) {
   return (
     <div className="xo-mn-services grid min-h-[360px] grid-cols-[256px_1fr]">
-      <div className="relative flex flex-col overflow-hidden border-white/8 border-r bg-linear-to-br from-[#161D3D] via-[#1F2A63] to-[#3A57C9] px-[30px] py-[34px]">
+      <div className="relative flex flex-col overflow-hidden border-white/8 border-r bg-[linear-gradient(165deg,#161D3D_0%,#1F2A63_45%,#2E47AE_82%,#3A57C9_100%)] px-[30px] py-[34px]">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -273,7 +273,7 @@ function ServicesPanel({
                   key={item.label}
                   href={item.href}
                   onClick={onPick}
-                  className="rounded-r-sm px-2 py-1.5 font-sans text-[13.5px] text-white/66 no-underline transition-[background,color] duration-140 hover:bg-white/6 hover:text-white"
+                  className="rounded-[var(--r-sm)] px-2 py-1.5 font-sans text-[13.5px] text-white/66 no-underline transition-[background,color] duration-140 hover:bg-white/6 hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -303,9 +303,9 @@ function IndustryLink({ industry }: { industry: NavIndustry }) {
   return (
     <Link
       href={industry.href}
-      className="flex gap-3 rounded-r-md px-3 py-3 no-underline transition-colors duration-140 hover:bg-white/5"
+      className="flex gap-3 rounded-[var(--r-md)] px-3 py-3 no-underline transition-colors duration-140 hover:bg-white/5"
     >
-      <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-r-md border border-[rgba(120,150,240,0.3)] bg-[rgba(70,76,159,0.25)] text-indigo-300">
+      <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[var(--r-md)] border border-[rgba(120,150,240,0.3)] bg-[rgba(70,76,159,0.25)] text-indigo-300">
         <NavIcon name={industry.icon} className="h-[19px] w-[19px]" />
       </span>
       <div>
@@ -328,7 +328,7 @@ function FeaturedCaseStudy({
   return (
     <Link
       href={featured.href}
-      className="relative flex flex-col overflow-hidden border-white/8 border-l bg-linear-to-br from-[#161D3D] via-[#1F2A63] to-[#3A57C9] px-[26px] py-[26px] no-underline"
+      className="relative flex flex-col overflow-hidden border-white/8 border-l bg-[linear-gradient(135deg,#161D3D_0%,#1F2A63_42%,#2E47AE_78%,#3A57C9_100%)] px-[26px] py-[26px] no-underline"
     >
       <div
         className="pointer-events-none absolute inset-0"
@@ -341,7 +341,7 @@ function FeaturedCaseStudy({
         <span className="mb-3.5 font-mono text-[10.5px] text-tangerine-400 tracking-[0.16em]">
           {featured.tag}
         </span>
-        <div className="mb-4 overflow-hidden rounded-r-md border border-white/12">
+        <div className="mb-4 overflow-hidden rounded-[var(--r-md)] border border-white/12">
           <Image
             src={featured.img}
             alt=""
@@ -379,7 +379,7 @@ function CompanyPanel({
           <CompanyLink key={link.name} link={link} />
         ))}
       </div>
-      <div className="relative flex flex-col justify-center overflow-hidden border-white/8 border-l bg-linear-to-br from-[#161D3D] via-[#1F2A63] to-[#3A57C9] px-7 py-[30px]">
+      <div className="relative flex flex-col justify-center overflow-hidden border-white/8 border-l bg-[linear-gradient(135deg,#161D3D_0%,#1F2A63_42%,#2E47AE_78%,#3A57C9_100%)] px-7 py-[30px]">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -417,9 +417,9 @@ function CompanyLink({ link }: { link: NavCompanyLink }) {
   return (
     <Link
       href={link.href}
-      className="flex gap-3 rounded-r-md px-3 py-3.5 no-underline transition-colors duration-140 hover:bg-white/5"
+      className="flex gap-3 rounded-[var(--r-md)] px-3 py-3.5 no-underline transition-colors duration-140 hover:bg-white/5"
     >
-      <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-r-md border border-[rgba(120,150,240,0.3)] bg-[rgba(70,76,159,0.25)] text-indigo-300">
+      <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[var(--r-md)] border border-[rgba(120,150,240,0.3)] bg-[rgba(70,76,159,0.25)] text-indigo-300">
         <NavIcon name={link.icon} className="h-[19px] w-[19px]" />
       </span>
       <div>
@@ -446,7 +446,7 @@ function MobileMenu({
   const [section, setSection] = useState<string | null>(null);
 
   return (
-    <div className="xo-mn-mobile pointer-events-auto mx-5 mt-2.5 max-h-[calc(100vh-120px)] overflow-y-auto rounded-r-xl border border-white/12 bg-[rgba(8,12,30,0.98)] px-5 py-3 pb-6 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
+    <div className="xo-mn-mobile pointer-events-auto mx-5 mt-2.5 max-h-[calc(100vh-120px)] overflow-y-auto rounded-[var(--r-xl)] border border-white/12 bg-[rgba(8,12,30,0.98)] px-5 py-3 pb-6 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
       <MobileSection
         open={section === "Services"}
         onToggle={() =>

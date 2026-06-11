@@ -8,7 +8,7 @@ import type { ContactInfo } from "@/lib/industries/types";
 import { cn } from "@/lib/utils";
 
 const fieldClass =
-  "w-full resize-none rounded-r-md border border-white/16 bg-white/4 px-3.5 py-3 font-sans text-[15px] text-white outline-hidden transition-shadow placeholder:text-white/50 focus:border-tangerine-500 focus:shadow-focus";
+  "w-full resize-none rounded-[var(--r-md)] border border-white/16 bg-white/4 px-3.5 py-3 font-sans text-[15px] text-white outline-hidden transition-shadow placeholder:text-white/50 focus:border-tangerine-500 focus:shadow-focus";
 
 interface IndustryContactProps {
   info: ContactInfo;
@@ -21,7 +21,7 @@ export function IndustryContact({ info }: IndustryContactProps) {
 
   return (
     <section className="bg-navy-950 px-8 py-[clamp(56px,7vw,96px)]">
-      <div className="relative mx-auto max-w-[1180px] overflow-hidden rounded-r-xl border border-white/10 bg-navy-900 p-[clamp(32px,4.5vw,60px)]">
+      <div className="relative mx-auto max-w-[1180px] overflow-hidden rounded-[var(--r-xl)] border border-white/10 bg-navy-900 p-[clamp(32px,4.5vw,60px)]">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_90%_at_90%_0%,rgba(70,76,159,0.4),transparent_58%)]" />
         <XWatermark
           size={420}
@@ -47,7 +47,7 @@ export function IndustryContact({ info }: IndustryContactProps) {
             </div>
           </div>
 
-          <div className="rounded-r-lg border border-white/10 bg-white/3 p-[clamp(24px,3vw,32px)]">
+          <div className="rounded-[var(--r-lg)] border border-white/10 bg-white/3 p-[clamp(24px,3vw,32px)]">
             {sent ? (
               <div className="py-12 text-center">
                 <div className="mx-auto mb-[18px] flex h-14 w-14 items-center justify-center rounded-full bg-success/18 text-success">
@@ -117,7 +117,7 @@ function ContactLine({
 }) {
   return (
     <div className="flex items-center gap-3 font-sans text-[15px] text-white/85">
-      <span className="flex h-9 w-9 items-center justify-center rounded-r-md border border-white/12 bg-white/6 text-tangerine-400">
+      <span className="flex h-9 w-9 items-center justify-center rounded-[var(--r-md)] border border-white/12 bg-white/6 text-tangerine-400">
         <Icon className="h-[17px] w-[17px]" aria-hidden />
       </span>
       {value}

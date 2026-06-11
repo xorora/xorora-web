@@ -55,7 +55,7 @@ export function AboutImpact() {
               key={item.title}
               className="ab-impact-row grid grid-cols-[48px_0.9fr_1.1fr] items-start gap-[clamp(14px,2vw,26px)] border-white/10 border-t py-[26px] first:border-t-0"
             >
-              <span className="flex h-[42px] w-[42px] items-center justify-center rounded-r-md border border-indigo-300/32 bg-indigo-700/28 text-indigo-300">
+              <span className="flex h-[42px] w-[42px] items-center justify-center rounded-[var(--r-md)] border border-indigo-300/32 bg-indigo-700/28 text-indigo-300">
                 <item.icon className="h-5 w-5" aria-hidden />
               </span>
               <h3 className="m-0 font-sans font-semibold text-[clamp(17px,1.6vw,20px)] text-white leading-snug">
@@ -66,7 +66,7 @@ export function AboutImpact() {
               </p>
             </div>
           ))}
-          <div className="relative mt-8 overflow-hidden rounded-r-xl bg-linear-to-br from-indigo-700 to-indigo-900 p-[clamp(28px,3.5vw,44px)]">
+          <div className="relative mt-8 overflow-hidden rounded-[var(--r-xl)] bg-linear-to-br from-indigo-700 to-indigo-900 p-[clamp(28px,3.5vw,44px)]">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_90%_at_90%_10%,rgba(120,150,240,0.35),transparent_60%)]" />
             <XWatermark
               size={260}

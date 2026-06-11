@@ -25,7 +25,7 @@ export function FinalCTA({ onContact }: FinalCTAProps) {
         color="rgba(120,150,240,0.05)"
         className="-translate-x-1/2 bottom-[-380px] left-1/2"
       />
-      <div className="relative mx-auto max-w-[1000px] px-8 py-32 text-center">
+      <div className="relative mx-auto max-w-[1000px] px-8 pt-32 pb-[120px] text-center">
         <SignalRule
           color="var(--tangerine-400)"
           className="mb-7 justify-center"

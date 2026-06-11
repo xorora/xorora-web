@@ -1,4 +1,13 @@
-import { ArrowUpRight, Check, Route, ShieldCheck } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  Repeat,
+  Route,
+  ShieldCheck,
+  SlidersHorizontal,
+  SquareCheck,
+  Users,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { LightSection } from "@/components/case-study/light-section";
@@ -18,6 +27,7 @@ import { cn } from "@/lib/utils";
 const MODELS = [
   {
     n: "01",
+    icon: SquareCheck,
     name: "Fixed Scope",
     tagline: "Defined deliverable, timeline, and price.",
     body: "When requirements are clear, we lock scope, milestones, and a fixed price up front. You get predictable cost and a committed delivery date, with change control if priorities shift.",
@@ -31,6 +41,7 @@ const MODELS = [
   },
   {
     n: "02",
+    icon: SlidersHorizontal,
     name: "Variable Scope",
     tagline: "Time-and-materials flexibility.",
     body: "When the path will flex as you learn, we work in agile sprints against a prioritized backlog. You steer scope sprint by sprint and pay only for what you build.",
@@ -44,6 +55,7 @@ const MODELS = [
   },
   {
     n: "03",
+    icon: Users,
     name: "Staff Augmentation",
     tagline: "Senior engineers embedded in your team.",
     body: "When you own the roadmap and need capacity or specialized skills, we embed vetted engineers into your team and process. They ramp fast, work in your stack, and report to you.",
@@ -69,7 +81,7 @@ const REASONS = [
     body: "Whichever model you pick, the same senior engineers and the same delivery standards back the work. No B-team.",
   },
   {
-    icon: Check,
+    icon: Repeat,
     title: "Switch models anytime",
     body: "Start fixed for an MVP, move to variable as you scale, or augment your team later. The engagement flexes with you.",
   },
@@ -130,7 +142,7 @@ export function EmModels() {
           <div
             key={m.name}
             className={cn(
-              "group relative flex flex-col overflow-hidden rounded-r-lg p-[clamp(26px,2.8vw,34px)] transition-all hover:translate-y-[-3px]",
+              "group relative flex flex-col overflow-hidden rounded-[var(--r-lg)] p-[clamp(26px,2.8vw,34px)] transition-all hover:translate-y-[-3px]",
               m.featured
                 ? "border border-indigo-300/30 bg-navy-900 shadow-sm hover:shadow-lg"
                 : "border border-border bg-slate-50 hover:border-border-strong hover:shadow-md",
@@ -143,13 +155,13 @@ export function EmModels() {
               <div className="mb-5 flex items-center justify-between">
                 <span
                   className={cn(
-                    "flex h-[50px] w-[50px] items-center justify-center rounded-r-md",
+                    "flex h-[50px] w-[50px] items-center justify-center rounded-[var(--r-md)]",
                     m.featured
                       ? "bg-tangerine-500 text-white"
                       : "bg-indigo-50 text-xo-indigo",
                   )}
                 >
-                  <Check className="h-6 w-6" />
+                  <m.icon className="h-6 w-6" />
                 </span>
                 <span
                   className={cn(
@@ -247,10 +259,10 @@ export function EmChoose() {
         {REASONS.map((r) => (
           <div
             key={r.title}
-            className="group relative overflow-hidden rounded-r-lg border border-border bg-surface p-[clamp(24px,2.6vw,32px)] shadow-xs transition-all hover:translate-y-[-3px] hover:border-border-strong hover:shadow-md"
+            className="group relative overflow-hidden rounded-[var(--r-lg)] border border-border bg-surface p-[clamp(24px,2.6vw,32px)] shadow-xs transition-all hover:translate-y-[-3px] hover:border-border-strong hover:shadow-md"
           >
             <div className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-linear-to-r from-indigo-400 to-tangerine-500 transition-transform group-hover:scale-x-100" />
-            <span className="mb-5 flex h-[46px] w-[46px] items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo transition-all group-hover:bg-xo-indigo group-hover:text-white">
+            <span className="mb-5 flex h-[46px] w-[46px] items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo transition-all group-hover:bg-xo-indigo group-hover:text-white">
               <r.icon className="h-[22px] w-[22px]" />
             </span>
             <h3 className="mb-2.5 font-sans font-semibold text-[19px] text-fg1">
@@ -315,7 +327,7 @@ function EmCaseCard({
   return (
     <Link
       href={href}
-      className="group hover:-translate-y-1 relative block min-h-[380px] overflow-hidden rounded-r-xl border border-white/10 bg-[#080C1E] no-underline shadow-[0_22px_56px_-34px_rgba(8,12,30,0.5)] transition-all hover:shadow-[0_36px_80px_-34px_rgba(8,12,30,0.7)]"
+      className="group hover:-translate-y-1 relative block min-h-[380px] overflow-hidden rounded-[var(--r-xl)] border border-white/10 bg-[#080C1E] no-underline shadow-[0_22px_56px_-34px_rgba(8,12,30,0.5)] transition-all hover:shadow-[0_36px_80px_-34px_rgba(8,12,30,0.7)]"
     >
       <Image
         src={img}

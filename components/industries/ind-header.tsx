@@ -36,7 +36,7 @@ export function IndHeader() {
           software and AI that fits how your industry actually operates, from
           first prototype to production scale.
         </p>
-        <div className="ind-reveal mt-11 flex flex-wrap items-center justify-center gap-x-[-clamp(20px,4vw,48px)] gap-y-5 delay-180">
+        <div className="ind-reveal mt-11 flex flex-wrap items-center justify-center gap-x-[clamp(20px,4vw,48px)] gap-y-5 delay-180">
           {STATS.map(([value, label]) => (
             <div key={label} className="flex items-center gap-3.5">
               <div className="font-extrabold font-sans text-[clamp(26px,3vw,38px)] text-white leading-none tracking-[-0.02em]">

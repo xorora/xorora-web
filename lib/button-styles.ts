@@ -26,7 +26,7 @@ export const buttonVariantClasses: Record<ButtonVariant, string> = {
 };
 
 const buttonBaseClasses =
-  "inline-flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-r-md border font-sans font-semibold transition-all duration-180 ease-in-out active:scale-[0.98]";
+  "inline-flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-[var(--r-md)] border font-sans font-semibold transition-all duration-180 ease-in-out active:scale-[0.98]";
 
 export function buttonClassName({
   variant = "primary",

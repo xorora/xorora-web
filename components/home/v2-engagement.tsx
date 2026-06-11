@@ -93,7 +93,7 @@ function ModelCard({
   return (
     <div
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-r-lg p-[clamp(26px,2.8vw,34px)] transition-all duration-220 ease-in-out",
+        "group relative flex flex-col overflow-hidden rounded-[var(--r-lg)] p-[clamp(26px,2.8vw,34px)] transition-all duration-220 ease-in-out",
         dark
           ? "hover:-translate-y-1 border border-[rgba(120,150,240,0.3)] bg-navy-900 shadow-sm hover:shadow-lg"
           : "hover:-translate-y-1 border border-border bg-slate-50 hover:border-border-strong hover:shadow-md",
@@ -106,7 +106,7 @@ function ModelCard({
         <div className="mb-5 flex items-center justify-between">
           <span
             className={cn(
-              "flex h-[50px] w-[50px] items-center justify-center rounded-r-md",
+              "flex h-[50px] w-[50px] items-center justify-center rounded-[var(--r-md)]",
               dark
                 ? "bg-tangerine-500 text-white"
                 : "bg-indigo-50 text-xo-indigo",

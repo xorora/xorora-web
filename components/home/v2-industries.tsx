@@ -41,7 +41,7 @@ function IndustryTile({
       <Link
         href={ind.href}
         className={cn(
-          "group relative flex min-h-[264px] flex-col overflow-hidden rounded-r-lg no-underline transition-all duration-300",
+          "group relative flex min-h-[264px] flex-col overflow-hidden rounded-[var(--r-lg)] no-underline transition-all duration-300",
           "hover:-translate-y-1 border border-white/14 hover:border-white/28 hover:shadow-[0_30px_60px_-34px_rgba(2,8,30,0.8)]",
         )}
       >
@@ -63,7 +63,7 @@ function IndustryTile({
         <div className="relative flex h-full flex-col p-[clamp(24px,2.2vw,30px)]">
           <span
             className={cn(
-              "mb-5 flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-r-md border border-white/22 backdrop-blur-sm transition-colors duration-250",
+              "mb-5 flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-[var(--r-md)] border border-white/22 backdrop-blur-sm transition-colors duration-250",
               "bg-white/14 group-hover:bg-xo-indigo",
             )}
           >
@@ -72,16 +72,16 @@ function IndustryTile({
               className="h-6 w-6 text-white"
             />
           </span>
-          <h3 className="dropshadow-[-0_2px_16px_rgba(0,0,0,0.4)] mb-2.5 font-bold font-sans text-[clamp(19px,1.6vw,22px)] text-white leading-tight tracking-tight">
+          <h3 className="[text-shadow:0_2px_16px_rgba(0,0,0,0.4)] mb-2.5 font-bold font-sans text-[clamp(19px,1.6vw,22px)] text-white leading-tight tracking-tight">
             {ind.name}
           </h3>
-          <p className="dropshadow-[-0_1px_10px_rgba(0,0,0,0.4)] font-sans text-sm text-white/82 leading-relaxed">
+          <p className="[text-shadow:0_1px_10px_rgba(0,0,0,0.4)] font-sans text-sm text-white/82 leading-relaxed">
             {ind.desc}
           </p>
           <span className="mt-auto inline-flex items-center gap-2 pt-[22px] font-sans font-semibold text-sm text-white transition-colors duration-200 group-hover:text-tangerine-400">
             Read more
             <ArrowRight
-              className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[-3px]"
+              className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[3px]"
               aria-hidden
             />
           </span>

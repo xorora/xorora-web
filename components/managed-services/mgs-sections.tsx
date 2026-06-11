@@ -1,6 +1,18 @@
 "use client";
 
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  LifeBuoy,
+  Map as MapIcon,
+  MonitorCheck,
+  Network,
+  Recycle,
+  Search,
+  ServerCog,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { SignalField } from "@/components/geometry/signal-field";
@@ -33,16 +45,19 @@ const TRUST = [
 const PROCESS = [
   {
     n: "01",
+    icon: Search,
     name: "Comprehensive Assessment",
     body: "We start with a thorough evaluation of your current IT environment to identify strengths, risks, and opportunities. No assumptions — just data.",
   },
   {
     n: "02",
+    icon: MapIcon,
     name: "Customized Strategy",
     body: "We develop a tailored IT plan aligned with your business goals. Every recommendation ties directly to a measurable outcome.",
   },
   {
     n: "03",
+    icon: LifeBuoy,
     name: "Implementation & Support",
     body: "We implement the agreed solutions with continuous monitoring and proactive support. One point of contact, not a ticket queue.",
   },
@@ -50,37 +65,37 @@ const PROCESS = [
 
 const SERVICES = [
   {
-    icon: "monitor-check",
+    icon: MonitorCheck,
     name: "IT Support",
     body: "24/7 help desk and rapid incident response. We resolve issues fast so your people stay productive and your operations stay online.",
     featured: false,
   },
   {
-    icon: "users",
+    icon: Users,
     name: "Co-Managed IT",
     body: "Flexible support alongside your in-house team. We fill the gaps, handle overflow, and bring specialized expertise where you need it.",
     featured: true,
   },
   {
-    icon: "network",
+    icon: Network,
     name: "Network Administration",
     body: "Continuous oversight of your network. We proactively detect and resolve issues, maintain peak performance, and keep security strong.",
     featured: false,
   },
   {
-    icon: "server-cog",
+    icon: ServerCog,
     name: "Server Management",
     body: "Proactive server monitoring, patching, and optimization. Critical infrastructure runs at peak performance and protected against threats.",
     featured: false,
   },
   {
-    icon: "shield-check",
+    icon: ShieldCheck,
     name: "Cybersecurity & Compliance",
     body: "Baseline controls, threat monitoring, and compliance built in — aligned to SOC 2, HIPAA, and GDPR for your industry.",
     featured: false,
   },
   {
-    icon: "recycle",
+    icon: Recycle,
     name: "IT Asset Management & Disposal",
     body: "Full lifecycle tracking from procurement to certified disposal. Maintain compliance, reduce waste, and keep sensitive data controlled.",
     featured: false,
@@ -201,6 +216,9 @@ export function MgsProcess() {
                 {s.n}
               </div>
               <div className="relative w-full overflow-hidden rounded-2xl border border-indigo-900/20 bg-slate-900 p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+                <span className="mb-[18px] flex h-11 w-11 items-center justify-center rounded-[10px] border border-[rgba(70,76,159,0.3)] bg-[rgba(70,76,159,0.12)] text-indigo-400">
+                  <s.icon className="h-[21px] w-[21px]" />
+                </span>
                 <div className="mb-2 font-mono text-[11px] text-tangerine-400 tracking-[0.14em]">
                   STEP {s.n}
                 </div>
@@ -251,6 +269,9 @@ export function MgsServices() {
                   FEATURED
                 </span>
               )}
+              <span className="flex h-11 w-11 items-center justify-center rounded-[10px] border border-[rgba(70,76,159,0.3)] bg-[rgba(70,76,159,0.12)] text-indigo-400">
+                <s.icon className="h-[21px] w-[21px]" />
+              </span>
               <h3 className="mt-4 mb-2.5 font-sans font-semibold text-lg text-white leading-snug">
                 {s.name}
               </h3>
@@ -262,7 +283,7 @@ export function MgsServices() {
               >
                 {s.body}
               </p>
-              <span className="mt-auto inline-flex items-center gap-[7px] pt-[22px] font-medium font-sans text-[13px] text-tangerine-500 transition-all group-hover:translate-x-[-3px] group-hover:text-tangerine-400">
+              <span className="mt-auto inline-flex items-center gap-[7px] pt-[22px] font-medium font-sans text-[13px] text-tangerine-500 transition-all group-hover:translate-x-[3px] group-hover:text-tangerine-400">
                 Learn more
                 <ArrowRight className="h-3.5 w-3.5" />
               </span>

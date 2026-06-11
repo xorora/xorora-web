@@ -75,7 +75,7 @@ function SectionRenderer({ section }: { section: IndustrySection }) {
               className="max-w-[620px]"
             />
             {section.callout && (
-              <div className="flex max-w-80 items-center gap-3 rounded-r-lg border border-white/12 bg-white/5 px-5 py-4">
+              <div className="flex max-w-80 items-center gap-3 rounded-[var(--r-lg)] border border-white/12 bg-white/5 px-5 py-4">
                 <IndustryIcon
                   name={section.callout.icon}
                   className="h-5 w-5 shrink-0 text-tangerine-400"
@@ -155,7 +155,7 @@ function SectionRenderer({ section }: { section: IndustrySection }) {
             {section.items.map((group) => (
               <div key={group.name}>
                 <div className="mb-2.5 flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo">
                     <IndustryIcon
                       name={group.icon}
                       className="h-[21px] w-[21px]"
@@ -212,7 +212,7 @@ function SectionRenderer({ section }: { section: IndustrySection }) {
               {section.items.map((item) => (
                 <div
                   key={item.id}
-                  className="flex flex-col items-center justify-start gap-3.5 rounded-r-lg border border-border bg-surface px-4 py-[26px] text-center shadow-xs"
+                  className="flex flex-col items-center justify-start gap-3.5 rounded-[var(--r-lg)] border border-border bg-surface px-4 py-[26px] text-center shadow-xs"
                 >
                   <div className="flex h-[92px] items-center justify-center">
                     <CertLogo id={item.id} />
@@ -455,7 +455,7 @@ function SectionRenderer({ section }: { section: IndustrySection }) {
               section.bg === "surface" ? "var(--surface)" : "var(--slate-50)",
           }}
         >
-          <div className="relative mx-auto max-w-[1240px] overflow-hidden rounded-r-xl bg-navy-900 p-[clamp(44px,6vw,80px)]">
+          <div className="relative mx-auto max-w-[1240px] overflow-hidden rounded-[var(--r-xl)] bg-navy-900 p-[clamp(44px,6vw,80px)]">
             {section.headerBg && (
               <div
                 className="pointer-events-none absolute inset-0 bg-center bg-cover opacity-[0.22]"
@@ -592,9 +592,9 @@ function SectionRenderer({ section }: { section: IndustrySection }) {
             {section.items.map((item) => (
               <HoverCard
                 key={item.name}
-                className="hover:-translate-y-0.5 rounded-r-lg border border-border bg-surface p-[clamp(26px,2.6vw,32px)] shadow-xs transition-all duration-220 hover:border-border-strong hover:shadow-md"
+                className="hover:-translate-y-0.5 rounded-[var(--r-lg)] border border-border bg-surface p-[clamp(26px,2.6vw,32px)] shadow-xs transition-all duration-220 hover:border-border-strong hover:shadow-md"
               >
-                <span className="mb-[18px] flex h-[46px] w-[46px] items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo">
+                <span className="mb-[18px] flex h-[46px] w-[46px] items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo">
                   <IndustryIcon
                     name={item.icon}
                     className="h-[23px] w-[23px]"
@@ -632,7 +632,7 @@ function SectionRenderer({ section }: { section: IndustrySection }) {
             {section.items.map((item) => (
               <div
                 key={item.number}
-                className="grid grid-cols-[56px_1fr] gap-[clamp(18px,2.5vw,32px)] rounded-r-lg border border-border bg-slate-50 p-[clamp(24px,2.6vw,30px)]"
+                className="grid grid-cols-[56px_1fr] gap-[clamp(18px,2.5vw,32px)] rounded-[var(--r-lg)] border border-border bg-slate-50 p-[clamp(24px,2.6vw,30px)]"
               >
                 <span className="font-extrabold font-sans text-[30px] text-indigo-300 leading-none tracking-[-0.02em]">
                   {item.number}
@@ -670,10 +670,10 @@ function SectionRenderer({ section }: { section: IndustrySection }) {
             {section.items.map((item) => (
               <div
                 key={item.name}
-                className="rounded-r-lg border border-border bg-slate-50 p-[clamp(26px,2.6vw,32px)]"
+                className="rounded-[var(--r-lg)] border border-border bg-slate-50 p-[clamp(26px,2.6vw,32px)]"
               >
                 <div className="mb-3 flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo">
                     <IndustryIcon
                       name={item.icon}
                       className="h-[21px] w-[21px]"
@@ -717,7 +717,7 @@ function SectionRenderer({ section }: { section: IndustrySection }) {
           <div className="ind-page-2grid grid grid-cols-2 gap-x-14 gap-y-10">
             {section.items.map((item) => (
               <div key={item.title} className="flex gap-5">
-                <span className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo">
+                <span className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo">
                   <IndustryIcon name={item.icon} className="h-6 w-6" />
                 </span>
                 <div>
@@ -745,7 +745,7 @@ function SectionRenderer({ section }: { section: IndustrySection }) {
 function IconCard({ item }: { item: IconCardItem }) {
   return (
     <div>
-      <span className="mb-5 flex h-[52px] w-[52px] items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo">
+      <span className="mb-5 flex h-[52px] w-[52px] items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo">
         <IndustryIcon name={item.icon} className="h-6 w-6" />
       </span>
       <h3 className="mb-3 font-sans font-semibold text-[19px] text-fg1 leading-tight">
@@ -760,9 +760,9 @@ function IconCard({ item }: { item: IconCardItem }) {
 
 function DarkHoverCard({ item }: { item: IconCardItem }) {
   return (
-    <HoverCard className="hover:-translate-y-0.5 relative overflow-hidden rounded-r-lg border border-white/12 bg-white/4 p-[clamp(24px,2.4vw,30px)] transition-[border-color,transform] duration-200 hover:border-indigo-300/50">
+    <HoverCard className="hover:-translate-y-0.5 relative overflow-hidden rounded-[var(--r-lg)] border border-white/12 bg-white/4 p-[clamp(24px,2.4vw,30px)] transition-[border-color,transform] duration-200 hover:border-indigo-300/50">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-linear-to-r from-indigo-400 to-indigo-700 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
-      <span className="mb-[18px] flex h-11 w-11 items-center justify-center rounded-r-md border border-indigo-300/32 bg-indigo-500/28 text-indigo-300">
+      <span className="mb-[18px] flex h-11 w-11 items-center justify-center rounded-[var(--r-md)] border border-indigo-300/32 bg-indigo-500/28 text-indigo-300">
         <IndustryIcon name={item.icon} className="h-[22px] w-[22px]" />
       </span>
       <h3 className="mb-2.5 font-sans font-semibold text-[18.5px] text-white leading-tight">
@@ -780,7 +780,7 @@ function ServiceCard({ item }: { item: ServiceItem }) {
     <HoverCard
       as="a"
       href="#industry-form"
-      className="hover:-translate-y-0.5 block rounded-r-lg border-l-[3px] border-l-xo-indigo bg-slate-50 p-[clamp(26px,2.6vw,32px)] no-underline transition-all duration-220 hover:border-border-strong hover:bg-surface hover:shadow-md"
+      className="hover:-translate-y-0.5 block rounded-[var(--r-lg)] border-l-[3px] border-l-xo-indigo bg-slate-50 p-[clamp(26px,2.6vw,32px)] no-underline transition-all duration-220 hover:border-border-strong hover:bg-surface hover:shadow-md"
     >
       <h3 className="mb-3 font-sans font-semibold text-[clamp(18px,1.6vw,21px)] text-fg1 leading-tight">
         {item.name}
@@ -808,11 +808,11 @@ function ServiceRow({
   return (
     <HoverCard
       className={cn(
-        "ind-page-svc-row grid grid-cols-[54px_1.1fr_1.4fr] items-start gap-[clamp(16px,2.5vw,40px)] rounded-r-md px-2 py-[clamp(24px,2.6vw,30px)] transition-colors duration-180 hover:bg-slate-50",
+        "ind-page-svc-row grid grid-cols-[54px_1.1fr_1.4fr] items-start gap-[clamp(16px,2.5vw,40px)] rounded-[var(--r-md)] px-2 py-[clamp(24px,2.6vw,30px)] transition-colors duration-180 hover:bg-slate-50",
         !first && "border-border border-t",
       )}
     >
-      <span className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo transition-all duration-180 group-hover:bg-xo-indigo group-hover:text-white">
+      <span className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo transition-all duration-180 group-hover:bg-xo-indigo group-hover:text-white">
         <IndustryIcon name={item.icon} className="h-6 w-6" />
       </span>
       <h3 className="m-0 font-sans font-semibold text-[clamp(18px,1.6vw,22px)] text-fg1 leading-tight">
@@ -827,7 +827,7 @@ function ServiceRow({
 
 function NumberedCapabilityCard({ item }: { item: CapabilityItem }) {
   return (
-    <HoverCard className="hover:-translate-y-0.5 relative overflow-hidden rounded-r-lg border border-white/12 bg-white/4 p-[clamp(26px,2.6vw,32px)] transition-[border-color,transform] duration-200 hover:border-indigo-300/50">
+    <HoverCard className="hover:-translate-y-0.5 relative overflow-hidden rounded-[var(--r-lg)] border border-white/12 bg-white/4 p-[clamp(26px,2.6vw,32px)] transition-[border-color,transform] duration-200 hover:border-indigo-300/50">
       <div className="mb-[18px] font-extrabold font-sans text-[30px] text-indigo-300 leading-none tracking-[-0.02em]">
         {item.number}
       </div>
@@ -843,8 +843,8 @@ function NumberedCapabilityCard({ item }: { item: CapabilityItem }) {
 
 function CapabilityIconCard({ item }: { item: CapabilityItem }) {
   return (
-    <HoverCard className="hover:-translate-y-0.5 relative flex gap-4 overflow-hidden rounded-r-lg border border-white/12 bg-white/4 p-[clamp(22px,2.4vw,28px)] transition-[border-color,transform] duration-200 hover:border-indigo-300/50">
-      <span className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-r-md border border-indigo-300/32 bg-indigo-500/28 text-indigo-300">
+    <HoverCard className="hover:-translate-y-0.5 relative flex gap-4 overflow-hidden rounded-[var(--r-lg)] border border-white/12 bg-white/4 p-[clamp(22px,2.4vw,28px)] transition-[border-color,transform] duration-200 hover:border-indigo-300/50">
+      <span className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[var(--r-md)] border border-indigo-300/32 bg-indigo-500/28 text-indigo-300">
         <IndustryIcon
           name={item.icon ?? "sparkles"}
           className="h-[22px] w-[22px]"
@@ -866,7 +866,7 @@ function FeaturedCaseCard({ caseItem }: { caseItem: FeaturedCaseItem }) {
   return (
     <Link
       href={ROUTES.caseStudy(caseItem.slug)}
-      className="group hover:-translate-y-1 relative block overflow-hidden rounded-r-xl border border-white/10 bg-[linear-gradient(155deg,#141A38_0%,#080C1E_70%)] no-underline shadow-[0_24px_60px_-34px_rgba(8,12,30,.5)] transition-[transform,box-shadow] duration-300 hover:shadow-[0_40px_90px_-34px_rgba(8,12,30,.7)]"
+      className="group hover:-translate-y-1 relative block overflow-hidden rounded-[var(--r-xl)] border border-white/10 bg-[linear-gradient(155deg,#141A38_0%,#080C1E_70%)] no-underline shadow-[0_24px_60px_-34px_rgba(8,12,30,.5)] transition-[transform,box-shadow] duration-300 hover:shadow-[0_40px_90px_-34px_rgba(8,12,30,.7)]"
     >
       <div className="absolute inset-x-0 top-0 z-3 h-[3px] bg-linear-to-r from-indigo-400 to-tangerine-500" />
       <XWatermark

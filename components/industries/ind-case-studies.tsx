@@ -41,7 +41,7 @@ function CaseTile({ href, img, tags, title, desc, stats }: CaseStudyTileData) {
     <Link
       href={href}
       className={cn(
-        "ind-reveal group relative flex flex-col overflow-hidden rounded-r-xl no-underline",
+        "ind-reveal group relative flex flex-col overflow-hidden rounded-[var(--r-xl)] no-underline",
         "border border-white/10 bg-linear-to-br from-[#141A38] to-[#080C1E]",
         "shadow-[0_22px_56px_-34px_rgba(8,12,30,0.5)]",
         "transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
@@ -77,7 +77,7 @@ function CaseTile({ href, img, tags, title, desc, stats }: CaseStudyTileData) {
         <p className="mb-[22px] font-sans text-[14.5px] text-white/66 leading-relaxed">
           {desc}
         </p>
-        <div className="mt-auto mb-[22px] flex flex-wrap gap-x-[-clamp(18px,3vw,32px)] gap-y-3">
+        <div className="mt-auto mb-[22px] flex flex-wrap gap-x-[clamp(18px,3vw,32px)] gap-y-3">
           {stats.map(([value, label]) => (
             <div key={label}>
               <div className="font-extrabold font-sans text-[clamp(19px,2vw,24px)] text-tangerine-400 leading-none tracking-[-0.02em]">
@@ -89,7 +89,7 @@ function CaseTile({ href, img, tags, title, desc, stats }: CaseStudyTileData) {
             </div>
           ))}
         </div>
-        <span className="inline-flex w-fit items-center gap-[9px] rounded-pill bg-white px-5 py-[11px] font-sans font-semibold text-sm text-xo-ink transition-transform duration-200 group-hover:translate-x-[-3px]">
+        <span className="inline-flex w-fit items-center gap-[9px] rounded-pill bg-white px-5 py-[11px] font-sans font-semibold text-sm text-xo-ink transition-transform duration-200 group-hover:translate-x-[3px]">
           Read more
           <ArrowUpRight className="h-[15px] w-[15px]" aria-hidden />
         </span>

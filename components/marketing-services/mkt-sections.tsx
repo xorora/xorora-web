@@ -1,6 +1,18 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import {
+  Activity,
+  ArrowRight,
+  BadgeDollarSign,
+  Briefcase,
+  GitCompareArrows,
+  Layers,
+  MapPin,
+  SearchCheck,
+  Share2,
+  ThumbsUp,
+  TrendingUp,
+} from "lucide-react";
 import { useState } from "react";
 import { SignalField } from "@/components/geometry/signal-field";
 import { XWatermark } from "@/components/geometry/x-watermark";
@@ -69,6 +81,7 @@ const DELIVER_STEPS = [
 
 const SERVICES = [
   {
+    icon: SearchCheck,
     plain: "SEO",
     name: "Search Equity Engineering",
     body: "Technical SEO, content systems, and authority building that compound organic visibility into a durable acquisition channel.",
@@ -76,6 +89,7 @@ const SERVICES = [
     featured: false,
   },
   {
+    icon: MapPin,
     plain: "Local SEO",
     name: "Local Signal Optimization",
     body: "Google Business Profile, citations, and review velocity tuned so you own the map pack across every service area.",
@@ -83,6 +97,7 @@ const SERVICES = [
     featured: false,
   },
   {
+    icon: BadgeDollarSign,
     plain: "Google Ads",
     name: "Paid Search Architecture",
     body: "Search, Shopping, and Performance Max structured for intent — bid systems and feeds engineered for profitable ROAS.",
@@ -90,6 +105,7 @@ const SERVICES = [
     featured: false,
   },
   {
+    icon: ThumbsUp,
     plain: "Meta Ads",
     name: "Social Demand Generation",
     body: "Prospecting and retargeting funnels with creative testing loops that turn cold audiences into measurable pipeline.",
@@ -97,6 +113,7 @@ const SERVICES = [
     featured: false,
   },
   {
+    icon: Share2,
     plain: "Social Media",
     name: "Audience Signal Management",
     body: "Organic presence run as a signal system — content, community, and analytics that feed the rest of the funnel.",
@@ -104,6 +121,7 @@ const SERVICES = [
     featured: false,
   },
   {
+    icon: Briefcase,
     plain: "B2B Marketing",
     name: "B2B Pipeline Engineering",
     body: "Account-based programs and full-funnel demand gen wired to your CRM — attribution from first touch to closed revenue.",
@@ -148,18 +166,22 @@ const PROJECTS = [
 
 const DIFFERENCE = [
   {
+    icon: Activity,
     title: "Instrumented from day one",
     body: "Every channel is wired to analytics and attribution before launch. If it can't be measured, we don't ship it.",
   },
   {
+    icon: Layers,
     title: "One team, full funnel",
     body: "Search, social, paid, and lifecycle under one engineering-led roof. No agency hand-offs, no dropped context.",
   },
   {
+    icon: GitCompareArrows,
     title: "Spend follows signal",
     body: "We reallocate budget to what converts, weekly. No set-and-forget media plans, no vanity spend.",
   },
   {
+    icon: TrendingUp,
     title: "Built to compound",
     body: "Search equity and pipeline velocity that keep growing after a campaign ends. We build assets, not ads.",
   },
@@ -200,7 +222,7 @@ export function MktHero() {
               ))}
             </div>
           </div>
-          <div className="relative rounded-r-xl border border-white/22 bg-white/9 p-[clamp(26px,3vw,36px)] backdrop-blur-[18px]">
+          <div className="relative rounded-[var(--r-xl)] border border-white/22 bg-white/9 p-[clamp(26px,3vw,36px)] backdrop-blur-[18px]">
             <div className="mb-[5px] font-mono text-[11px] text-tangerine-400 uppercase tracking-[0.12em]">
               Benchmark Improvements
             </div>
@@ -225,6 +247,9 @@ export function MktHero() {
                 </div>
               </div>
             ))}
+            <div className="mt-[18px] font-mono text-[10px] text-slate-600 italic leading-snug">
+              Performance benchmarks from our engineering-led campaigns
+            </div>
           </div>
         </div>
       </div>
@@ -335,9 +360,14 @@ export function MktServices() {
                   FEATURED
                 </span>
               )}
-              <span className="mb-[18px] font-mono text-[10.5px] text-slate-500 uppercase tracking-[0.12em]">
-                {s.plain}
-              </span>
+              <div className="mb-[18px] flex items-center gap-[13px]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] border border-[rgba(70,76,159,0.35)] bg-[rgba(70,76,159,0.16)] text-indigo-400">
+                  <s.icon className="h-[21px] w-[21px]" />
+                </span>
+                <span className="font-mono text-[10.5px] text-slate-500 uppercase tracking-[0.12em]">
+                  {s.plain}
+                </span>
+              </div>
               <h3 className="mb-2.5 font-sans font-semibold text-[19px] text-white leading-snug">
                 {s.name}
               </h3>
@@ -463,6 +493,9 @@ export function MktDifference() {
               key={c.title}
               className="relative flex gap-[18px] overflow-hidden rounded-2xl border border-white/12 bg-white/4 p-[clamp(24px,2.6vw,30px)] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
             >
+              <span className="relative flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[10px] border border-[rgba(120,150,240,0.32)] bg-[rgba(70,76,159,0.28)] text-indigo-300">
+                <c.icon className="h-[22px] w-[22px]" />
+              </span>
               <div>
                 <h3 className="mb-2 font-sans font-semibold text-lg text-white leading-snug">
                   {c.title}

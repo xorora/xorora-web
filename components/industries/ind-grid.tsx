@@ -37,14 +37,14 @@ function IndCard({
     <Link
       href={href}
       className={cn(
-        "ind-reveal group relative flex flex-col overflow-hidden rounded-r-lg border border-border bg-slate-50 p-[clamp(26px,2.6vw,32px)] no-underline",
+        "ind-reveal group relative flex flex-col overflow-hidden rounded-[var(--r-lg)] border border-border bg-slate-50 p-[clamp(26px,2.6vw,32px)] no-underline",
         "transition-all duration-220 ease-in-out",
         "hover:translate-y-[-3px] hover:border-border-strong hover:bg-surface hover:shadow-md",
       )}
     >
       <div className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-linear-to-r from-indigo-400 to-tangerine-500 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
       <div className="mb-[18px] flex items-center justify-between">
-        <span className="flex h-[50px] w-[50px] items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo transition-all duration-200 group-hover:bg-xo-indigo group-hover:text-white group-hover:shadow-glow-indigo">
+        <span className="flex h-[50px] w-[50px] items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo transition-all duration-200 group-hover:bg-xo-indigo group-hover:text-white group-hover:shadow-glow-indigo">
           <NavIcon name={icon as NavIconName} className="h-6 w-6" />
         </span>
         <ArrowUpRight

@@ -45,7 +45,7 @@ function MetaGrid({
       {meta.map((item) => (
         <div
           key={item.label}
-          className="rounded-r-lg border border-border bg-white px-5 py-4"
+          className="rounded-[var(--r-lg)] border border-border bg-white px-5 py-4"
         >
           <div className="font-mono text-[10.5px] text-fg3 uppercase tracking-[0.12em]">
             {item.label}
@@ -148,9 +148,9 @@ function ChallengePairsSection({
             key={pair.challenge.slice(0, 40)}
             className="cs-cs-row grid grid-cols-2 items-stretch gap-[22px]"
           >
-            <div className="rounded-r-lg border border-border bg-white p-[clamp(24px,3vw,34px)]">
+            <div className="rounded-[var(--r-lg)] border border-border bg-white p-[clamp(24px,3vw,34px)]">
               <div className="mb-4 flex items-center gap-3">
-                <span className="flex h-[38px] w-[38px] items-center justify-center rounded-r-md bg-slate-100 text-slate-500">
+                <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[var(--r-md)] bg-slate-100 text-slate-500">
                   <AlertCircle className="h-5 w-5" aria-hidden />
                 </span>
                 <span className="font-mono text-[11.5px] text-slate-400 tracking-[0.14em]">
@@ -161,11 +161,11 @@ function ChallengePairsSection({
                 {pair.challenge}
               </p>
             </div>
-            <div className="relative overflow-hidden rounded-r-lg bg-navy-900 p-[clamp(24px,3vw,34px)]">
+            <div className="relative overflow-hidden rounded-[var(--r-lg)] bg-navy-900 p-[clamp(24px,3vw,34px)]">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_80%_at_100%_0%,rgba(70,76,159,.35),transparent_60%)]" />
               <div className="relative">
                 <div className="mb-4 flex items-center gap-3">
-                  <span className="flex h-[38px] w-[38px] items-center justify-center rounded-r-md bg-xo-indigo text-white">
+                  <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[var(--r-md)] bg-xo-indigo text-white">
                     <Check className="h-5 w-5" aria-hidden />
                   </span>
                   <span className="font-mono text-[11.5px] text-tangerine-400 tracking-[0.14em]">
@@ -217,9 +217,9 @@ function ChallengeBulletsSection({
             return (
               <div
                 key={item.body.slice(0, 40)}
-                className="flex items-start gap-4 rounded-r-lg border border-border bg-slate-50 px-5 py-[18px]"
+                className="flex items-start gap-4 rounded-[var(--r-lg)] border border-border bg-slate-50 px-5 py-[18px]"
               >
-                <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-r-md border border-border bg-white text-slate-500">
+                <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[var(--r-md)] border border-border bg-white text-slate-500">
                   <AlertCircle className="h-[19px] w-[19px]" aria-hidden />
                 </span>
                 <p className="m-0 self-center font-sans text-[15px] text-fg2 leading-[1.55]">
@@ -236,7 +236,7 @@ function ChallengeBulletsSection({
 
 function PipelineBanner({ pipeline }: { pipeline: string }) {
   return (
-    <div className="mt-10 rounded-r-lg border border-white/12 bg-white/4 px-6 py-5">
+    <div className="mt-10 rounded-[var(--r-lg)] border border-white/12 bg-white/4 px-6 py-5">
       <p className="m-0 font-mono text-[12px] text-white/70 leading-[1.8]">
         {pipeline}
       </p>
@@ -290,7 +290,7 @@ function ArchitectureSection({
         onDark
         className="mb-14"
       />
-      <div className="relative overflow-hidden rounded-r-xl border border-white/10 bg-[rgba(3,9,24,.5)] p-[clamp(24px,3.5vw,48px)]">
+      <div className="relative overflow-hidden rounded-[var(--r-xl)] border border-white/10 bg-[rgba(3,9,24,.5)] p-[clamp(24px,3.5vw,48px)]">
         <XWatermark
           size={420}
           color="rgba(120,150,240,0.05)"
@@ -300,7 +300,7 @@ function ArchitectureSection({
           {content.items?.map((item) => (
             <div
               key={item.title}
-              className="rounded-r-lg border border-white/12 bg-white/[0.035] p-5"
+              className="rounded-[var(--r-lg)] border border-white/12 bg-white/[0.035] p-5"
             >
               <div className="mb-3 font-sans font-semibold text-base text-white leading-[1.1]">
                 {item.title}
@@ -329,9 +329,9 @@ function ServicesSection({ content }: { content: CaseStudySectionContent }) {
         {content.services?.map((service) => (
           <div
             key={service.name}
-            className="group hover:-translate-y-0.5 flex items-center gap-4 rounded-r-lg border border-border bg-slate-50 px-[22px] py-[22px] transition-all duration-200 hover:border-border-strong hover:bg-white hover:shadow-md"
+            className="group hover:-translate-y-0.5 flex items-center gap-4 rounded-[var(--r-lg)] border border-border bg-slate-50 px-[22px] py-[22px] transition-all duration-200 hover:border-border-strong hover:bg-white hover:shadow-md"
           >
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo transition-colors group-hover:bg-xo-indigo group-hover:text-white">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo transition-colors group-hover:bg-xo-indigo group-hover:text-white">
               <ArrowUpRight className="h-[22px] w-[22px]" aria-hidden />
             </span>
             <span className="flex-1 font-sans font-semibold text-[15.5px] text-fg1 leading-[1.25]">
@@ -364,7 +364,7 @@ function TechSection({ content }: { content: CaseStudySectionContent }) {
         {items.map((item) => (
           <div
             key={item.body}
-            className="flex shrink-0 items-center gap-3 rounded-r-md border border-border bg-white px-6 py-[15px] shadow-xs"
+            className="flex shrink-0 items-center gap-3 rounded-[var(--r-md)] border border-border bg-white px-6 py-[15px] shadow-xs"
           >
             <span className="whitespace-nowrap font-sans font-semibold text-[15px] text-fg1">
               {item.title ?? item.body}
@@ -402,9 +402,9 @@ function OutcomesSection({ content }: { content: CaseStudySectionContent }) {
             return (
               <div
                 key={item.title ?? item.body.slice(0, 40)}
-                className="rounded-r-lg border border-white/10 bg-white/4 p-5"
+                className="rounded-[var(--r-lg)] border border-white/10 bg-white/4 p-5"
               >
-                <span className="mb-3.5 flex h-[38px] w-[38px] items-center justify-center rounded-r-md border border-[rgba(120,150,240,.3)] bg-[rgba(70,76,159,.25)] text-indigo-300">
+                <span className="mb-3.5 flex h-[38px] w-[38px] items-center justify-center rounded-[var(--r-md)] border border-[rgba(120,150,240,.3)] bg-[rgba(70,76,159,.25)] text-indigo-300">
                   <Icon className="h-[19px] w-[19px]" aria-hidden />
                 </span>
                 {item.title && (
@@ -431,7 +431,7 @@ function QuoteBanner({ quote }: { quote: string }) {
     .filter(Boolean);
 
   return (
-    <div className="relative overflow-hidden rounded-r-xl bg-navy-900 p-[clamp(36px,5vw,56px)] text-center">
+    <div className="relative overflow-hidden rounded-[var(--r-xl)] bg-navy-900 p-[clamp(36px,5vw,56px)] text-center">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(90%_120%_at_50%_0%,rgba(70,76,159,.35),transparent_60%)]" />
       <div className="relative flex flex-wrap justify-center gap-[clamp(20px,4vw,52px)]">
         {parts.map((part, index) => (
@@ -470,7 +470,7 @@ function ResultsSection({ content }: { content: CaseStudySectionContent }) {
         {bullets.map((item) => (
           <div
             key={item.title ?? item.body.slice(0, 40)}
-            className="rounded-r-lg border border-border bg-slate-50 p-[clamp(26px,3vw,34px)]"
+            className="rounded-[var(--r-lg)] border border-border bg-slate-50 p-[clamp(26px,3vw,34px)]"
           >
             <span className="mb-[22px] flex h-[46px] w-[46px] items-center justify-center rounded-full bg-indigo-50 text-xo-indigo">
               <Check className="h-6 w-6" aria-hidden />

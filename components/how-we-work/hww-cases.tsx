@@ -52,7 +52,7 @@ function CaseTile({
     <Link
       href={href}
       className={cn(
-        "group relative block min-h-[380px] overflow-hidden rounded-r-xl no-underline",
+        "group relative block min-h-[380px] overflow-hidden rounded-[var(--r-xl)] no-underline",
         "border border-white/10 bg-[#080C1E]",
         "shadow-[0_22px_56px_-34px_rgba(8,12,30,0.5)]",
         "transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",

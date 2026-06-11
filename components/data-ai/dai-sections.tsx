@@ -181,7 +181,7 @@ export function DaiChallenges() {
           <div
             key={s.v}
             className={cn(
-              "flex min-h-[320px] flex-col overflow-hidden rounded-r-lg border border-border bg-surface shadow-sm",
+              "flex min-h-[320px] flex-col overflow-hidden rounded-[var(--r-lg)] border border-border bg-surface shadow-sm",
               s.lift,
             )}
           >
@@ -232,7 +232,7 @@ export function DaiServices() {
         {SERVICES.map((s) => (
           <LetsTalkContactLink
             key={s.name}
-            className="group relative block h-full cursor-pointer overflow-hidden rounded-r-lg border border-border bg-white p-[clamp(24px,2.6vw,32px)] no-underline shadow-sm transition-all hover:translate-y-[-3px] hover:border-border-strong hover:bg-surface hover:shadow-md"
+            className="group relative block h-full cursor-pointer overflow-hidden rounded-[var(--r-lg)] border border-border bg-white p-[clamp(24px,2.6vw,32px)] no-underline shadow-sm transition-all hover:translate-y-[-3px] hover:border-border-strong hover:bg-surface hover:shadow-md"
           >
             <div className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-linear-to-r from-indigo-400 to-tangerine-500 transition-transform group-hover:scale-x-100" />
             <h3 className="mb-2.5 font-sans font-semibold text-[19px] text-fg1 leading-snug">
@@ -248,7 +248,7 @@ export function DaiServices() {
           </LetsTalkContactLink>
         ))}
       </div>
-      <LetsTalkContactLink className="group relative mt-[22px] block cursor-pointer overflow-hidden rounded-r-lg border border-white/10 bg-navy-900 p-[clamp(28px,3.2vw,40px)] no-underline shadow-sm transition-all hover:translate-y-[-3px] hover:shadow-lg">
+      <LetsTalkContactLink className="group relative mt-[22px] block cursor-pointer overflow-hidden rounded-[var(--r-lg)] border border-white/10 bg-navy-900 p-[clamp(28px,3.2vw,40px)] no-underline shadow-sm transition-all hover:translate-y-[-3px] hover:shadow-lg">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_120%_at_92%_0%,rgba(70,76,159,0.5),transparent_60%)]" />
         <XWatermark
           size={300}
@@ -256,10 +256,10 @@ export function DaiServices() {
           className="-right-10 bottom-[-130px]"
         />
         <div className="relative flex flex-wrap items-center gap-[clamp(20px,3vw,40px)]">
-          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-r-md bg-tangerine-500 text-white">
+          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[var(--r-md)] bg-tangerine-500 text-white">
             <Plus className="h-7 w-7" />
           </span>
-          <div className="min-w-[-240px] flex-1">
+          <div className="min-w-[240px] flex-1">
             <h3 className="mb-2 font-sans font-semibold text-[22px] text-white leading-snug">
               Not sure where to start?
             </h3>
@@ -291,7 +291,7 @@ export function DaiEvolve() {
           {EVOLVE.map((c) => (
             <div
               key={c.t}
-              className="relative flex min-h-[300px] flex-col overflow-hidden rounded-r-lg border border-white/20 bg-white/10 p-[clamp(24px,2.4vw,30px)] backdrop-blur-lg"
+              className="relative flex min-h-[300px] flex-col overflow-hidden rounded-[var(--r-lg)] border border-white/20 bg-white/10 p-[clamp(24px,2.4vw,30px)] backdrop-blur-lg"
             >
               <h3 className="m-0 font-sans font-semibold text-white text-xl leading-snug tracking-[-0.01em]">
                 {c.t}
@@ -310,6 +310,7 @@ export function DaiEvolve() {
 export function DaiDeliver() {
   return (
     <StepApproach
+      label=""
       title="How we deliver AI and data innovation"
       steps={[...DELIVER_STEPS]}
       gradientId="daiDeliverDia"
@@ -352,7 +353,7 @@ export function DaiTools() {
           );
         })}
       </div>
-      <div className="mx-auto max-w-[1000px] overflow-hidden rounded-r-lg border border-border bg-surface shadow-sm">
+      <div className="mx-auto max-w-[1000px] overflow-hidden rounded-[var(--r-lg)] border border-border bg-surface shadow-sm">
         <div className="dai-tech-row grid grid-cols-6">
           {cur.items.map((it, i) => (
             <div
@@ -401,7 +402,7 @@ export function DaiFAQ() {
 export function DaiContact() {
   return (
     <section className="bg-navy-950 px-8 py-[clamp(64px,8vw,104px)]">
-      <div className="relative mx-auto max-w-[1180px] overflow-hidden rounded-r-xl border border-white/10 bg-navy-900 p-[clamp(32px,4.5vw,60px)]">
+      <div className="relative mx-auto max-w-[1180px] overflow-hidden rounded-[var(--r-xl)] border border-white/10 bg-navy-900 p-[clamp(32px,4.5vw,60px)]">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_90%_at_90%_0%,rgba(70,76,159,0.45),transparent_58%)]" />
         <div className="svc-contact-grid relative grid grid-cols-[0.92fr_1.08fr] gap-[clamp(36px,5vw,64px)]">
           <div>
@@ -414,7 +415,7 @@ export function DaiContact() {
               a preliminary plan.
             </p>
           </div>
-          <div className="flex items-center rounded-r-lg border border-white/10 bg-white/3 p-[clamp(24px,3vw,32px)]">
+          <div className="flex items-center rounded-[var(--r-lg)] border border-white/10 bg-white/3 p-[clamp(24px,3vw,32px)]">
             <LetsTalkContactLink className="font-sans font-semibold text-base text-tangerine-400 no-underline hover:text-tangerine-300">
               Submit a request →
             </LetsTalkContactLink>

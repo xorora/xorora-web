@@ -20,7 +20,7 @@ export function WorkTile({ study }: WorkTileProps) {
     <Link
       href={ROUTES.caseStudy(study.slug)}
       className={cn(
-        "group flex flex-col overflow-hidden rounded-r-xl border border-border bg-surface no-underline",
+        "group flex flex-col overflow-hidden rounded-[var(--r-xl)] border border-border bg-surface no-underline",
         "shadow-xs transition-all duration-250 ease-in-out",
         "hover:-translate-y-1 hover:shadow-lg",
       )}
@@ -54,7 +54,7 @@ export function WorkTile({ study }: WorkTileProps) {
           {study.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-r-sm bg-slate-100 px-[11px] py-[5px] font-mono text-[11px] text-slate-600 tracking-[0.06em]"
+              className="rounded-[var(--r-sm)] bg-slate-100 px-[11px] py-[5px] font-mono text-[11px] text-slate-600 tracking-[0.06em]"
             >
               {tag}
             </span>

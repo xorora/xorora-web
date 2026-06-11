@@ -151,7 +151,7 @@ function ProcessStep({
             const Icon = ICON_MAP[iconKey] ?? Compass;
             return (
               <div key={title} className="flex gap-3.5">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo">
                   <Icon className="h-[19px] w-[19px]" aria-hidden />
                 </span>
                 <div>
@@ -174,7 +174,7 @@ function ProcessStep({
           img={step.img}
           title={`${step.title} ${step.accent}`}
         />
-        <div className="gapy-[-18px] mt-4 grid grid-cols-2 gap-x-6 rounded-r-lg border border-border bg-slate-50 p-[clamp(20px,2.4vw,28px)]">
+        <div className="gap-y-[18px] mt-4 grid grid-cols-2 gap-x-6 rounded-[var(--r-lg)] border border-border bg-slate-50 p-[clamp(20px,2.4vw,28px)]">
           {step.meta.map(([key, value]) => (
             <div key={key}>
               <div
@@ -206,7 +206,7 @@ function StepVisual({
   return (
     <div
       className={cn(
-        "group relative h-[320px] overflow-hidden rounded-r-xl border border-white/10 bg-[#080C1E]",
+        "group relative h-[320px] overflow-hidden rounded-[var(--r-xl)] border border-white/10 bg-[#080C1E]",
         "shadow-[0_20px_52px_-34px_rgba(8,12,30,0.5)]",
         "transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
         "hover:translate-y-[-3px] hover:shadow-[0_34px_78px_-34px_rgba(8,12,30,0.65)]",

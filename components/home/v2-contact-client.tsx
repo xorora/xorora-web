@@ -38,7 +38,7 @@ export function V2ContactClient({ faqs }: V2ContactClientProps) {
                     </span>
                     <span
                       className={cn(
-                        "flex h-8 w-8 shrink-0 items-center justify-center rounded-r-md border transition-all duration-180",
+                        "flex h-8 w-8 shrink-0 items-center justify-center rounded-[var(--r-md)] border transition-all duration-180",
                         isOpen
                           ? "border-transparent bg-xo-indigo text-white"
                           : "border-border-strong bg-surface text-fg2",

@@ -44,7 +44,7 @@ export function HwwContact() {
             Book a build review
           </LetsTalkContactLink>
         </div>
-        <div className="mt-9 flex flex-wrap justify-center gap-x-[-clamp(20px,4vw,40px)] gap-y-5">
+        <div className="mt-9 flex flex-wrap justify-center gap-x-[clamp(20px,4vw,40px)] gap-y-5">
           {CONTACT_ITEMS.map(({ icon: Icon, value }) => (
             <div
               key={value}

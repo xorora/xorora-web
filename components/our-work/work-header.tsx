@@ -5,7 +5,7 @@ import { WorkHeaderActions } from "./work-header-actions";
 
 export function WorkHeader() {
   return (
-    <section className="relative overflow-hidden bg-navy-950">
+    <section className="relative mt-[-72px] overflow-hidden bg-navy-950 pt-[72px]">
       <TechFieldDynamic />
       <div className="ow-beams pointer-events-none absolute inset-0">
         <span className="ow-beam ow-beam-1" />

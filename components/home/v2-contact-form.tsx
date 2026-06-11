@@ -18,13 +18,13 @@ const CONTACT_ITEMS = [
 ] as const;
 
 const fieldClass =
-  "w-full rounded-r-md border border-white/16 bg-white/[0.07] px-4 py-3.5 font-sans text-[14.5px] text-white outline-hidden transition-shadow placeholder:text-white/40 focus:border-tangerine-400 focus:shadow-[0_0_0_3px_rgba(255,138,61,0.25)]";
+  "w-full rounded-[var(--r-md)] border border-white/16 bg-white/[0.07] px-4 py-3.5 font-sans text-[14.5px] text-white outline-hidden transition-shadow placeholder:text-white/40 focus:border-tangerine-400 focus:shadow-[0_0_0_3px_rgba(255,138,61,0.25)]";
 
 export function V2ContactForm() {
   const [sent, setSent] = useState(false);
 
   return (
-    <div className="sticky top-24 overflow-hidden rounded-r-xl bg-navy-900 p-[clamp(28px,3vw,40px)]">
+    <div className="sticky top-24 overflow-hidden rounded-[var(--r-xl)] bg-navy-900 p-[clamp(28px,3vw,40px)]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_90%_0%,rgba(70,76,159,0.5),transparent_58%)]" />
       <XWatermark
         size={300}
@@ -97,7 +97,7 @@ export function V2ContactForm() {
             </Button>
           </form>
         )}
-        <div className="mt-6 flex flex-wrap gap-x-[-22px] gap-y-3.5">
+        <div className="mt-6 flex flex-wrap gap-x-[22px] gap-y-3.5">
           {TRUST_ITEMS.map((t) => (
             <span
               key={t}
@@ -111,7 +111,7 @@ export function V2ContactForm() {
             </span>
           ))}
         </div>
-        <div className="mt-6 flex flex-wrap gap-x-[-26px] gap-y-3 border-white/10 border-t pt-[22px]">
+        <div className="mt-6 flex flex-wrap gap-x-[26px] gap-y-3 border-white/10 border-t pt-[22px]">
           {CONTACT_ITEMS.map(({ icon: Icon, value }) => (
             <div
               key={value}

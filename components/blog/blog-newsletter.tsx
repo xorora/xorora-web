@@ -13,7 +13,7 @@ const PERKS = [
 ] as const;
 
 const fieldClass =
-  "w-full rounded-r-md border bg-white/5 px-[15px] py-[13px] font-sans text-[15px] text-white outline-hidden transition-shadow placeholder:text-white/40 focus:border-tangerine-500 focus:shadow-focus";
+  "w-full rounded-[var(--r-md)] border bg-white/5 px-[15px] py-[13px] font-sans text-[15px] text-white outline-hidden transition-shadow placeholder:text-white/40 focus:border-tangerine-500 focus:shadow-focus";
 
 export function BlogNewsletter() {
   const [email, setEmail] = useState("");
@@ -25,7 +25,7 @@ export function BlogNewsletter() {
       id="blog-news"
       className="bg-surface px-8 pb-[clamp(56px,7vw,96px)]"
     >
-      <div className="relative mx-auto max-w-[1180px] overflow-hidden rounded-r-xl bg-navy-900 p-[clamp(40px,5vw,72px)]">
+      <div className="relative mx-auto max-w-[1180px] overflow-hidden rounded-[var(--r-xl)] bg-navy-900 p-[clamp(40px,5vw,72px)]">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_110%_at_88%_0%,rgba(70,76,159,0.5),transparent_60%)]" />
         <div className="pointer-events-none absolute inset-0 opacity-70 [background:repeating-radial-gradient(circle_at_90%_10%,rgba(120,150,240,0.05)_0px,rgba(120,150,240,0.05)_1px,transparent_1px,transparent_44px)]" />
         <XWatermark
@@ -47,7 +47,7 @@ export function BlogNewsletter() {
               breakdown a month on building production AI. Plus our free
               playbook when you subscribe.
             </p>
-            <div className="flex flex-wrap gap-x-[-22px] gap-y-3">
+            <div className="flex flex-wrap gap-x-[22px] gap-y-3">
               {PERKS.map((perk) => (
                 <span
                   key={perk}
@@ -64,7 +64,7 @@ export function BlogNewsletter() {
           </div>
           <div>
             {sent ? (
-              <div className="rounded-r-lg border border-white/12 bg-white/4 px-8 py-10 text-center">
+              <div className="rounded-[var(--r-lg)] border border-white/12 bg-white/4 px-8 py-10 text-center">
                 <div className="mx-auto mb-4 flex h-[52px] w-[52px] items-center justify-center rounded-full bg-success/18 text-success">
                   <Check className="h-[26px] w-[26px]" aria-hidden />
                 </div>
@@ -76,7 +76,7 @@ export function BlogNewsletter() {
                 </p>
               </div>
             ) : (
-              <div className="rounded-r-lg border border-white/12 bg-white/4 p-[clamp(24px,3vw,32px)]">
+              <div className="rounded-[var(--r-lg)] border border-white/12 bg-white/4 p-[clamp(24px,3vw,32px)]">
                 <label
                   htmlFor="blog-newsletter-email"
                   className="mb-2 block font-sans font-semibold text-[12.5px] text-white/70"

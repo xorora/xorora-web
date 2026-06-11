@@ -28,7 +28,7 @@ export function WorkContact() {
       id="contact"
       className="scroll-mt-24 bg-surface px-8 pb-[clamp(64px,8vw,104px)]"
     >
-      <div className="relative mx-auto max-w-[1240px] overflow-hidden rounded-r-xl bg-navy-900 p-[clamp(36px,5vw,68px)]">
+      <div className="relative mx-auto max-w-[1240px] overflow-hidden rounded-[var(--r-xl)] bg-navy-900 p-[clamp(36px,5vw,68px)]">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_90%_at_12%_0%,rgba(70,76,159,0.4),transparent_56%)]" />
         <XWatermark
           size={460}
@@ -77,7 +77,7 @@ export function WorkContact() {
             </div>
           </div>
 
-          <div className="rounded-r-lg bg-white p-[clamp(26px,3vw,38px)] shadow-xl">
+          <div className="rounded-[var(--r-lg)] bg-white p-[clamp(26px,3vw,38px)] shadow-xl">
             {sent ? (
               <div className="py-[60px] text-center">
                 <span className="mx-auto mb-[18px] flex h-14 w-14 items-center justify-center rounded-full bg-accent-soft text-success">
@@ -175,7 +175,7 @@ function WorkField({ label, placeholder, textarea, required }: WorkFieldProps) {
   const fieldId = useId();
 
   const fieldClass = cn(
-    "w-full rounded-r-md border px-3.5 py-3 font-sans text-[15px] text-fg1 outline-hidden transition-shadow",
+    "w-full rounded-[var(--r-md)] border px-3.5 py-3 font-sans text-[15px] text-fg1 outline-hidden transition-shadow",
     focused
       ? "border-tangerine-500 bg-white shadow-focus"
       : "border-border-strong bg-slate-50",

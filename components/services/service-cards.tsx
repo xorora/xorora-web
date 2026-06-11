@@ -104,14 +104,14 @@ function ServiceCard({
   return (
     <LetsTalkContactLink
       className={cn(
-        "group relative block cursor-pointer overflow-hidden rounded-r-lg border border-border bg-slate-50 p-[clamp(24px,2.6vw,32px)] no-underline",
+        "group relative block cursor-pointer overflow-hidden rounded-[var(--r-lg)] border border-border bg-slate-50 p-[clamp(24px,2.6vw,32px)] no-underline",
         "transition-all duration-220 ease-in-out",
         "hover:translate-y-[-3px] hover:border-border-strong hover:bg-surface hover:shadow-md",
       )}
     >
       <div className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-linear-to-r from-indigo-400 to-tangerine-500 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
       <div className="mb-[18px] flex items-center justify-between">
-        <span className="flex h-12 w-12 items-center justify-center rounded-r-md bg-indigo-50 text-xo-indigo transition-all duration-200 group-hover:bg-xo-indigo group-hover:text-white">
+        <span className="flex h-12 w-12 items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo transition-all duration-200 group-hover:bg-xo-indigo group-hover:text-white">
           <Icon className="h-[23px] w-[23px]" aria-hidden />
         </span>
         <ArrowUpRight className="h-[19px] w-[19px] text-slate-400 transition-colors duration-200 group-hover:text-tangerine-500" />
@@ -172,9 +172,9 @@ export function OutcomeGrid({ label, title, sub, items }: OutcomeGridProps) {
             return (
               <div
                 key={item.title}
-                className="relative overflow-hidden rounded-r-lg border border-white/12 bg-white/4 p-[clamp(22px,2.4vw,28px)]"
+                className="relative overflow-hidden rounded-[var(--r-lg)] border border-white/12 bg-white/4 p-[clamp(22px,2.4vw,28px)]"
               >
-                <span className="mb-[18px] flex h-11 w-11 items-center justify-center rounded-r-md border border-indigo-300/32 bg-indigo-900/28 text-indigo-300">
+                <span className="mb-[18px] flex h-11 w-11 items-center justify-center rounded-[var(--r-md)] border border-indigo-300/32 bg-indigo-900/28 text-indigo-300">
                   <Icon className="h-[22px] w-[22px]" aria-hidden />
                 </span>
                 <h3 className="mb-2.5 font-sans font-semibold text-[17.5px] text-white leading-snug">

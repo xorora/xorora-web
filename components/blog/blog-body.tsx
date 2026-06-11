@@ -45,7 +45,7 @@ export function BlogBody({ posts }: BlogBodyProps) {
                   type="button"
                   onClick={() => setCategory(cat)}
                   className={cn(
-                    "flex w-full cursor-pointer items-center justify-between gap-2.5 rounded-r-md border border-transparent px-3.5 py-[11px] text-left font-sans text-[14.5px] transition-all duration-150",
+                    "flex w-full cursor-pointer items-center justify-between gap-2.5 rounded-[var(--r-md)] border border-transparent px-3.5 py-[11px] text-left font-sans text-[14.5px] transition-all duration-150",
                     active
                       ? "bg-indigo-50 font-semibold text-xo-indigo"
                       : "bg-transparent font-medium text-fg2 hover:bg-slate-50",
@@ -64,7 +64,7 @@ export function BlogBody({ posts }: BlogBodyProps) {
               );
             })}
           </div>
-          <div className="relative mt-7 overflow-hidden rounded-r-lg bg-navy-900 p-[clamp(20px,2.4vw,26px)]">
+          <div className="relative mt-7 overflow-hidden rounded-[var(--r-lg)] bg-navy-900 p-[clamp(20px,2.4vw,26px)]">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_80%_at_100%_0%,rgba(70,76,159,0.4),transparent_60%)]" />
             <div className="relative">
               <Rss
@@ -117,7 +117,7 @@ function BlogCard({ post, wide }: { post: BlogPost; wide?: boolean }) {
   return (
     <article
       className={cn(
-        "group flex overflow-hidden rounded-r-lg border border-border bg-surface shadow-xs",
+        "group flex overflow-hidden rounded-[var(--r-lg)] border border-border bg-surface shadow-xs",
         "transition-all duration-220 ease-in-out",
         "hover:translate-y-[-3px] hover:border-border-strong hover:shadow-md",
         wide ? "blog-card-wide col-span-2 flex-row" : "flex-col",

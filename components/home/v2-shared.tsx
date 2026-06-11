@@ -165,7 +165,7 @@ export function ServiceBlob({
       viewBox="0 0 64 64"
       fill="none"
       aria-hidden
-      className="dropshadow-[-0_6px_14px_rgba(46,85,214,0.45)]"
+      className="drop-shadow-[0_6px_14px_rgba(46,85,214,0.45)]"
     >
       <title>Decorative icon</title>
       <defs>

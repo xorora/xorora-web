@@ -114,7 +114,7 @@ export function CaseStudyHero({ study }: CaseStudyHeroProps) {
             url={study.heroUrl ?? "app.xorora.ai"}
             glow
           />
-          <div className="absolute bottom-[-22px] left-[-22px] flex items-center gap-2.5 rounded-r-md border border-white/12 bg-navy-950 px-[18px] py-3 text-white shadow-lg">
+          <div className="absolute bottom-[-22px] left-[-22px] flex items-center gap-2.5 rounded-[var(--r-md)] border border-white/12 bg-navy-950 px-[18px] py-3 text-white shadow-lg">
             <span className="h-2 w-2 rounded-full bg-success shadow-[0_0_8px_var(--success)]" />
             <span className="font-mono text-xs">{heroBadge(study)}</span>
           </div>

@@ -49,7 +49,7 @@ export function AboutFAQ({ faqs }: AboutFAQProps) {
                     </span>
                     <span
                       className={cn(
-                        "flex h-8 w-8 shrink-0 items-center justify-center rounded-r-md border transition-all duration-180",
+                        "flex h-8 w-8 shrink-0 items-center justify-center rounded-[var(--r-md)] border transition-all duration-180",
                         isOpen
                           ? "border-transparent bg-xo-indigo text-white"
                           : "border-border-strong bg-surface text-fg2",
@@ -73,7 +73,7 @@ export function AboutFAQ({ faqs }: AboutFAQProps) {
           </div>
         </div>
 
-        <div className="sticky top-24 overflow-hidden rounded-r-xl bg-navy-900 p-[clamp(30px,3.5vw,44px)]">
+        <div className="sticky top-24 overflow-hidden rounded-[var(--r-xl)] bg-navy-900 p-[clamp(30px,3.5vw,44px)]">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_90%_0%,rgba(70,76,159,0.45),transparent_58%)]" />
           <XWatermark
             size={320}
@@ -88,7 +88,7 @@ export function AboutFAQ({ faqs }: AboutFAQProps) {
               We respond within one business day with a real person, not an
               automated acknowledgement.
             </p>
-            <LetsTalkContactLink className="flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-r-md border border-transparent bg-xo-indigo px-[30px] py-[15px] font-sans font-semibold text-base text-white transition-all duration-180 ease-in-out hover:bg-indigo-600 hover:shadow-glow-indigo active:scale-[0.98]">
+            <LetsTalkContactLink className="flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-[var(--r-md)] border border-transparent bg-xo-indigo px-[30px] py-[15px] font-sans font-semibold text-base text-white transition-all duration-180 ease-in-out hover:bg-indigo-600 hover:shadow-glow-indigo active:scale-[0.98]">
               Start the conversation
               <ArrowUpRight className="h-4 w-4" aria-hidden />
             </LetsTalkContactLink>

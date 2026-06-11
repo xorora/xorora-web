@@ -81,7 +81,7 @@ function ServiceFeatured({ svc }: { svc: ServiceItem }) {
     <Link
       href={svc.href}
       className={cn(
-        "v2-svc-feat group relative flex min-h-[420px] flex-col overflow-hidden rounded-r-lg p-[clamp(28px,2.6vw,38px)] no-underline transition-all duration-300",
+        "v2-svc-feat group relative flex min-h-[420px] flex-col overflow-hidden rounded-[var(--r-lg)] p-[clamp(28px,2.6vw,38px)] no-underline transition-all duration-300",
         "border border-[rgba(120,150,240,0.22)] bg-linear-to-br from-[#0C1430] via-[#0A1024] to-[#0B1640]",
         "shadow-[0_24px_60px_-40px_rgba(2,8,30,0.6)]",
         "hover:-translate-y-1 hover:border-[rgba(120,150,240,0.4)] hover:shadow-[0_40px_80px_-36px_rgba(2,8,30,0.8)]",
@@ -110,7 +110,7 @@ function ServiceFeatured({ svc }: { svc: ServiceItem }) {
         <span className="inline-flex items-center gap-2 font-sans font-semibold text-[14.5px] text-tangerine-400">
           Read more
           <ArrowRight
-            className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[-3px]"
+            className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[3px]"
             aria-hidden
           />
         </span>
@@ -131,12 +131,12 @@ function ServiceTile({
       <Link
         href={svc.href}
         className={cn(
-          "group relative flex h-full min-h-[210px] flex-col overflow-hidden rounded-r-lg p-[clamp(24px,2.2vw,30px)] no-underline transition-all duration-300",
+          "group relative flex h-full min-h-[210px] flex-col overflow-hidden rounded-[var(--r-lg)] p-[clamp(24px,2.2vw,30px)] no-underline transition-all duration-300",
           "border border-white/12 bg-white/5 backdrop-blur-2xl",
           "hover:-translate-y-1 hover:border-white/24 hover:bg-white/10 hover:shadow-[0_30px_60px_-34px_rgba(2,8,30,0.7)]",
         )}
       >
-        <div className="pointer-events-none absolute inset-0 rounded-r-lg bg-linear-to-br from-white/12 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 rounded-[var(--r-lg)] bg-linear-to-br from-white/12 to-transparent" />
         <div className="relative flex h-full flex-col">
           <div className="mb-[18px] flex items-start justify-between">
             <ServiceBlob shape={svc.shape} size={50} />
@@ -153,7 +153,7 @@ function ServiceTile({
           <span className="mt-auto inline-flex items-center gap-2 pt-[18px] font-sans font-semibold text-[13.5px] text-white/82 transition-colors duration-200 group-hover:text-tangerine-400">
             Read more
             <ArrowRight
-              className="h-[15px] w-[15px] transition-transform duration-200 group-hover:translate-x-[-3px]"
+              className="h-[15px] w-[15px] transition-transform duration-200 group-hover:translate-x-[3px]"
               aria-hidden
             />
           </span>
