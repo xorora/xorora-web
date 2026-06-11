@@ -42,7 +42,7 @@ export async function V2Cases() {
         ))}
       </div>
       <div className="mt-10">
-        <LetsTalkContactLink className="inline-flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-[var(--r-md)] border border-transparent bg-xo-indigo px-[30px] py-[15px] font-sans font-semibold text-base text-white transition-all duration-180 ease-in-out hover:bg-indigo-600 hover:shadow-glow-indigo active:scale-[0.98]">
+        <LetsTalkContactLink className="inline-flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-(--r-md) border border-transparent bg-xo-indigo px-[30px] py-[15px] font-sans font-semibold text-base text-white transition-all duration-180 ease-in-out hover:bg-indigo-600 hover:shadow-glow-indigo active:scale-[0.98]">
           Book a free strategy call
           <ArrowUpRight className="h-4 w-4" aria-hidden />
         </LetsTalkContactLink>
@@ -63,7 +63,7 @@ function CaseCard({
     <Link
       href={href}
       className={cn(
-        "group relative block min-h-[440px] overflow-hidden rounded-[var(--r-xl)] no-underline",
+        "group relative block min-h-[440px] overflow-hidden rounded-(--r-xl) no-underline",
         "border border-white/10 bg-[#080C1E]",
         "shadow-[0_22px_56px_-34px_rgba(8,12,30,0.5)]",
         "transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",

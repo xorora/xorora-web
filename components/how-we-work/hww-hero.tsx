@@ -15,11 +15,11 @@ export function HwwHero() {
             How We Work
           </div>
           <h1 className="mb-6 text-balance font-extrabold font-sans text-[clamp(38px,5.4vw,68px)] text-white leading-none tracking-[-0.03em]">
-            We serve business and{" "}
+            We serve business and&nbsp;
             <span className="bg-linear-to-r from-[#C3C6EC] via-[#8E94E0] to-tangerine-400 bg-clip-text text-transparent">
               tech leaders
-            </span>{" "}
-            building software
+            </span>
+            &nbsp; building software
             <span className="text-tangerine-400">.</span>
           </h1>
           <p className="mb-[18px] max-w-[520px] font-sans text-[clamp(17px,1.9vw,20px)] text-white/74 leading-relaxed">

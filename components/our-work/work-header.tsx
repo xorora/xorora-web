@@ -28,7 +28,7 @@ export function WorkHeader() {
           <SignalRule color="var(--tangerine-400)" className="scale-x-[-1]" />
         </div>
         <h1 className="m-0 mb-6 text-balance font-extrabold font-sans text-[clamp(44px,7vw,92px)] text-white leading-[0.98] tracking-[-0.03em]">
-          Work that{" "}
+          Work that&nbsp;
           <span
             className="bg-clip-text text-transparent"
             style={{

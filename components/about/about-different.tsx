@@ -49,9 +49,11 @@ export function AboutDifferent() {
             <Image
               src="/assets/nav-logo-x.png"
               alt="X"
-              width={52}
-              height={52}
-              className="inline-block h-[1em] w-auto"
+              width={0}
+              height={0}
+              sizes="52px"
+              style={{ height: "1em", width: "auto" }}
+              className="inline-block h-auto w-auto"
             />
             <span>
               Factor<span className="text-tangerine-400">.</span>
@@ -86,11 +88,11 @@ function DiffCard({
   return (
     <div
       className={cn(
-        "group relative overflow-hidden rounded-[var(--r-lg)] border border-white/12 bg-white/4 p-[clamp(24px,2.4vw,30px)]",
+        "group relative overflow-hidden rounded-(--r-lg) border border-white/12 bg-white/4 p-[clamp(24px,2.4vw,30px)]",
         "transition-all duration-200 hover:translate-y-[-3px] hover:border-indigo-300/50",
       )}
     >
-      <span className="mb-[18px] flex h-11 w-11 items-center justify-center rounded-[var(--r-md)] border border-indigo-300/32 bg-indigo-700/28 text-indigo-300">
+      <span className="mb-[18px] flex h-11 w-11 items-center justify-center rounded-(--r-md) border border-indigo-300/32 bg-indigo-700/28 text-indigo-300">
         <Icon className="h-[22px] w-[22px]" aria-hidden />
       </span>
       <h3 className="mb-2.5 font-sans font-semibold text-lg text-white leading-snug">

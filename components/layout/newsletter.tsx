@@ -28,7 +28,7 @@ export function Newsletter() {
         onBlur={() => setFocused(false)}
         placeholder="Your work email"
         className={cn(
-          "min-w-[180px] flex-1 rounded-[var(--r-md)] border bg-white/5 px-[15px] py-3 font-sans text-[14.5px] text-white outline-hidden transition-shadow",
+          "min-w-[180px] flex-1 rounded-(--r-md) border bg-white/5 px-[15px] py-3 font-sans text-[14.5px] text-white outline-hidden transition-shadow",
           focused ? "border-tangerine-500 shadow-focus" : "border-white/18",
         )}
       />

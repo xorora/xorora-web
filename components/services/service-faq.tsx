@@ -47,7 +47,7 @@ export function ServiceFaq({
               <div
                 key={item.q}
                 className={cn(
-                  "overflow-hidden rounded-[var(--r-lg)] border bg-surface transition-colors duration-180",
+                  "overflow-hidden rounded-(--r-lg) border bg-surface transition-colors duration-180",
                   isOpen ? "border-border-strong" : "border-border",
                 )}
               >
@@ -99,7 +99,7 @@ export function ServiceFaq({
                   </span>
                   <span
                     className={cn(
-                      "flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-[var(--r-md)] border transition-all duration-180",
+                      "flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-(--r-md) border transition-all duration-180",
                       isOpen
                         ? "border-transparent bg-xo-indigo text-white"
                         : "border-border-strong bg-surface text-fg2",

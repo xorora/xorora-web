@@ -14,7 +14,7 @@ export function ConHero() {
         <div>
           <ServiceBreadcrumb current="Consulting" />
           <h1 className="hero-reveal hero-reveal-1 mb-6 text-balance font-extrabold font-sans text-[clamp(34px,4.6vw,60px)] text-white leading-[1.02] tracking-[-0.03em]">
-            IT consulting services that turn ambition into a{" "}
+            IT consulting services that turn ambition into a&nbsp;
             <span className="text-tangerine-400">clear roadmap.</span>
           </h1>
           <p className="hero-reveal hero-reveal-2 mb-8 max-w-[520px] font-sans text-lg text-white/74 leading-relaxed">

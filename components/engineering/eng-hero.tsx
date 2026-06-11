@@ -14,7 +14,7 @@ export function EngHero() {
         <div>
           <ServiceBreadcrumb current="Engineering" />
           <h1 className="hero-reveal hero-reveal-1 mb-6 text-balance font-extrabold font-sans text-[clamp(36px,4.8vw,62px)] text-white leading-none tracking-[-0.03em]">
-            Software engineering that{" "}
+            Software engineering that&nbsp;
             <span className="bg-linear-to-br from-[#C3C6EC] via-[#8E94E0] to-tangerine-400 bg-clip-text text-transparent">
               ships and scales
             </span>

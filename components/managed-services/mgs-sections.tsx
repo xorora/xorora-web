@@ -161,7 +161,7 @@ export function MgsHero() {
       <div className="svc-wrap relative z-5 px-8 py-[clamp(96px,11vw,150px)]">
         <MgsEyebrow>Managed Services</MgsEyebrow>
         <h1 className="hero-reveal hero-reveal-1 mt-[26px] mb-[26px] max-w-[940px] font-extrabold font-sans text-[clamp(40px,6vw,72px)] text-white uppercase leading-tight tracking-[-0.02em]">
-          Your IT should work as hard as{" "}
+          Your IT should work as hard as&nbsp;
           <span className="text-indigo-400">your team does.</span>
         </h1>
         <p className="hero-reveal hero-reveal-2 mb-10 max-w-[560px] font-sans text-lg text-slate-400 leading-relaxed">

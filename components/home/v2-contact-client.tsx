@@ -20,7 +20,7 @@ export function V2ContactClient({ faqs }: V2ContactClientProps) {
         <div>
           <V2Eyebrow>Get in touch</V2Eyebrow>
           <h2 className="mb-8 text-balance font-bold font-sans text-[clamp(28px,3.6vw,46px)] text-fg1 leading-tight tracking-tight">
-            Everything you may ask before{" "}
+            Everything you may ask before&nbsp;
             <span className="text-xo-indigo">booking a call</span>
           </h2>
           <div>

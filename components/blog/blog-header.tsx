@@ -22,7 +22,7 @@ export function BlogHeader() {
           <SignalRule color="var(--tangerine-400)" className="scale-x-[-1]" />
         </div>
         <h1 className="mb-[22px] text-balance font-extrabold font-sans text-[clamp(38px,5.6vw,68px)] text-white leading-none tracking-[-0.03em]">
-          Field notes on shipping{" "}
+          Field notes on shipping&nbsp;
           <span className="bg-linear-to-r from-[#C3C6EC] via-[#8E94E0] to-tangerine-400 bg-clip-text text-transparent">
             production AI
           </span>

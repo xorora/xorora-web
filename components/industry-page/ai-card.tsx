@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import type { AiCardItem } from "@/lib/industries/types";
 import { cn } from "@/lib/utils";
@@ -17,7 +18,7 @@ export function AiCard({ item, featured, spanRows }: AiCardProps) {
   return (
     <div
       className={cn(
-        "group ind-page-ai-feat relative flex min-h-64 flex-col overflow-hidden rounded-[var(--r-lg)] border border-white/12 transition-[border-color,transform] duration-200 hover:translate-y-[-3px] hover:border-indigo-300/55",
+        "group ind-page-ai-feat relative flex min-h-64 flex-col overflow-hidden rounded-(--r-lg) border border-white/12 transition-[border-color,transform] duration-200 hover:translate-y-[-3px] hover:border-indigo-300/55",
         spanRows && "row-span-2 min-h-80",
         featured
           ? "bg-[linear-gradient(165deg,rgba(70,76,159,.5),rgba(10,14,40,.85))]"
@@ -25,14 +26,15 @@ export function AiCard({ item, featured, spanRows }: AiCardProps) {
       )}
     >
       {item.image && imageOk && (
-        // biome-ignore lint/performance/noImgElement: dynamic URLs with onError fallback
-        <img
+        <Image
           src={item.image}
           alt=""
-          aria-hidden="true"
+          aria-hidden
+          fill
+          sizes="(max-width: 768px) 100vw, 400px"
           onError={() => setImageOk(false)}
           className={cn(
-            "absolute inset-0 z-0 h-full w-full scale-[1.12] object-cover blur-lg brightness-50 saturate-[1.1] transition-[filter,transform] duration-500 group-hover:scale-[1.03] group-hover:blur-0 group-hover:brightness-[0.96] group-hover:saturate-[1.06]",
+            "z-0 scale-[1.12] object-cover blur-lg brightness-50 saturate-[1.1] transition-[filter,transform] duration-500 group-hover:scale-[1.03] group-hover:blur-0 group-hover:brightness-[0.96] group-hover:saturate-[1.06]",
           )}
         />
       )}
@@ -40,7 +42,7 @@ export function AiCard({ item, featured, spanRows }: AiCardProps) {
       <div className="pointer-events-none absolute inset-0 z-2 bg-[linear-gradient(to_top,rgba(4,7,18,.93)_0%,rgba(4,7,18,.62)_34%,rgba(4,7,18,.18)_64%,rgba(4,7,18,.06)_100%)]" />
 
       <div className="relative z-3 flex flex-1 flex-col p-[clamp(24px,2.4vw,30px)]">
-        <span className="mb-[18px] flex h-[46px] w-[46px] items-center justify-center rounded-[var(--r-md)] border border-indigo-300/50 bg-indigo-500/45 text-white backdrop-blur-sm">
+        <span className="mb-[18px] flex h-[46px] w-[46px] items-center justify-center rounded-(--r-md) border border-indigo-300/50 bg-indigo-500/45 text-white backdrop-blur-sm">
           <IndustryIcon name={item.icon} className="h-[23px] w-[23px]" />
         </span>
         <div className="mt-auto">

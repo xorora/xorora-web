@@ -79,28 +79,33 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
           <div className="pointer-events-auto flex w-full max-w-[1080px] items-center gap-3 rounded-pill border border-white/12 bg-[rgba(8,12,30,0.72)] px-[9px] py-[9px] pl-[22px] shadow-[0_18px_50px_-24px_rgba(0,0,0,0.7)] backdrop-blur-lg">
             <Link
               href={ROUTES.home}
-              className="relative flex h-9 shrink-0 items-center transition-[width] duration-300 ease-in-out"
-              style={{ width: scrolled ? 40 : 150 }}
+              className="relative flex h-9 w-[150px] shrink-0 items-center"
             >
               <Image
                 src="/assets/nav-logo-full.png"
                 alt="Xorora"
-                width={150}
-                height={28}
+                width={0}
+                height={0}
+                sizes="150px"
+                style={{ height: 28, width: "auto" }}
                 className={cn(
-                  "absolute left-0 h-7 w-auto transition-opacity duration-300",
+                  "absolute left-0 h-auto w-auto transition-opacity duration-300",
                   scrolled ? "opacity-0" : "opacity-100",
                 )}
+                priority
               />
               <Image
                 src="/assets/nav-logo-x.png"
                 alt="Xorora"
-                width={40}
-                height={28}
+                width={0}
+                height={0}
+                sizes="40px"
+                style={{ height: 28, width: "auto" }}
                 className={cn(
-                  "absolute left-0 h-7 w-auto transition-opacity duration-300",
+                  "absolute left-0 h-auto w-auto transition-opacity duration-300",
                   scrolled ? "opacity-100" : "opacity-0",
                 )}
+                priority
               />
             </Link>
 
@@ -118,7 +123,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
                     setOpen((value) => (value === trigger ? null : trigger));
                   }}
                   className={cn(
-                    "flex cursor-pointer items-center gap-1.5 rounded-[var(--r-md)] border-0 bg-transparent px-[15px] py-[9px] font-medium font-sans text-[14.5px] transition-colors duration-150",
+                    "flex cursor-pointer items-center gap-1.5 rounded-(--r-md) border-0 bg-transparent px-[15px] py-[9px] font-medium font-sans text-[14.5px] transition-colors duration-150",
                     open === trigger ? "text-white" : "text-white/74",
                   )}
                 >
@@ -136,7 +141,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
                 href={nav.caseStudiesHref}
                 onMouseEnter={() => enter(null)}
                 className={cn(
-                  "rounded-[var(--r-md)] px-[15px] py-[9px] font-medium font-sans text-[14.5px] no-underline transition-colors duration-150 hover:text-white",
+                  "rounded-(--r-md) px-[15px] py-[9px] font-medium font-sans text-[14.5px] no-underline transition-colors duration-150 hover:text-white",
                   current === "work" ? "text-white" : "text-white/74",
                 )}
               >
@@ -156,7 +161,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
             <button
               type="button"
               onClick={() => setMobile((value) => !value)}
-              className="xo-mn-burger hidden h-[42px] w-[42px] shrink-0 cursor-pointer items-center justify-center rounded-[var(--r-md)] border border-white/14 bg-white/8 text-white"
+              className="xo-mn-burger ml-auto hidden h-[42px] w-[42px] shrink-0 cursor-pointer items-center justify-center rounded-full border border-white/14 bg-white/8 text-white"
               aria-label={mobile ? "Close menu" : "Open menu"}
             >
               {mobile ? (
@@ -176,7 +181,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
             className="xo-mn-panelwrap pointer-events-auto flex justify-center px-5 pt-2.5"
             aria-label={`${open} menu`}
           >
-            <div className="xo-mn-in w-full max-w-[1080px] overflow-hidden rounded-[var(--r-xl)] border border-white/12 bg-[rgba(8,12,30,0.96)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)] backdrop-blur-[20px]">
+            <div className="xo-mn-in w-full max-w-[1080px] overflow-hidden rounded-(--r-xl) border border-white/12 bg-[rgba(8,12,30,0.96)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)] backdrop-blur-[20px]">
               {open === "Services" && (
                 <ServicesPanel
                   nav={nav}
@@ -273,7 +278,7 @@ function ServicesPanel({
                   key={item.label}
                   href={item.href}
                   onClick={onPick}
-                  className="rounded-[var(--r-sm)] px-2 py-1.5 font-sans text-[13.5px] text-white/66 no-underline transition-[background,color] duration-140 hover:bg-white/6 hover:text-white"
+                  className="rounded-(--r-sm) px-2 py-1.5 font-sans text-[13.5px] text-white/66 no-underline transition-[background,color] duration-140 hover:bg-white/6 hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -303,9 +308,9 @@ function IndustryLink({ industry }: { industry: NavIndustry }) {
   return (
     <Link
       href={industry.href}
-      className="flex gap-3 rounded-[var(--r-md)] px-3 py-3 no-underline transition-colors duration-140 hover:bg-white/5"
+      className="flex gap-3 rounded-(--r-md) px-3 py-3 no-underline transition-colors duration-140 hover:bg-white/5"
     >
-      <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[var(--r-md)] border border-[rgba(120,150,240,0.3)] bg-[rgba(70,76,159,0.25)] text-indigo-300">
+      <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-(--r-md) border border-[rgba(120,150,240,0.3)] bg-[rgba(70,76,159,0.25)] text-indigo-300">
         <NavIcon name={industry.icon} className="h-[19px] w-[19px]" />
       </span>
       <div>
@@ -341,13 +346,13 @@ function FeaturedCaseStudy({
         <span className="mb-3.5 font-mono text-[10.5px] text-tangerine-400 tracking-[0.16em]">
           {featured.tag}
         </span>
-        <div className="mb-4 overflow-hidden rounded-[var(--r-md)] border border-white/12">
+        <div className="relative mb-4 h-[116px] overflow-hidden rounded-(--r-md) border border-white/12">
           <Image
             src={featured.img}
             alt=""
-            width={328}
-            height={116}
-            className="block h-[116px] w-full object-cover object-top-left"
+            fill
+            sizes="328px"
+            className="object-cover object-top-left"
           />
         </div>
         <h4 className="m-0 mb-2 font-sans font-semibold text-base text-white leading-[1.25]">
@@ -417,9 +422,9 @@ function CompanyLink({ link }: { link: NavCompanyLink }) {
   return (
     <Link
       href={link.href}
-      className="flex gap-3 rounded-[var(--r-md)] px-3 py-3.5 no-underline transition-colors duration-140 hover:bg-white/5"
+      className="flex gap-3 rounded-(--r-md) px-3 py-3.5 no-underline transition-colors duration-140 hover:bg-white/5"
     >
-      <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[var(--r-md)] border border-[rgba(120,150,240,0.3)] bg-[rgba(70,76,159,0.25)] text-indigo-300">
+      <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-(--r-md) border border-[rgba(120,150,240,0.3)] bg-[rgba(70,76,159,0.25)] text-indigo-300">
         <NavIcon name={link.icon} className="h-[19px] w-[19px]" />
       </span>
       <div>
@@ -446,7 +451,7 @@ function MobileMenu({
   const [section, setSection] = useState<string | null>(null);
 
   return (
-    <div className="xo-mn-mobile pointer-events-auto mx-5 mt-2.5 max-h-[calc(100vh-120px)] overflow-y-auto rounded-[var(--r-xl)] border border-white/12 bg-[rgba(8,12,30,0.98)] px-5 py-3 pb-6 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
+    <div className="xo-mn-mobile pointer-events-auto mx-5 mt-2.5 max-h-[calc(100vh-120px)] overflow-y-auto rounded-(--r-xl) border border-white/12 bg-[rgba(8,12,30,0.98)] px-5 py-3 pb-6 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
       <MobileSection
         open={section === "Services"}
         onToggle={() =>

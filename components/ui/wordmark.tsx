@@ -20,10 +20,11 @@ export function Wordmark({
           : "/assets/logo-wordmark-light-transparent.svg"
       }
       alt="Xorora"
-      width={Math.round(height * 4.2)}
-      height={height}
+      width={0}
+      height={0}
+      sizes={`${Math.round(height * 4.2)}px`}
       className={cn("block h-auto w-auto", className)}
-      style={{ height }}
+      style={{ height, width: "auto" }}
       priority
     />
   );

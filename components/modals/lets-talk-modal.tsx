@@ -67,7 +67,7 @@ export function LetsTalkModal({
         role="dialog"
         aria-modal="true"
         aria-labelledby="lets-talk-title"
-        className="lt-pop relative z-10 max-h-[92vh] w-full max-w-[1180px] overflow-y-auto rounded-[var(--r-xl)] border border-white/10 bg-navy-900 shadow-[0_40px_120px_-40px_rgba(0,0,0,0.8)]"
+        className="lt-pop relative z-10 max-h-[92vh] w-full max-w-[1180px] overflow-hidden rounded-(--r-xl) border border-white/10 bg-navy-900 shadow-[0_40px_120px_-40px_rgba(0,0,0,0.8)]"
       >
         <div
           className="pointer-events-none absolute inset-0"
@@ -86,12 +86,12 @@ export function LetsTalkModal({
           type="button"
           onClick={onClose}
           aria-label="Close"
-          className="absolute top-[18px] right-[18px] z-5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-[var(--r-md)] border border-white/14 bg-white/6 text-white/80 transition-colors duration-150 hover:bg-white/12 hover:text-white"
+          className="absolute top-[18px] right-[18px] z-5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-(--r-md) border border-white/14 bg-white/6 text-white/80 transition-colors duration-150 hover:bg-white/12 hover:text-white"
         >
           <X className="h-5 w-5" aria-hidden />
         </button>
 
-        <div className="lt-grid relative grid grid-cols-[0.92fr_1.08fr] gap-[clamp(32px,5vw,64px)] p-[clamp(32px,4.5vw,60px)]">
+        <div className="lt-grid relative grid max-h-[92vh] grid-cols-[0.92fr_1.08fr] gap-[clamp(32px,5vw,64px)] overflow-y-auto p-[clamp(32px,4.5vw,60px)]">
           <div className="flex flex-col">
             <h2
               id="lets-talk-title"
@@ -112,7 +112,7 @@ export function LetsTalkModal({
                   key={value}
                   className="flex items-center gap-3 font-sans text-[15px] text-white/85"
                 >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-[var(--r-md)] border border-white/12 bg-white/6 text-tangerine-400">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-(--r-md) border border-white/12 bg-white/6 text-tangerine-400">
                     <Icon className="h-[17px] w-[17px]" aria-hidden />
                   </span>
                   {value}
@@ -121,7 +121,7 @@ export function LetsTalkModal({
             </div>
           </div>
 
-          <div className="rounded-[var(--r-lg)] border border-white/10 bg-white/3 p-[clamp(24px,3vw,32px)]">
+          <div className="rounded-(--r-lg) border border-white/10 bg-white/3 p-[clamp(24px,3vw,32px)]">
             {sent ? (
               <div className="py-14 text-center">
                 <div className="mx-auto mb-[18px] flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(46,158,107,0.18)] text-success">
@@ -259,7 +259,7 @@ function LtSelect({
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           className={cn(
-            "box-border w-full cursor-pointer appearance-none rounded-[var(--r-md)] border bg-white/4 py-3 pr-[38px] pl-3.5 font-sans text-[15px] outline-hidden",
+            "box-border w-full cursor-pointer appearance-none rounded-(--r-md) border bg-white/4 py-3 pr-[38px] pl-3.5 font-sans text-[15px] outline-hidden",
             focused ? "border-tangerine-500 shadow-focus" : "border-white/16",
             value ? "text-white" : "text-white/50",
           )}

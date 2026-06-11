@@ -68,7 +68,7 @@ export function ProcessTabs({
         ))}
       </div>
 
-      <div className="ind-page-2col grid grid-cols-2 gap-[clamp(28px,4vw,52px)] rounded-[var(--r-xl)] border border-border bg-slate-50 p-[clamp(28px,3.5vw,44px)]">
+      <div className="ind-page-2col grid grid-cols-2 gap-[clamp(28px,4vw,52px)] rounded-(--r-xl) border border-border bg-slate-50 p-[clamp(28px,3.5vw,44px)]">
         <div>
           <h3 className="mb-4 font-bold font-sans text-2xl text-fg1 tracking-[-0.01em]">
             {current.tab}
@@ -89,7 +89,7 @@ export function ProcessTabs({
             {current.outcomes.map((outcome) => (
               <div
                 key={outcome}
-                className="flex items-center gap-2.5 rounded-[var(--r-md)] border border-border bg-surface px-4 py-3.5"
+                className="flex items-center gap-2.5 rounded-(--r-md) border border-border bg-surface px-4 py-3.5"
               >
                 <Check
                   className="h-4 w-4 shrink-0 text-tangerine-500"

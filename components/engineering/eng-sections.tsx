@@ -204,7 +204,7 @@ function EngCaseCard({
     <Link
       href={href}
       className={cn(
-        "group relative block min-h-[360px] overflow-hidden rounded-[var(--r-xl)] border border-white/10 bg-[#080C1E] no-underline",
+        "group relative block min-h-[360px] overflow-hidden rounded-(--r-xl) border border-white/10 bg-[#080C1E] no-underline",
         "shadow-[0_22px_56px_-34px_rgba(8,12,30,0.5)] transition-all duration-300",
         "hover:-translate-y-1 hover:shadow-[0_36px_80px_-34px_rgba(8,12,30,0.7)]",
       )}
@@ -244,8 +244,30 @@ function EngCaseCard({
 
 export function EngTechStack() {
   const half = Math.ceil(TECH.length / 2);
-  const rowA = [...TECH.slice(0, half), ...TECH.slice(0, half)];
-  const rowB = [...TECH.slice(half), ...TECH.slice(half)];
+  const rowA = [
+    ...TECH.slice(0, half).map(([icon, name], i) => ({
+      id: `a1-${i}`,
+      icon,
+      name,
+    })),
+    ...TECH.slice(0, half).map(([icon, name], i) => ({
+      id: `a2-${i}`,
+      icon,
+      name,
+    })),
+  ];
+  const rowB = [
+    ...TECH.slice(half).map(([icon, name], i) => ({
+      id: `b1-${i}`,
+      icon,
+      name,
+    })),
+    ...TECH.slice(half).map(([icon, name], i) => ({
+      id: `b2-${i}`,
+      icon,
+      name,
+    })),
+  ];
 
   return (
     <section className="overflow-hidden border-border border-t bg-surface py-[clamp(72px,9vw,118px)]">
@@ -266,16 +288,16 @@ function TechRow({
   items,
   className,
 }: {
-  items: Array<[LucideIcon, string]>;
+  items: Array<{ id: string; icon: LucideIcon; name: string }>;
   className?: string;
 }) {
   return (
     <div className="eng-tmq-wrap">
       <div className={cn("eng-tmq flex gap-4", className)}>
-        {items.map(([Icon, name]) => (
+        {items.map(({ id, icon: Icon, name }) => (
           <div
-            key={name}
-            className="flex shrink-0 items-center gap-3 rounded-[var(--r-md)] border border-border bg-slate-50 px-6 py-[15px] shadow-xs"
+            key={id}
+            className="flex shrink-0 items-center gap-3 rounded-(--r-md) border border-border bg-slate-50 px-6 py-[15px] shadow-xs"
           >
             <Icon className="h-[19px] w-[19px] text-xo-indigo" aria-hidden />
             <span className="whitespace-nowrap font-sans font-semibold text-[15px] text-fg1">
@@ -302,10 +324,10 @@ export function EngApproach() {
         {APPROACH.map((s) => (
           <div
             key={s.n}
-            className="relative overflow-hidden rounded-[var(--r-lg)] border border-border bg-slate-50 p-[clamp(24px,2.6vw,30px)]"
+            className="relative overflow-hidden rounded-(--r-lg) border border-border bg-slate-50 p-[clamp(24px,2.6vw,30px)]"
           >
             <div className="mb-[18px] flex items-center justify-between">
-              <span className="flex h-[46px] w-[46px] items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo">
+              <span className="flex h-[46px] w-[46px] items-center justify-center rounded-(--r-md) bg-indigo-50 text-xo-indigo">
                 <s.icon className="h-[22px] w-[22px]" aria-hidden />
               </span>
               <span className="font-mono text-slate-400 text-xs tracking-widest">
@@ -344,11 +366,11 @@ export async function EngIndustries() {
             key={ind.name}
             href={ind.href}
             className={cn(
-              "group flex items-center gap-3.5 rounded-[var(--r-lg)] border border-white/12 bg-white/4 px-5 py-[18px] no-underline transition-all duration-200",
+              "group flex items-center gap-3.5 rounded-(--r-lg) border border-white/12 bg-white/4 px-5 py-[18px] no-underline transition-all duration-200",
               "hover:-translate-y-0.5 hover:border-indigo-300/50",
             )}
           >
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[var(--r-md)] border border-indigo-300/32 bg-indigo-900/28 text-indigo-300 transition-all group-hover:bg-xo-indigo group-hover:text-white">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-(--r-md) border border-indigo-300/32 bg-indigo-900/28 text-indigo-300 transition-all group-hover:bg-xo-indigo group-hover:text-white">
               <NavIcon name={ind.icon} className="h-[21px] w-[21px]" />
             </span>
             <span className="flex-1 font-sans font-semibold text-base text-white">
@@ -365,7 +387,7 @@ export async function EngIndustries() {
 export function EngContact() {
   return (
     <section className="bg-navy-950 px-8 py-[clamp(64px,8vw,104px)]">
-      <div className="relative mx-auto max-w-[1180px] overflow-hidden rounded-[var(--r-xl)] border border-white/10 bg-navy-900 p-[clamp(32px,4.5vw,60px)]">
+      <div className="relative mx-auto max-w-[1180px] overflow-hidden rounded-(--r-xl) border border-white/10 bg-navy-900 p-[clamp(32px,4.5vw,60px)]">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_90%_at_90%_0%,rgba(70,76,159,0.4),transparent_58%)]" />
         <div className="svc-contact-grid relative grid grid-cols-[0.92fr_1.08fr] gap-[clamp(36px,5vw,64px)]">
           <div className="flex flex-col">
@@ -378,7 +400,7 @@ export function EngContact() {
             </p>
             <LetsTalkContactLink
               className={cn(
-                "mt-auto inline-flex w-fit items-center gap-2 rounded-[var(--r-md)] bg-xo-indigo px-[30px] py-[15px]",
+                "mt-auto inline-flex w-fit items-center gap-2 rounded-(--r-md) bg-xo-indigo px-[30px] py-[15px]",
                 "font-sans font-semibold text-base text-white no-underline transition-all hover:bg-indigo-600",
               )}
             >
@@ -386,7 +408,7 @@ export function EngContact() {
               <ArrowUpRight className="h-4 w-4" />
             </LetsTalkContactLink>
           </div>
-          <div className="rounded-[var(--r-lg)] border border-white/10 bg-white/3 p-[clamp(24px,3vw,32px)]">
+          <div className="rounded-(--r-lg) border border-white/10 bg-white/3 p-[clamp(24px,3vw,32px)]">
             <p className="m-0 font-sans text-[15px] text-white/70 leading-relaxed">
               Share your project scope, timeline, and budget range. Our team
               will reply with a real person and a clear next step within one

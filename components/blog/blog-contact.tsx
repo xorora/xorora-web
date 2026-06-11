@@ -44,7 +44,7 @@ export function BlogContact() {
                 key={value}
                 className="flex items-center gap-3 font-sans text-[15px] text-fg1"
               >
-                <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[var(--r-md)] bg-indigo-50 text-xo-indigo">
+                <span className="flex h-[38px] w-[38px] items-center justify-center rounded-(--r-md) bg-indigo-50 text-xo-indigo">
                   <Icon className="h-[18px] w-[18px]" aria-hidden />
                 </span>
                 {value}
@@ -53,7 +53,7 @@ export function BlogContact() {
           </div>
         </div>
 
-        <div className="rounded-[var(--r-xl)] border border-border bg-surface p-[clamp(28px,3.5vw,44px)] shadow-sm">
+        <div className="rounded-(--r-xl) border border-border bg-surface p-[clamp(28px,3.5vw,44px)] shadow-sm">
           {sent ? (
             <div className="py-14 text-center">
               <div className="mx-auto mb-[18px] flex h-14 w-14 items-center justify-center rounded-full bg-accent-soft text-success">

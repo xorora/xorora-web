@@ -222,7 +222,7 @@ export function MktHero() {
               ))}
             </div>
           </div>
-          <div className="relative rounded-[var(--r-xl)] border border-white/22 bg-white/9 p-[clamp(26px,3vw,36px)] backdrop-blur-[18px]">
+          <div className="relative rounded-(--r-xl) border border-white/22 bg-white/9 p-[clamp(26px,3vw,36px)] backdrop-blur-[18px]">
             <div className="mb-[5px] font-mono text-[11px] text-tangerine-400 uppercase tracking-[0.12em]">
               Benchmark Improvements
             </div>

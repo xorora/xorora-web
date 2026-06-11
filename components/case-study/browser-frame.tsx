@@ -53,8 +53,10 @@ export function BrowserFrame({
       <Image
         src={src}
         alt={alt}
-        width={1200}
-        height={800}
+        width={0}
+        height={0}
+        sizes="(max-width: 1240px) 100vw, 1240px"
+        style={{ width: "100%", height: "auto" }}
         className="block h-auto w-full"
       />
     </div>
