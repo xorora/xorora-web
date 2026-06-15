@@ -3,7 +3,7 @@
 export const ABOUT_FAQ = [
   {
     q: "Where is Xorora based?",
-    a: "We are a distributed team with hubs in San Francisco, London, and Singapore, working with clients across North America, Europe, and Asia.",
+    a: "We are headquartered in Lahore, Pakistan, working with clients across North America, Europe, and Asia.",
   },
   {
     q: "How quickly can you start?",
