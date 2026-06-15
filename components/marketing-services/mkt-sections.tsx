@@ -83,7 +83,7 @@ const SERVICES = [
   {
     icon: SearchCheck,
     plain: "SEO",
-    name: "Search Equity Engineering",
+    name: "Professional SEO Services",
     body: "Technical SEO, content systems, and authority building that compound organic visibility into a durable acquisition channel.",
     tags: ["TECHNICAL SEO", "CONTENT", "LINK EQUITY"],
     featured: false,
@@ -91,15 +91,15 @@ const SERVICES = [
   {
     icon: MapPin,
     plain: "Local SEO",
-    name: "Local Signal Optimization",
+    name: "Local SEO Services",
     body: "Google Business Profile, citations, and review velocity tuned so you own the map pack across every service area.",
     tags: ["GBP", "CITATIONS", "REVIEWS"],
     featured: false,
   },
   {
     icon: BadgeDollarSign,
-    plain: "Google Ads",
-    name: "Paid Search Architecture",
+    plain: "Paid Ads",
+    name: "Paid Ads Services",
     body: "Search, Shopping, and Performance Max structured for intent — bid systems and feeds engineered for profitable ROAS.",
     tags: ["SEM", "SHOPPING", "PMAX"],
     featured: false,
@@ -107,7 +107,7 @@ const SERVICES = [
   {
     icon: ThumbsUp,
     plain: "Meta Ads",
-    name: "Social Demand Generation",
+    name: "Meta Ads Services",
     body: "Prospecting and retargeting funnels with creative testing loops that turn cold audiences into measurable pipeline.",
     tags: ["PROSPECTING", "RETARGETING", "CREATIVE"],
     featured: false,
@@ -115,7 +115,7 @@ const SERVICES = [
   {
     icon: Share2,
     plain: "Social Media",
-    name: "Audience Signal Management",
+    name: "Social Media Marketing Services",
     body: "Organic presence run as a signal system — content, community, and analytics that feed the rest of the funnel.",
     tags: ["ORGANIC", "COMMUNITY", "ANALYTICS"],
     featured: false,
@@ -123,7 +123,7 @@ const SERVICES = [
   {
     icon: Briefcase,
     plain: "B2B Marketing",
-    name: "B2B Pipeline Engineering",
+    name: "B2B Digital Marketing Services",
     body: "Account-based programs and full-funnel demand gen wired to your CRM — attribution from first touch to closed revenue.",
     tags: ["ABM", "DEMAND GEN", "ATTRIBUTION"],
     featured: true,
@@ -195,15 +195,16 @@ export function MktHero() {
       <div className="svc-wrap relative z-5 px-8 py-[clamp(88px,10vw,132px)]">
         <div className="mkt-hero-grid grid grid-cols-[1.05fr_0.95fr] items-center gap-[clamp(40px,5vw,72px)]">
           <div>
-            <MktEyebrow>Marketing Services</MktEyebrow>
+            <MktEyebrow>Digital Marketing Services</MktEyebrow>
             <h1 className="hero-reveal hero-reveal-1 mt-[26px] mb-6 font-extrabold font-sans text-[clamp(40px,5.5vw,68px)] text-white uppercase leading-tight tracking-[-0.02em]">
               We <span className="text-tangerine-400">engineer growth.</span> We
               don&apos;t guess at it.
             </h1>
             <p className="hero-reveal hero-reveal-2 mb-10 max-w-[540px] font-sans text-lg text-white/82 leading-relaxed">
-              Every channel is a system — instrumented, attributed, and tuned
-              for pipeline, not vanity metrics. We build the conversion
-              architecture that turns audience signal into qualified revenue.
+              Xorora delivers digital marketing services engineered as systems —
+              instrumented, attributed, and tuned for pipeline, not vanity
+              metrics. We build the conversion architecture that turns audience
+              signal into qualified revenue.
             </p>
             <LetsTalkContactLink
               className={buttonClassName({ variant: "primary", size: "lg" })}
@@ -340,7 +341,7 @@ export function MktServices() {
         }}
       />
       <div className="svc-wrap relative mx-auto max-w-[1180px]">
-        <MktEyebrow>Our marketing services</MktEyebrow>
+        <MktEyebrow>Our digital marketing services</MktEyebrow>
         <h2 className="mt-[18px] mb-14 max-w-[720px] text-balance font-extrabold font-sans text-[clamp(32px,5vw,56px)] text-white uppercase leading-tight tracking-[-0.02em]">
           Channels, built as systems
         </h2>
