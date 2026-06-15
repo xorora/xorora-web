@@ -337,7 +337,8 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
 ];
 
 export const FOOTER_OFFICES = [
-  { city: "San Francisco", addr: "548 Market St, Suite 200, CA 94104" },
-  { city: "London", addr: "1 Finsbury Avenue, EC2M 2PF" },
-  { city: "Singapore", addr: "9 Battery Road, 049910" },
+  {
+    city: "Pakistan",
+    addr: "Plot # 606, Block F2, Phase 1 Johar Town, Lahore, 54000",
+  },
 ] as const;
