@@ -90,7 +90,12 @@ export function Footer({ columns }: FooterProps) {
           <Newsletter />
         </div>
 
-        <div className="xo-foot-offices mb-12 grid grid-cols-3 gap-7">
+        <div
+          className="xo-foot-offices mb-12 grid gap-7"
+          style={{
+            gridTemplateColumns: `repeat(${FOOTER_OFFICES.length}, minmax(0, 1fr))`,
+          }}
+        >
           {FOOTER_OFFICES.map((office) => (
             <div key={office.city}>
               <div className="mb-2 flex items-center gap-2">

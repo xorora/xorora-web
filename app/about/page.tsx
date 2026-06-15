@@ -9,6 +9,8 @@ import {
 } from "@/components/about";
 import { type FaqItem, requireSiteContent } from "@/lib/content";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "About Us | Xorora",
   description:

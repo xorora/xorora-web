@@ -10,6 +10,8 @@ import {
   V2Statement,
 } from "@/components/home";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Xorora — Engineered for your Ambition",
   description:
