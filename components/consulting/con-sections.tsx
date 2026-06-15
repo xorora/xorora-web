@@ -5,7 +5,7 @@ import {
   StepApproach,
 } from "@/components/services";
 
-const SERVICES = [
+export const SERVICES = [
   {
     icon: "compass",
     name: "Discovery Workshop Services",
@@ -69,7 +69,7 @@ const APPROACH_STEPS = [
   },
 ] as const;
 
-const FAQS = [
+export const FAQS = [
   {
     q: "What is IT consulting?",
     a: "IT consulting is expert advisory work that helps a business use technology to reach its goals. At Xorora, our IT consulting services assess your product, data, and systems, identify the right problems to solve, and produce a costed, de-risked roadmap, so you invest in what actually moves the business forward.",
