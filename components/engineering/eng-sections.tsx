@@ -40,25 +40,25 @@ import { ROUTES } from "@/lib/navigation";
 import { listIndustryNavItems } from "@/lib/navigation/server";
 import { cn } from "@/lib/utils";
 
-const SERVICES = [
+export const SERVICES = [
   {
     icon: "cpu",
-    name: "AI Software Development",
+    name: "AI Software Development Services",
     body: "Applied ML, LLMs, RAG, and agents engineered for your data and domain.",
   },
   {
     icon: "app-window",
-    name: "Custom App Development",
+    name: "Custom Mobile App Development Services",
     body: "Web and mobile products built full stack, from interface to infrastructure.",
   },
   {
     icon: "layers",
-    name: "Application Modernization",
+    name: "Legacy Application Modernization Services",
     body: "A flexible, API-first layer over legacy systems so you ship faster without a full rewrite.",
   },
   {
     icon: "rocket",
-    name: "MVP / POC Development",
+    name: "MVP & POC Development Services",
     body: "A focused prototype that proves value and gets you to traction fast.",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES = [
   },
   {
     icon: "pen-tool",
-    name: "UI/UX Services",
+    name: "UI/UX Design Services",
     body: "Research-led product design that turns complex workflows into intuitive experiences.",
   },
 ] as const;
@@ -150,7 +150,7 @@ export function EngServices() {
   return (
     <ServiceCardGrid
       label="What we build"
-      title="Our engineering services."
+      title="Our software product engineering services."
       sub="One team across the full delivery arc: strategy, design, frontend, backend, and the AI that powers it."
       items={[...SERVICES]}
     />
