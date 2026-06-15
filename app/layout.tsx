@@ -9,6 +9,7 @@ import {
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://xorora.vercel.app"),
   title: "Xorora — Your AI Development Partner",
   description: "Engineered for your Ambition",
 };

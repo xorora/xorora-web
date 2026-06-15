@@ -20,6 +20,7 @@ import { XWatermark } from "@/components/geometry/x-watermark";
 import { LetsTalkContactLink } from "@/components/modals";
 import { buttonClassName } from "@/lib/button-styles";
 import { cn } from "@/lib/utils";
+import { MGS_FAQS } from "./mgs-data";
 
 function MgsEyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -78,25 +79,25 @@ const SERVICES = [
   },
   {
     icon: Network,
-    name: "Network Administration",
+    name: "Managed Network Services",
     body: "Continuous oversight of your network. We proactively detect and resolve issues, maintain peak performance, and keep security strong.",
     featured: false,
   },
   {
     icon: ServerCog,
-    name: "Server Management",
+    name: "Managed Server Services",
     body: "Proactive server monitoring, patching, and optimization. Critical infrastructure runs at peak performance and protected against threats.",
     featured: false,
   },
   {
     icon: ShieldCheck,
-    name: "Cybersecurity & Compliance",
+    name: "Managed Cybersecurity Services",
     body: "Baseline controls, threat monitoring, and compliance built in — aligned to SOC 2, HIPAA, and GDPR for your industry.",
     featured: false,
   },
   {
     icon: Recycle,
-    name: "IT Asset Management & Disposal",
+    name: "Managed IT Asset Services",
     body: "Full lifecycle tracking from procurement to certified disposal. Maintain compliance, reduce waste, and keep sensitive data controlled.",
     featured: false,
   },
@@ -121,33 +122,6 @@ const WHY = [
   },
 ] as const;
 
-const FAQS = [
-  {
-    q: 'What does "managed IT" actually include?',
-    a: "Xorora takes ownership of your IT environment: 24/7 monitoring, help desk support, patch management, infrastructure administration, server management, vendor coordination, and strategic planning. We become an extension of your team, not a break-fix shop you call when something fails.",
-  },
-  {
-    q: "How is this different from co-managed IT?",
-    a: "Fully managed means we own the entire IT function. Co-managed means we work alongside your existing in-house IT staff, filling gaps, handling overflow, and bringing specialized expertise where your team needs it. We tailor the model to your structure.",
-  },
-  {
-    q: "How fast is your response time?",
-    a: "Critical issues get an immediate response through our 24/7 monitoring, with most resolved before they ever impact your business. We agree exact response and resolution targets in your service-level agreement up front.",
-  },
-  {
-    q: "Can you support our compliance requirements?",
-    a: "Yes. Every managed IT engagement includes baseline security controls, and we align our practices with standards such as SOC 2, HIPAA, and GDPR depending on your industry. Compliance posture starts strong from day one.",
-  },
-  {
-    q: "How does pricing work?",
-    a: "Managed services are a predictable monthly fee scoped to your environment, team size, and coverage level. After a short assessment we provide a clear, itemized plan so there are no surprises.",
-  },
-  {
-    q: "What happens during the transition from our current provider?",
-    a: "We run a structured onboarding: a full assessment of your environment, documentation, and access handover, then a phased cutover with zero downtime as the goal. You get a single point of contact throughout.",
-  },
-] as const;
-
 export function MgsHero() {
   return (
     <section className="relative mt-[-72px] overflow-hidden bg-navy-900 pt-[72px]">
@@ -159,15 +133,15 @@ export function MgsHero() {
         className="-translate-y-1/2 top-1/2 right-[-300px]"
       />
       <div className="svc-wrap relative z-5 px-8 py-[clamp(96px,11vw,150px)]">
-        <MgsEyebrow>Managed Services</MgsEyebrow>
+        <MgsEyebrow>IT Managed Services</MgsEyebrow>
         <h1 className="hero-reveal hero-reveal-1 mt-[26px] mb-[26px] max-w-[940px] font-extrabold font-sans text-[clamp(40px,6vw,72px)] text-white uppercase leading-tight tracking-[-0.02em]">
           Your IT should work as hard as&nbsp;
           <span className="text-indigo-400">your team does.</span>
         </h1>
         <p className="hero-reveal hero-reveal-2 mb-10 max-w-[560px] font-sans text-lg text-slate-400 leading-relaxed">
-          Xorora is an extension of your IT team — proactive management,
-          monitoring, and support, so your people can focus on what moves the
-          business forward.
+          Xorora delivers end-to-end IT managed services as an extension of your
+          team — proactive management, monitoring, and support, so your people
+          can focus on what moves the business forward.
         </p>
         <div className="mb-11 flex flex-wrap items-center gap-3.5">
           <LetsTalkContactLink
@@ -386,7 +360,7 @@ export function MgsFAQ() {
           </h2>
         </div>
         <div>
-          {FAQS.map((f, i) => {
+          {MGS_FAQS.map((f, i) => {
             const isOpen = open === i;
             return (
               <div
