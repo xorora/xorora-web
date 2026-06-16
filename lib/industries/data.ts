@@ -1312,12 +1312,14 @@ const INDUSTRIES: IndustriesRecord = {
   logistics: {
     slug: "logistics",
     name: "Logistics",
-    metaTitle: "Xorora — Logistics Software Development",
+    metaTitle: "Logistics Software Development Company | Xorora",
     metaDescription:
-      "Logistics software development services. Streamline supply chains, enable real time tracking, and automate warehouse operations with custom platforms engineered for your operation.",
+      "Logistics software development company — custom logistics software, 3PL logistics software, supply chain management software, and AI-driven logistics modernization, engineered for your operation.",
     headerBg: "/assets/logistics/header-bg.jpg",
     hero: {
-      title: "Logistics software development services.",
+      title: "Logistics software development company.",
+      subtitle:
+        "Xorora delivers logistics software development services and custom software development for logistics — 3PL logistics software, supply chain management logistics software, and AI-driven logistics modernization.",
       bullets: [
         "Streamline supply chains and cut operational cost",
         "Real time tracking that builds customer loyalty",
@@ -1381,7 +1383,7 @@ const INDUSTRIES: IndustriesRecord = {
           {
             icon: "boxes",
             name: "3PLs and freight forwarders",
-            body: "We build powerful multi client logistics platforms with automated workflows and partner integrations.",
+            body: "We build powerful 3PL logistics software — multi client platforms with automated workflows and partner integrations.",
             items: [
               "Centralized TMS with client, shipment, and billing management",
               "Client portals for tracking, scheduling, and document access",
@@ -1481,8 +1483,8 @@ const INDUSTRIES: IndustriesRecord = {
           },
           {
             icon: "sparkles",
-            title: "AI based forecasting",
-            body: "Demand forecasting, inventory optimization, and peak load forecasting powered by applied machine learning.",
+            title: "AI-driven logistics modernization",
+            body: "Modernize operations with applied machine learning: demand forecasting, inventory optimization, and peak load prediction.",
           },
           {
             icon: "files",
