@@ -518,12 +518,12 @@ const INDUSTRIES: IndustriesRecord = {
   fintech: {
     slug: "fintech",
     name: "Fintech",
-    metaTitle: "Xorora — Fintech Software Development",
+    metaTitle: "Custom Fintech Software Development | Xorora",
     metaDescription:
-      "Custom built payment platforms, lending systems, risk management tools, and analytics dashboards engineered to fit your business model, streamline financial operations, and deliver measurable ROI as you grow.",
+      "Custom fintech software development by Xorora — fintech development, AI integration, legacy modernization, mobile app, and consulting services. Secure, compliant, ROI-driven.",
     headerBg: "/assets/fintech/header-bg.jpg",
     hero: {
-      title: "Custom fintech software for future driven companies.",
+      title: "Custom fintech software development for future-driven companies.",
       subtitle:
         "Custom built payment platforms, lending systems, risk management tools, and analytics dashboards engineered to fit your business model, streamline financial operations, and deliver measurable ROI as you grow.",
       badges: [
@@ -569,26 +569,34 @@ const INDUSTRIES: IndustriesRecord = {
         type: "services",
         heading: {
           label: "Capabilities",
-          title: "Financial software development services we offer.",
+          title: "Fintech development services we offer.",
           subtitle:
-            "Our fintech specialists deliver end to end financial software development services that consider your current digital state and business goals.",
+            "Our fintech specialists deliver end to end fintech development services that consider your current digital state and business goals.",
         },
         items: [
           {
-            name: "FinTech software development",
+            name: "Custom Fintech Software Development",
             body: "Development of custom fintech solutions from scratch with a focus on performance, cost efficiency, scalability, and resiliency.",
           },
           {
-            name: "Code audit for FinTech projects",
-            body: "Comprehensive review of your financial software codebase to detect vulnerabilities or compliance gaps and shape an improvement strategy.",
+            name: "Fintech AI Integration Services",
+            body: "Integrating AI models into your financial systems and building AI ready workflows to enhance productivity and reduce manual effort.",
           },
           {
-            name: "Financial system modernization",
+            name: "Legacy Fintech Application Modernization",
             body: "Reengineering your existing fintech solutions to meet the latest industry standards in security, usability, and interoperability.",
           },
           {
-            name: "FinTech AI integration",
-            body: "Integrating AI models into your financial systems and building AI ready workflows to enhance productivity and reduce manual effort.",
+            name: "Fintech Mobile App Development Services",
+            body: "Native and cross platform fintech mobile apps engineered for secure payments, banking, and trading, with a fast, compliant experience on every device.",
+          },
+          {
+            name: "Fintech Consulting Services",
+            body: "Strategic fintech consulting across compliance, architecture, and product roadmap, so you invest in the right build and de-risk every decision.",
+          },
+          {
+            name: "Code Audit for Fintech Projects",
+            body: "Comprehensive review of your financial software codebase to detect vulnerabilities or compliance gaps and shape an improvement strategy.",
           },
         ],
         bg: "slate-50",
