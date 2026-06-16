@@ -824,14 +824,14 @@ const INDUSTRIES: IndustriesRecord = {
   ecommerce: {
     slug: "ecommerce",
     name: "E-commerce",
-    metaTitle: "Xorora — E-commerce Software Development",
+    metaTitle: "E-commerce Software Development Company | Xorora",
     metaDescription:
-      "Custom built storefronts, headless commerce platforms, marketplace systems, and analytics dashboards engineered to fit your business model, lift conversion, and deliver measurable ROI as you scale.",
+      "E-commerce software development company: custom e-commerce development, e-commerce app development services, and e-commerce inventory software engineered to lift conversion and scale.",
     headerBg: "/assets/ecommerce/header-bg.jpg",
     hero: {
-      title: "Custom e-commerce software for growth driven brands.",
+      title: "Custom e-commerce development for growth-driven brands.",
       subtitle:
-        "Custom built storefronts, headless commerce platforms, marketplace systems, and analytics dashboards engineered to fit your business model, lift conversion, and deliver measurable ROI as you scale.",
+        "Xorora is an e-commerce software development company. Custom-built storefronts, headless commerce platforms, marketplace systems, and analytics dashboards engineered to fit your business model, lift conversion, and deliver measurable ROI as you scale.",
       badges: [
         { icon: "shield-check", label: "PCI DSS ready" },
         { icon: "lock", label: "GDPR compliant" },
@@ -882,12 +882,20 @@ const INDUSTRIES: IndustriesRecord = {
         },
         items: [
           {
-            name: "E-commerce software development",
+            name: "Custom E-commerce Development",
             body: "Development of custom commerce solutions from scratch with a focus on performance, cost efficiency, scalability, and resiliency.",
           },
           {
             name: "Headless and storefront platforms",
             body: "Headless commerce, custom storefronts, and progressive web apps that load fast and convert across every device.",
+          },
+          {
+            name: "E-commerce App Development Services",
+            body: "Native and progressive web shopping apps for iOS, Android, and the web, built for fast, high converting experiences on every device.",
+          },
+          {
+            name: "E-commerce Inventory Software",
+            body: "Real time inventory software that unifies stock, orders, and pricing across web, mobile, and marketplaces from a single source of truth.",
           },
           {
             name: "Marketplace and multi vendor systems",
