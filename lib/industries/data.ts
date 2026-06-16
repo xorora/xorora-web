@@ -1103,12 +1103,12 @@ const INDUSTRIES: IndustriesRecord = {
   edtech: {
     slug: "edtech",
     name: "EdTech",
-    metaTitle: "Xorora — EdTech Software Development",
+    metaTitle: "Custom EdTech Software Development | Xorora",
     metaDescription:
-      "We build EdTech software tailored to your learners, workflows, and growth targets, delivered by AI enabled engineering teams. We embed AI throughout the entire development lifecycle to ship up to twice as fast and at higher quality, with no proportional increase in headcount.",
+      "Custom EdTech software development by Xorora: custom LMS development, AI powered LMS, e-learning, and education app development — built around your learners and ready to scale.",
     headerBg: "/assets/edtech/header-bg.jpg",
     hero: {
-      title: "EdTech software development.",
+      title: "Custom EdTech software development.",
       subtitle:
         "We build EdTech software tailored to your learners, workflows, and growth targets, delivered by AI enabled engineering teams. We embed AI throughout the entire development lifecycle to ship up to twice as fast and at higher quality, with no proportional increase in headcount.",
       badges: [
@@ -1135,8 +1135,8 @@ const INDUSTRIES: IndustriesRecord = {
           },
           {
             icon: "graduation-cap",
-            title: "Learning management systems (LMS)",
-            body: "We build LMS platforms that make course management straightforward for administrators and frictionless for learners. Progress tracking, enrollment workflows, and reporting are built into the platform.",
+            title: "Custom LMS Development",
+            body: "We build custom LMS platforms that make course management straightforward for administrators and frictionless for learners. Progress tracking, enrollment workflows, and reporting are built into the platform.",
           },
           {
             icon: "monitor-play",
@@ -1145,8 +1145,8 @@ const INDUSTRIES: IndustriesRecord = {
           },
           {
             icon: "smartphone",
-            title: "Mobile learning applications",
-            body: "We build mobile learning apps for iOS and Android that give learners consistent access to content regardless of device or connectivity.",
+            title: "Education App Development",
+            body: "We build education apps for iOS and Android that give learners consistent access to content regardless of device or connectivity.",
           },
           {
             icon: "briefcase",
@@ -1155,8 +1155,8 @@ const INDUSTRIES: IndustriesRecord = {
           },
           {
             icon: "sparkles",
-            title: "AI powered learning solutions",
-            body: "We build AI features into learning platforms: adaptive learning paths, automated assessments, RAG based support chatbots, and recommendation engines that personalize every learner journey.",
+            title: "AI Powered LMS",
+            body: "We build AI features into LMS and learning platforms: adaptive learning paths, automated assessments, RAG based support chatbots, and recommendation engines that personalize every learner journey.",
           },
           {
             icon: "layers",
