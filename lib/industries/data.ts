@@ -1601,14 +1601,14 @@ const INDUSTRIES: IndustriesRecord = {
   saas: {
     slug: "saas",
     name: "SaaS",
-    metaTitle: "Xorora — SaaS Software Development",
+    metaTitle: "Custom SaaS Development Company | Xorora",
     metaDescription:
-      "Custom built multi tenant platforms, billing and subscription systems, admin dashboards, and analytics engineered to fit your product, streamline operations, and deliver measurable ROI as you scale from first customer to enterprise.",
+      "Custom SaaS development company offering SaaS product & application development services, SaaS integration, and outsourcing SaaS development — built to scale from first customer to enterprise.",
     headerBg: "/assets/saas/header-bg.jpg",
     hero: {
-      title: "Custom SaaS software for scale driven companies.",
+      title: "Custom SaaS development company.",
       subtitle:
-        "Custom built multi tenant platforms, billing and subscription systems, admin dashboards, and analytics engineered to fit your product, streamline operations, and deliver measurable ROI as you scale from first customer to enterprise.",
+        "We deliver SaaS product development services, SaaS application development services, SaaS integration, and outsourcing SaaS development — engineered to scale from first customer to enterprise.",
       badges: [
         { icon: "shield-check", label: "SOC 2 ready" },
         { icon: "lock", label: "GDPR compliant" },
@@ -1658,12 +1658,20 @@ const INDUSTRIES: IndustriesRecord = {
         },
         items: [
           {
-            name: "SaaS product development",
+            name: "SaaS Product Development Services",
             body: "Development of custom multi tenant products from scratch with a focus on performance, cost efficiency, scalability, and resiliency.",
           },
           {
-            name: "MVP and product engineering",
+            name: "SaaS Application Development Services",
             body: "From first prototype to production, we build and harden the platform your business runs on, fast.",
+          },
+          {
+            name: "SaaS Integration",
+            body: "Connect your platform to billing, auth, analytics, and partner APIs with reliable SaaS integration that keeps your stack in sync.",
+          },
+          {
+            name: "Outsourcing SaaS Development",
+            body: "Dedicated SaaS teams and staff augmentation — senior engineers who plug into your roadmap and own delivery end to end.",
           },
           {
             name: "Billing and subscription systems",
