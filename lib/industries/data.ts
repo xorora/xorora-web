@@ -6,12 +6,12 @@ const INDUSTRIES: IndustriesRecord = {
   "health-tech": {
     slug: "health-tech",
     name: "Health Tech",
-    metaTitle: "Xorora — Health Tech Software Development",
+    metaTitle: "Healthcare Software Development Services | Xorora",
     metaDescription:
-      "Businesses partner with Xorora to develop custom, AI powered software for patients, providers, and payers, engineered to fit your care model, streamline operations, and improve outcomes as you grow.",
+      "Healthcare software development services: custom healthcare software, EHR & EMR software development, telehealth, healthcare compliance software, and healthcare modernization by Xorora.",
     headerBg: "/assets/healthtech/header-bg.jpg",
     hero: {
-      title: "HealthTech software development.",
+      title: "Healthcare software development services.",
       subtitle:
         "Businesses partner with Xorora to develop custom, AI powered software for patients, providers, and payers, engineered to fit your care model, streamline operations, and improve outcomes as you grow.",
       badges: [
@@ -57,41 +57,56 @@ const INDUSTRIES: IndustriesRecord = {
       {
         type: "services",
         heading: {
-          label: "What we build",
-          title: "Our HealthTech expertise.",
+          label: "Healthcare expertise",
+          title: "Our healthcare software expertise.",
           subtitle:
-            "Check our services for a wide range of the HealthTech industry.",
+            "Check our services for a wide range of the healthcare industry.",
         },
         items: [
           {
-            name: "Custom healthcare app development",
-            body: "We develop custom web and mobile apps focused on exceptional security, performance, and usability.",
+            name: "Custom Healthcare Software Development",
+            body: "We develop custom web and mobile healthcare software focused on exceptional security, performance, and usability.",
             cta: "Get consultation",
           },
           {
+            name: "EHR Software Development",
+            body: "Custom EHR software development for medical records, charting, and patient management that fits your clinical workflows.",
+            cta: "Leave a request",
+          },
+          {
+            name: "EMR Software Development",
+            body: "EMR software development that streamlines documentation and patient data so your care teams spend less time on admin.",
+            cta: "Order an estimate",
+          },
+          {
+            name: "Custom Telehealth Software Development",
+            body: "Custom telehealth software development for secure virtual visits, scheduling, and remote care, built on robust, compliant technology.",
+            cta: "Get a quote",
+          },
+          {
+            name: "Healthcare Compliance Software",
+            body: "Healthcare compliance software with HIPAA, HITECH, and FDA controls, audit trails, and PHI security built in from day one.",
+            cta: "Share your idea",
+          },
+          {
+            name: "Healthcare Software Modernization",
+            body: "Healthcare software modernization that migrates legacy clinical systems to secure, scalable, cloud native architectures without disruption.",
+            cta: "Order an estimate",
+          },
+          {
+            name: "Digital Transformation in Healthcare",
+            body: "We help established medical businesses digitalize their workflows and gain a competitive edge through digital transformation in healthcare.",
+            cta: "Contact us",
+          },
+          {
             name: "Medical big data and analytics",
-            body: "Data plays a key role in HealthTech. We ensure its proper storage and management, so you can derive valuable insights.",
+            body: "Data plays a key role in healthcare. We ensure its proper storage and management, so you can derive valuable insights.",
             cta: "Order an estimate",
           },
           {
             name: "Integrations with third party services",
             body: "We integrate your existing software with services and tools for optimized patient management, medical records, and more.",
             cta: "Share your idea",
-          },
-          {
-            name: "EHR and EMR systems development",
-            body: "Improve your patient experience with custom built EHR and EMR systems for medical records and patient management.",
-            cta: "Leave a request",
-          },
-          {
-            name: "Telehealth app development",
-            body: "Modern medicine is remote. If you have a telehealth application idea in mind, we help you implement it with robust and secure technologies.",
-            cta: "Get a quote",
-          },
-          {
-            name: "Digital transformation of medical business",
-            body: "We help established medical businesses digitalize their workflows and gain a competitive edge.",
-            cta: "Contact us",
           },
         ],
         bg: "surface",
