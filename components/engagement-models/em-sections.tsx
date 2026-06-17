@@ -14,7 +14,7 @@ import { LightSection } from "@/components/case-study/light-section";
 import { SectionHead } from "@/components/case-study/section-head";
 import { SignalField } from "@/components/geometry/signal-field";
 import { LetsTalkContactLink } from "@/components/modals";
-import { ServiceCta, ServiceGlassForm } from "@/components/services";
+import { ServiceCta, ServiceFaq, ServiceGlassForm } from "@/components/services";
 import { buttonClassName } from "@/lib/button-styles";
 import {
   type CaseStudyCardData,
@@ -56,7 +56,7 @@ const MODELS = [
   {
     n: "03",
     icon: Users,
-    name: "Staff Augmentation",
+    name: "IT Staff Augmentation Services",
     tagline: "Senior engineers embedded in your team.",
     body: "When you own the roadmap and need capacity or specialized skills, we embed vetted engineers into your team and process. They ramp fast, work in your stack, and report to you.",
     points: [
@@ -86,6 +86,35 @@ const REASONS = [
     body: "Start fixed for an MVP, move to variable as you scale, or augment your team later. The engagement flexes with you.",
   },
 ] as const;
+
+export const FAQS = [
+  {
+    q: "What is the difference between staff augmentation and managed services?",
+    a: "Staff augmentation embeds vetted engineers into your team — you own the roadmap, set priorities, and direct the work day to day. Managed services hand an outcome or function to us to own end to end, including delivery, process, and accountability. Many clients mix both: augment in-house capacity for some work while we manage a defined scope for the rest.",
+  },
+  {
+    q: "Do you offer staff augmentation consulting services?",
+    a: "Yes. Our staff augmentation consulting services help you decide which roles and seniority to add, how to onboard them into your stack and process, and whether augmentation, a managed team, or a fixed-scope build is the right fit for your roadmap and budget.",
+  },
+  {
+    q: "What are IT staff augmentation services?",
+    a: "IT staff augmentation services are a flexible model where senior, vetted engineers join your existing team and report to you, ramping fast in your stack to add capacity or niche expertise without the overhead of permanent hiring.",
+  },
+  {
+    q: "Can we switch between engagement models?",
+    a: "Yes. Start fixed scope for an MVP, move to variable scope as the product evolves, or augment your team later. The same senior talent pool backs every model, so switching is seamless.",
+  },
+] as const;
+
+export function EmFaq() {
+  return (
+    <ServiceFaq
+      label="Good to know"
+      title="Engagement models, answered."
+      items={[...FAQS]}
+    />
+  );
+}
 
 export function EmHero() {
   return (
