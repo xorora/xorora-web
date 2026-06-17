@@ -255,12 +255,12 @@ const INDUSTRIES: IndustriesRecord = {
   "real-estate": {
     slug: "real-estate",
     name: "Real Estate",
-    metaTitle: "Xorora — Real Estate Software Development",
+    metaTitle: "Real Estate Software Development | Xorora",
     metaDescription:
-      "Custom built property platforms, CRM and listing systems, tenant portals, and analytics dashboards engineered to fit your business model, streamline property operations, and deliver measurable ROI as you grow.",
+      "Real estate software development: custom property platforms, property management CRM software, listing systems, and analytics dashboards engineered to streamline operations and grow ROI.",
     headerBg: "/assets/realestate/header-bg.jpg",
     hero: {
-      title: "Custom real estate software for property driven companies.",
+      title: "Real estate software development for property-driven companies.",
       subtitle:
         "Custom built property platforms, CRM and listing systems, tenant portals, and analytics dashboards engineered to fit your business model, streamline property operations, and deliver measurable ROI as you grow.",
       badges: [
@@ -317,8 +317,8 @@ const INDUSTRIES: IndustriesRecord = {
             body: "Development of custom property solutions from scratch with a focus on performance, cost efficiency, scalability, and resiliency.",
           },
           {
-            name: "Property CRM and listing platforms",
-            body: "CRM, listing management, and syndication systems that keep your inventory, leads, and deals connected in one place.",
+            name: "Property Management CRM Software",
+            body: "Property management CRM software with listing management and syndication that keeps your inventory, leads, tenants, and deals connected in one place.",
           },
           {
             name: "Legacy system modernization",
