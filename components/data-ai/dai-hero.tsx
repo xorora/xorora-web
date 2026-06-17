@@ -21,8 +21,8 @@ export function DaiHero() {
             <span className="text-tangerine-400">.</span>
           </h1>
           <p className="hero-reveal hero-reveal-2 mb-8 max-w-[520px] font-sans text-[18.5px] text-white/82 leading-relaxed">
-            We accelerate data and AI adoption to create practical outcomes that
-            strengthen teams and organizations.
+            Our AI &amp; data services accelerate data and AI adoption to create
+            practical outcomes that strengthen teams and organizations.
           </p>
           <div className="flex flex-wrap items-center gap-3.5">
             <LetsTalkContactLink

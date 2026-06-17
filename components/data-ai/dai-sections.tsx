@@ -9,6 +9,7 @@ import { LetsTalkContactLink } from "@/components/modals";
 import { ServiceFaq, StepApproach } from "@/components/services";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { cn } from "@/lib/utils";
+import { DAI_FAQS } from "./dai-data";
 
 const CHALLENGES = [
   {
@@ -33,23 +34,28 @@ const CHALLENGES = [
 
 const SERVICES = [
   {
-    icon: "bar-chart-3",
-    name: "Data Analytics",
-    body: "Dashboards, reporting, and decision intelligence that turn raw data into answers your teams can act on.",
+    icon: "database-zap",
+    name: "Data Modernization Services",
+    body: "Reliable pipelines, warehouses, and lakehouses — data modernization solutions that make your data clean, governed, and analytics-ready.",
   },
   {
-    icon: "database-zap",
-    name: "Data Engineering",
-    body: "Reliable pipelines, warehouses, and lakehouses that make your data clean, governed, and analytics-ready.",
+    icon: "bar-chart-3",
+    name: "Data Analytics Services",
+    body: "Dashboards, reporting, and decision intelligence — our data analytics services in the USA turn raw data into answers your teams can act on.",
+  },
+  {
+    icon: "compass",
+    name: "Data & AI Consulting",
+    body: "Strategy, roadmaps, and readiness assessments — data and AI consulting that pinpoints where AI creates the most value and how to get there.",
   },
   {
     icon: "cloud",
-    name: "Cloud Engineering & Migration",
+    name: "Cloud Migration Services",
     body: "Modernize and migrate to the cloud with scalable, secure, cost-aware architecture built for AI workloads.",
   },
   {
     icon: "bot",
-    name: "AI Agent Development",
+    name: "AI Agent Development Services",
     body: "Autonomous and assistive agents that automate workflows, reason over your data, and act within guardrails.",
   },
   {
@@ -144,29 +150,6 @@ const TOOL_DATA = [
   },
 ] as const;
 
-const FAQS = [
-  {
-    q: "How do we know if our organization is ready for AI and data innovation?",
-    a: "Readiness depends on your current data quality, infrastructure, workflows, and business priorities. Most organizations begin with an assessment to understand gaps in data, architecture, and processes. This helps determine where AI can create the most value and what needs to be improved first. A clear readiness evaluation reduces risk and accelerates adoption.",
-  },
-  {
-    q: "How long does it take to implement an AI or data project?",
-    a: "It depends on scope and data maturity. A focused proof of value typically runs a few weeks, while production rollouts span a few months. We work in short, outcome-based phases so you see value early and decide each next step with evidence rather than guesswork.",
-  },
-  {
-    q: "Do we need fully clean or structured data before starting?",
-    a: "No. Most organizations start with imperfect data. Part of our work is assessing, cleaning, and structuring data as we go. We design pipelines and governance that improve data quality continuously rather than waiting for perfection before any value is delivered.",
-  },
-  {
-    q: "Will AI and data solutions integrate with our existing systems?",
-    a: "Yes. We build on open standards and connect to your existing stack — cloud platforms, databases, applications, and APIs — so new capabilities extend what you already run instead of replacing it. Interoperability is a design requirement from day one.",
-  },
-  {
-    q: "How do you ensure responsible, secure, and compliant AI deployment?",
-    a: "We bake in security, access controls, and governance from day one, with evaluation suites, monitoring, and human oversight. We align with standards such as SOC 2, GDPR, and industry-specific regulations depending on your context, so deployments are trustworthy and auditable.",
-  },
-] as const;
-
 export function DaiChallenges() {
   return (
     <LightSection bg="var(--surface)">
@@ -212,7 +195,7 @@ export function DaiServices() {
         <div>
           <Eyebrow className="mb-[18px]">What we engineer</Eyebrow>
           <h2 className="m-0 text-balance font-bold font-sans text-[clamp(30px,4vw,48px)] text-tangerine-500 leading-tight tracking-[-0.02em]">
-            We deliver end-to-end data and AI services
+            We deliver end-to-end AI &amp; data services
           </h2>
         </div>
         <div className="pt-1.5">
@@ -392,7 +375,7 @@ export function DaiFAQ() {
   return (
     <ServiceFaq
       title="Frequently asked questions"
-      items={[...FAQS]}
+      items={[...DAI_FAQS]}
       layout="center"
       bg="var(--surface)"
     />
