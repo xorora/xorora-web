@@ -1852,14 +1852,14 @@ const INDUSTRIES: IndustriesRecord = {
   startups: {
     slug: "startups",
     name: "Startups",
-    metaTitle: "Xorora — Software Development for Startups",
+    metaTitle: "Software Development for Startups | Xorora",
     metaDescription:
-      "From first prototype to funded scale up, we build MVPs, investor ready products, and the technical foundation your startup runs on, engineered to ship fast, prove traction, and grow without a costly rebuild.",
+      "Software development for startups: MVP development services and a custom software development company for startups, built to ship fast and scale without a rebuild.",
     headerBg: "/assets/startups/header-bg.jpg",
     hero: {
-      title: "Custom software for ambitious startups.",
+      title: "Software development for startups, built to scale.",
       subtitle:
-        "From first prototype to funded scale up, we build MVPs, investor ready products, and the technical foundation your startup runs on, engineered to ship fast, prove traction, and grow without a costly rebuild.",
+        "Xorora is a custom software development company for startups. From first prototype to funded scale up, we build MVPs, investor ready products, and the technical foundation your startup runs on, engineered to ship fast, prove traction, and grow without a costly rebuild.",
       badges: [
         { icon: "rocket", label: "MVP in weeks" },
         { icon: "handshake", label: "Founder friendly" },
@@ -1903,13 +1903,13 @@ const INDUSTRIES: IndustriesRecord = {
         type: "services",
         heading: {
           label: "Capabilities",
-          title: "Startup software development services we offer.",
+          title: "Software development services for startups.",
           subtitle:
             "Our specialists deliver end to end product development that considers your stage, runway, and growth goals.",
         },
         items: [
           {
-            name: "MVP and prototype development",
+            name: "MVP Development Services for Startups",
             body: "We turn your idea into a working product fast, focused on the core features that prove value and win your first users.",
           },
           {
