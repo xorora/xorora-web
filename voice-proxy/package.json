@@ -1,0 +1,16 @@
+{
+  "name": "losono-voice-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone WebSocket proxy that keeps the Losono secret key server-side.",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
