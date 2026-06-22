@@ -41,7 +41,7 @@ export default async function RootLayout({
         <VoiceWidget />
         <Script
           src="https://losono.xorora.com/embed.js"
-          data-agent="xorora"
+          data-agent="emma"
           strategy="afterInteractive"
         />
       </body>

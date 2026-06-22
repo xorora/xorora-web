@@ -14,7 +14,7 @@ import { WebSocket, WebSocketServer } from "ws";
 
 const PORT = process.env.PORT || 8787;
 const API_KEY = process.env.LOSONO_API_KEY;
-const AGENT_ID = process.env.LOSONO_AGENT_ID || "xorora";
+const AGENT_ID = process.env.LOSONO_AGENT_ID || "emma";
 const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || "")
   .split(",")
   .map((s) => s.trim())

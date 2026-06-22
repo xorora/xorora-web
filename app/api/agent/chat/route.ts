@@ -11,7 +11,7 @@ import type { NextRequest } from "next/server";
  * HTTP streaming and runs fine on Vercel.
  */
 
-const AGENT_ID = process.env.LOSONO_AGENT_ID ?? "xorora";
+const AGENT_ID = process.env.LOSONO_AGENT_ID ?? "emma";
 const API_KEY = process.env.LOSONO_API_KEY;
 
 export async function POST(req: NextRequest) {
