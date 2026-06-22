@@ -106,7 +106,7 @@ export function LetsTalkModal({
             <div className="mt-auto flex flex-col gap-3.5">
               {[
                 { icon: Mail, value: "info@xorora.com" },
-                { icon: Phone, value: "+92-332 -0555328" },
+                { icon: Phone, value: "+92-332-0555328" },
               ].map(({ icon: Icon, value }) => (
                 <div
                   key={value}

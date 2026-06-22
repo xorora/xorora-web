@@ -1311,7 +1311,7 @@ const INDUSTRIES: IndustriesRecord = {
             "Then we meet to discuss your needs, answer questions, and align on next steps.",
           ],
           email: "info@xorora.com",
-          phone: "+92-332 -0555328",
+          phone: "+92-332-0555328",
           budgetOptions: [
             "up to $10k",
             "$10k – $20k",

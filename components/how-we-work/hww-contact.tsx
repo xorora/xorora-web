@@ -6,7 +6,7 @@ import { buttonClassName } from "@/lib/button-styles";
 
 const CONTACT_ITEMS = [
   { icon: Mail, value: "info@xorora.com" },
-  { icon: Phone, value: "+92-332 -0555328" },
+  { icon: Phone, value: "+92-332-0555328" },
 ] as const;
 
 export function HwwContact() {
