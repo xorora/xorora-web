@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Footer } from "@/components/layout/footer";
+import { VoiceWidget } from "@/components/voice/voice-widget";
 import { ConnectedMegaNav, LetsTalkModalProvider } from "@/components/modals";
 import { jetbrainsMono, poppins } from "@/lib/fonts";
 import {
@@ -37,6 +38,7 @@ export default async function RootLayout({
           <main className="flex flex-1 flex-col">{children}</main>
           <Footer columns={footerColumns} />
         </LetsTalkModalProvider>
+        <VoiceWidget />
         <Script
           src="https://losono.xorora.com/embed.js"
           data-agent="xorora"
