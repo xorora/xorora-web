@@ -20,13 +20,13 @@ export function V2Hero() {
             <span className="rounded-pill bg-white px-[11px] py-1 font-bold font-sans text-[11.5px] text-xo-ink">
               NEW
             </span>
-            <span className="font-sans text-[13.5px] text-white/82">
+            <h1 className="m-0 font-normal font-sans text-[13.5px] text-white/82 leading-normal tracking-normal">
               Your AI Development Partner
-            </span>
+            </h1>
           </span>
         </V2Rise>
         <V2Rise
-          as="h1"
+          as="p"
           delay={80}
           className="mb-6 text-balance font-extrabold font-sans text-[clamp(48px,9vw,118px)] uppercase leading-[0.92] tracking-tight"
         >
