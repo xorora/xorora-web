@@ -5,8 +5,8 @@ import { LetsTalkContactLink } from "@/components/modals";
 import { buttonClassName } from "@/lib/button-styles";
 
 const CONTACT_ITEMS = [
-  { icon: Mail, value: "partners@xorora.com" },
-  { icon: Phone, value: "+1 (415) 555-0148" },
+  { icon: Mail, value: "info@xorora.com" },
+  { icon: Phone, value: "+92-332 -0555328" },
 ] as const;
 
 interface ServiceCtaProps {

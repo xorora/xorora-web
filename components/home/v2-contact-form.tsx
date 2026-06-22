@@ -13,8 +13,8 @@ const TRUST_ITEMS = [
 ] as const;
 
 const CONTACT_ITEMS = [
-  { icon: Phone, value: "+1 (415) 555-0148" },
-  { icon: Mail, value: "partners@xorora.com" },
+  { icon: Phone, value: "+92-332 -0555328" },
+  { icon: Mail, value: "info@xorora.com" },
 ] as const;
 
 const fieldClass =

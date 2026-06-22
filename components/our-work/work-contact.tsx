@@ -15,8 +15,8 @@ const BUDGETS = [
 ] as const;
 
 const CONTACT_DETAILS = [
-  { label: "Sales & general", value: "partners@xorora.ai" },
-  { label: "Call us", value: "+1 (415) 555-0148" },
+  { label: "Sales & general", value: "info@xorora.com" },
+  { label: "Call us", value: "+92-332 -0555328" },
 ] as const;
 
 export function WorkContact() {

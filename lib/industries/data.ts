@@ -1310,8 +1310,8 @@ const INDUSTRIES: IndustriesRecord = {
             "We will sign an NDA if required, carefully analyze your request, and prepare a preliminary estimate.",
             "Then we meet to discuss your needs, answer questions, and align on next steps.",
           ],
-          email: "partners@xorora.ai",
-          phone: "+1 (415) 555-0148",
+          email: "info@xorora.com",
+          phone: "+92-332 -0555328",
           budgetOptions: [
             "up to $10k",
             "$10k – $20k",
