@@ -2212,8 +2212,8 @@ const INDUSTRIES: IndustriesRecord = {
             body: "Real time booking engines, channel management, and reservation systems that keep availability and rates in sync everywhere, including a business travel management app for corporate programs.",
           },
           {
-            name: "Property and guest management",
-            body: "PMS, guest apps, and loyalty programs that streamline operations and elevate every stage of the guest journey.",
+            name: "Commercial Property Management Software",
+            body: "Commercial property management software — PMS, guest apps, and loyalty programs that streamline operations and elevate every stage of the guest journey.",
           },
           {
             name: "Travel AI integration",
