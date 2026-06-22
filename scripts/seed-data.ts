@@ -227,7 +227,7 @@ export const seedCaseStudies: SeedCaseStudy[] = [
     ],
   },
   {
-    slug: "regula",
+    slug: "real-time-compliance-intelligence",
     title: "Turning regulatory chaos into real-time compliance intelligence.",
     subtitle: 'RegTech · AI Automation · FinTech — "Regula"',
     tags: ["RegTech", "AI Automation", "FinTech"],
@@ -237,9 +237,9 @@ export const seedCaseStudies: SeedCaseStudy[] = [
     heroUrl: "app.regula.io/dashboard",
     featured: false,
     sortOrder: 2,
-    metaTitle: "Regula Case Study — Regulatory Intelligence | Xorora",
+    metaTitle: "Real-Time Compliance Intelligence Platform | Xorora",
     metaDescription:
-      "How Xorora built an automation-first RegTech platform that monitors regulators continuously and alerts compliance teams in under an hour.",
+      "Case study: an automation-first RegTech platform delivering real-time compliance intelligence — continuous regulator monitoring with prioritized alerts in under an hour.",
     metrics: [
       {
         value: "70%",
@@ -437,7 +437,7 @@ export const seedCaseStudies: SeedCaseStudy[] = [
     ],
   },
   {
-    slug: "pingpanda",
+    slug: "real-time-saas-event-monitoring",
     title:
       "Real-time SaaS event monitoring. From blind spots to instant visibility.",
     subtitle: 'SaaS Monitoring · Real-Time Analytics · API-First — "PingPanda"',
@@ -448,9 +448,9 @@ export const seedCaseStudies: SeedCaseStudy[] = [
     heroUrl: "app.pingpanda.io/dashboard",
     featured: false,
     sortOrder: 3,
-    metaTitle: "PingPanda Case Study — SaaS Event Monitoring | Xorora",
+    metaTitle: "Real-Time SaaS Event Monitoring | Case Study | Xorora",
     metaDescription:
-      "How Xorora built an API-first SaaS event notifier that delivers instant Discord alerts — from blind spots to real-time visibility.",
+      "Case study: an API-first SaaS event monitoring platform delivering instant, real-time alerts with full context — from blind spots to total visibility.",
     metrics: [
       {
         value: "Real-time",

@@ -665,7 +665,7 @@ const INDUSTRIES: IndustriesRecord = {
         type: "featured-case",
         heading: { label: "Selected work", title: "Featured case study." },
         case: {
-          slug: "regula",
+          slug: "real-time-compliance-intelligence",
           title: "Regulatory Intelligence Platform",
           description:
             "An automation first platform that monitors regulators continuously, scores the business impact of every change, and alerts compliance teams in under an hour. We engineered the real time crawling, AI analysis, and multi channel delivery end to end.",
@@ -1761,7 +1761,7 @@ const INDUSTRIES: IndustriesRecord = {
             tags: ["AI Voice", "B2B SaaS", "Multi-portal"],
           },
           {
-            slug: "pingpanda",
+            slug: "real-time-saas-event-monitoring",
             title: "SaaS Event Monitoring",
             description:
               "An API first event notifier: send a typed event, get an instant alert with full context. No dashboards to configure, no blind spots.",

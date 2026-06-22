@@ -40,8 +40,9 @@ export const LEGACY_REDIRECTS: Record<string, string> = {
   // Case studies
   "/Unified AI Voice Operations Case Study.html":
     "/case-studies/unified-ai-voice-operations",
-  "/Regula Case Study.html": "/case-studies/regula",
-  "/PingPanda Case Study.html": "/case-studies/pingpanda",
+  "/Regula Case Study.html": "/case-studies/real-time-compliance-intelligence",
+  "/PingPanda Case Study.html":
+    "/case-studies/real-time-saas-event-monitoring",
   "/Xorora Case Study.html": "/our-work",
 
   // Internal content sources (not public routes; redirect to index)
