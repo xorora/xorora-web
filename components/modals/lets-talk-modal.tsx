@@ -115,7 +115,12 @@ export function LetsTalkModal({
                   <span className="flex h-9 w-9 items-center justify-center rounded-(--r-md) border border-white/12 bg-white/6 text-tangerine-400">
                     <Icon className="h-[17px] w-[17px]" aria-hidden />
                   </span>
-                  {value}
+                  <a
+                    href={value.includes("@") ? `mailto:${value}` : `tel:${value.replace(/[^\d+]/g, "")}`}
+                    className="transition-colors hover:text-tangerine-400"
+                  >
+                    {value}
+                  </a>
                 </div>
               ))}
             </div>

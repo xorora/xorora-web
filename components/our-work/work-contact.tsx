@@ -48,7 +48,12 @@ export function WorkContact() {
                     {item.label}
                   </div>
                   <div className="font-sans font-semibold text-base text-white">
-                    {item.value}
+                    <a
+                      href={item.value.includes("@") ? `mailto:${item.value}` : `tel:${item.value.replace(/[^\d+]/g, "")}`}
+                      className="no-underline transition-colors hover:text-tangerine-400"
+                    >
+                      {item.value}
+                    </a>
                   </div>
                 </div>
               ))}

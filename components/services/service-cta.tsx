@@ -64,7 +64,12 @@ export function ServiceCta({
                 className="h-[17px] w-[17px] text-tangerine-400"
                 aria-hidden
               />
-              {value}
+              <a
+                href={value.includes("@") ? `mailto:${value}` : `tel:${value.replace(/[^\d+]/g, "")}`}
+                className="transition-colors hover:text-tangerine-400"
+              >
+                {value}
+              </a>
             </div>
           ))}
         </div>

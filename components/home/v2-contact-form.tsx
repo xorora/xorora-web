@@ -118,7 +118,12 @@ export function V2ContactForm() {
               className="flex items-center gap-[11px] font-sans text-[14.5px] text-white/85"
             >
               <Icon className="h-4 w-4 text-tangerine-400" aria-hidden />
-              {value}
+              <a
+                href={value.includes("@") ? `mailto:${value}` : `tel:${value.replace(/[^\d+]/g, "")}`}
+                className="transition-colors hover:text-tangerine-400"
+              >
+                {value}
+              </a>
             </div>
           ))}
         </div>

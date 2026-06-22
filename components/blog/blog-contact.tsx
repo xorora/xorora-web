@@ -47,7 +47,12 @@ export function BlogContact() {
                 <span className="flex h-[38px] w-[38px] items-center justify-center rounded-(--r-md) bg-indigo-50 text-xo-indigo">
                   <Icon className="h-[18px] w-[18px]" aria-hidden />
                 </span>
-                {value}
+                <a
+                  href={value.includes("@") ? `mailto:${value}` : `tel:${value.replace(/[^\d+]/g, "")}`}
+                  className="transition-colors hover:text-xo-indigo"
+                >
+                  {value}
+                </a>
               </div>
             ))}
           </div>

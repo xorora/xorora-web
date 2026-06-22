@@ -55,6 +55,11 @@ const organizationJsonLd = {
     postalCode: "54000",
     addressCountry: "PK",
   },
+  sameAs: [
+    "https://www.linkedin.com/company/xorora",
+    "https://www.youtube.com/@Xorora-tech",
+    "https://x.com/Xororatech",
+  ],
 };
 
 export default async function AboutPage() {
