@@ -122,8 +122,18 @@ export function Footer({ columns }: FooterProps) {
             </span>
           </div>
           <div className="flex flex-wrap items-center gap-[22px]">
-            <span className="font-sans text-[13px] text-white/50">Privacy</span>
-            <span className="font-sans text-[13px] text-white/50">Terms</span>
+            <Link
+              href="/privacy"
+              className="font-sans text-[13px] text-white/50 no-underline transition-colors hover:text-white"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/terms"
+              className="font-sans text-[13px] text-white/50 no-underline transition-colors hover:text-white"
+            >
+              Terms
+            </Link>
             <div className="flex gap-3.5">
               <a
                 href="https://www.linkedin.com/company/xorora"
