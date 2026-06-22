@@ -23,8 +23,9 @@ export function HwwHero() {
             <span className="text-tangerine-400">.</span>
           </h1>
           <p className="mb-[18px] max-w-[520px] font-sans text-[clamp(17px,1.9vw,20px)] text-white/74 leading-relaxed">
-            Discover how we work behind the scenes. Engage a cross-functional
-            team or dedicated experts, matched to how you build.
+            Discover our software development process behind the scenes. Engage a
+            cross-functional dedicated team or staff augmentation, matched to how
+            you build.
           </p>
           <div className="mt-6 flex flex-wrap gap-3.5">
             <LetsTalkContactLink
