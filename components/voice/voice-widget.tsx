@@ -56,7 +56,9 @@ export function VoiceWidget() {
   const stop = useCallback(() => {
     processorRef.current?.disconnect();
     processorRef.current = null;
-    streamRef.current?.getTracks().forEach((t) => t.stop());
+    streamRef.current?.getTracks().forEach((t) => {
+      t.stop();
+    });
     streamRef.current = null;
     if (ctxRef.current?.state !== "closed") void ctxRef.current?.close();
     ctxRef.current = null;
@@ -206,7 +208,7 @@ export function VoiceWidget() {
         className={cn(
           "flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition-all hover:scale-105",
           status === "live"
-            ? "bg-red-500 animate-pulse"
+            ? "animate-pulse bg-red-500"
             : "bg-tangerine-500 hover:bg-tangerine-600",
         )}
         aria-label="Voice assistant"

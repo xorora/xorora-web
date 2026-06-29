@@ -114,7 +114,11 @@ export function AboutFAQ({ faqs }: AboutFAQProps) {
                 >
                   <Icon className="h-4 w-4 text-tangerine-400" aria-hidden />
                   <a
-                    href={value.includes("@") ? `mailto:${value}` : `tel:${value.replace(/[^\d+]/g, "")}`}
+                    href={
+                      value.includes("@")
+                        ? `mailto:${value}`
+                        : `tel:${value.replace(/[^\d+]/g, "")}`
+                    }
                     className="transition-colors hover:text-tangerine-400"
                   >
                     {value}

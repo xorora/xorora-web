@@ -299,7 +299,8 @@
   }
 
   .xo-mn-industries,
-  .xo-mn-company {
+  .xo-mn-company,
+  .xo-mn-solutions {
     grid-template-columns: 1fr;
   }
 }

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Footer } from "@/components/layout/footer";
-import { VoiceWidget } from "@/components/voice/voice-widget";
 import { ConnectedMegaNav, LetsTalkModalProvider } from "@/components/modals";
+import { VoiceWidget } from "@/components/voice/voice-widget";
 import { jetbrainsMono, poppins } from "@/lib/fonts";
 import {
   buildFooterColumns,

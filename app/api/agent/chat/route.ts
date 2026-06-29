@@ -16,9 +16,12 @@ const API_KEY = process.env.LOSONO_API_KEY;
 
 export async function POST(req: NextRequest) {
   if (!API_KEY) {
-    return new Response("Chat agent is not configured (missing LOSONO_API_KEY).", {
-      status: 503,
-    });
+    return new Response(
+      "Chat agent is not configured (missing LOSONO_API_KEY).",
+      {
+        status: 503,
+      },
+    );
   }
 
   let body: {

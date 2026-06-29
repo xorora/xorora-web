@@ -121,7 +121,11 @@ function ContactLine({
         <Icon className="h-[17px] w-[17px]" aria-hidden />
       </span>
       <a
-        href={value.includes("@") ? `mailto:${value}` : `tel:${value.replace(/[^\d+]/g, "")}`}
+        href={
+          value.includes("@")
+            ? `mailto:${value}`
+            : `tel:${value.replace(/[^\d+]/g, "")}`
+        }
         className="transition-colors hover:text-tangerine-400"
       >
         {value}

@@ -77,7 +77,10 @@ function buildJsonLd(study: CaseStudy, slug: string) {
     ],
   };
 
-  return { "@context": "https://schema.org", "@graph": [articleJsonLd, breadcrumbJsonLd] };
+  return {
+    "@context": "https://schema.org",
+    "@graph": [articleJsonLd, breadcrumbJsonLd],
+  };
 }
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {

@@ -157,9 +157,9 @@ export function Footer({ columns }: FooterProps) {
                 href="https://x.com/Xororatech"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Xorora on X"
                 className="flex items-center text-white/55 transition-colors hover:text-white"
               >
+                <span className="sr-only">Xorora on X</span>
                 <svg
                   viewBox="0 0 24 24"
                   className="h-4 w-4"

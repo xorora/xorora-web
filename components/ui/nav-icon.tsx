@@ -1,4 +1,5 @@
 import {
+  Bot,
   Building,
   Building2,
   Code2,
@@ -8,9 +9,11 @@ import {
   GraduationCap,
   Handshake,
   HeartPulse,
+  KanbanSquare,
   Landmark,
   LayoutGrid,
   type LucideIcon,
+  MailCheck,
   Megaphone,
   Newspaper,
   Palmtree,
@@ -41,6 +44,9 @@ const ICON_MAP: Record<NavIconName, LucideIcon> = {
   building: Building,
   newspaper: Newspaper,
   "git-branch": GitBranch,
+  "kanban-square": KanbanSquare,
+  "mail-check": MailCheck,
+  bot: Bot,
 };
 
 export function NavIcon({

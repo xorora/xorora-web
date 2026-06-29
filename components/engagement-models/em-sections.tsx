@@ -14,7 +14,11 @@ import { LightSection } from "@/components/case-study/light-section";
 import { SectionHead } from "@/components/case-study/section-head";
 import { SignalField } from "@/components/geometry/signal-field";
 import { LetsTalkContactLink } from "@/components/modals";
-import { ServiceCta, ServiceFaq, ServiceGlassForm } from "@/components/services";
+import {
+  ServiceCta,
+  ServiceFaq,
+  ServiceGlassForm,
+} from "@/components/services";
 import { buttonClassName } from "@/lib/button-styles";
 import {
   type CaseStudyCardData,

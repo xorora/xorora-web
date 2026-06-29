@@ -3,6 +3,7 @@
 import {
   ArrowRight,
   ArrowUpRight,
+  Boxes,
   CalendarCheck,
   ChevronDown,
   Menu,
@@ -16,12 +17,13 @@ import { NavIcon } from "@/components/ui/nav-icon";
 import {
   type NavCompanyLink,
   type NavIndustry,
+  type NavSolution,
   ROUTES,
   type SiteNavigation,
 } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
 
-type MegaMenu = "Services" | "Industries" | "Company" | null;
+type MegaMenu = "Solutions" | "Services" | "Industries" | "Company" | null;
 
 interface MegaNavProps {
   current?: "work";
@@ -66,7 +68,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   }
 
-  const triggers = ["Services", "Industries", "Company"] as const;
+  const triggers = ["Solutions", "Services", "Industries", "Company"] as const;
 
   return (
     <header className="pointer-events-none fixed top-0 right-0 left-0 z-100">
@@ -186,6 +188,7 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
             aria-label={`${open} menu`}
           >
             <div className="xo-mn-in w-full max-w-[1080px] overflow-hidden rounded-(--r-xl) border border-white/12 bg-[rgba(8,12,30,0.96)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)] backdrop-blur-[20px]">
+              {open === "Solutions" && <SolutionsPanel nav={nav} />}
               {open === "Services" && (
                 <ServicesPanel
                   nav={nav}
@@ -210,6 +213,93 @@ export function MegaNav({ current, onLetsTalk, nav }: MegaNavProps) {
         />
       )}
     </header>
+  );
+}
+
+function SolutionsPanel({ nav }: { nav: SiteNavigation }) {
+  return (
+    <div className="xo-mn-solutions grid grid-cols-[1fr_340px]">
+      <div className="flex flex-col gap-1.5 px-[26px] py-[26px]">
+        <div className="mb-1.5 flex items-center gap-2.5 px-3">
+          <span className="font-mono text-[10.5px] text-tangerine-400 tracking-[0.18em]">
+            OUR PRODUCTS
+          </span>
+        </div>
+        {nav.solutions.map((solution) => (
+          <SolutionLink key={solution.name} solution={solution} />
+        ))}
+      </div>
+      <div className="relative flex flex-col justify-center overflow-hidden border-white/8 border-l bg-[linear-gradient(135deg,#161D3D_0%,#1F2A63_42%,#2E47AE_78%,#3A57C9_100%)] px-7 py-[30px]">
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(90% 80% at 100% 60%, rgba(90,125,235,0.45), transparent 62%)",
+          }}
+        />
+        <div
+          className="pointer-events-none absolute right-[-40px] bottom-[-120px] h-[300px] w-[300px] rounded-full opacity-70"
+          style={{
+            background:
+              "repeating-radial-gradient(circle at center, rgba(255,255,255,.30) 0px, rgba(255,255,255,.30) 2.5px, transparent 2.5px, transparent 24px)",
+          }}
+        />
+        <div className="relative">
+          <Boxes className="mb-4 h-[26px] w-[26px] text-white" aria-hidden />
+          <h4 className="m-0 mb-2.5 font-bold font-sans text-[21px] text-white leading-[1.18] tracking-[-0.01em]">
+            Three products. One engineering team.
+          </h4>
+          <p className="m-0 mb-[22px] font-sans text-[13.5px] text-white/78 leading-[1.55]">
+            Lead&apos;em, Clearbeam, and Losono are all built and maintained by
+            Xorora&apos;s own engineers — the same team that builds AI software
+            for our clients.
+          </p>
+          <Link
+            href={ROUTES.ourWork}
+            className="inline-flex items-center gap-2 font-sans font-semibold text-sm text-tangerine-400 no-underline"
+          >
+            Explore all solutions
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SolutionLink({ solution }: { solution: NavSolution }) {
+  return (
+    <Link
+      href={solution.href}
+      className={cn(
+        "flex items-center gap-3.5 rounded-(--r-md) px-3 py-3.5 no-underline transition-colors duration-140 hover:bg-white/5",
+        !solution.live && "opacity-60",
+      )}
+    >
+      <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-(--r-md) border border-[rgba(120,150,240,0.3)] bg-[rgba(70,76,159,0.25)] text-indigo-300">
+        <NavIcon name={solution.icon} className="h-5 w-5" />
+      </span>
+      <div className="min-w-0 flex-1">
+        <div className="mb-0.5 flex items-center gap-2.5">
+          <span className="font-sans font-semibold text-[15.5px] text-white">
+            {solution.name}
+          </span>
+          {solution.live ? (
+            <span className="rounded-pill border border-[rgba(242,107,33,0.3)] bg-[rgba(242,107,33,0.14)] px-2 py-0.5 font-mono text-[9.5px] text-tangerine-400 tracking-[0.1em]">
+              LIVE
+            </span>
+          ) : (
+            <span className="rounded-pill border border-white/12 bg-white/5 px-2 py-0.5 font-mono text-[9.5px] text-white/45 tracking-[0.1em]">
+              SOON
+            </span>
+          )}
+        </div>
+        <div className="font-sans text-[12.5px] text-white/55 leading-[1.45]">
+          {solution.tagline}
+        </div>
+      </div>
+      <ArrowUpRight className="h-4 w-4 shrink-0 text-white/40" aria-hidden />
+    </Link>
   );
 }
 
@@ -456,6 +546,29 @@ function MobileMenu({
 
   return (
     <div className="xo-mn-mobile pointer-events-auto mx-5 mt-2.5 max-h-[calc(100vh-120px)] overflow-y-auto rounded-(--r-xl) border border-white/12 bg-[rgba(8,12,30,0.98)] px-5 py-3 pb-6 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)]">
+      <MobileSection
+        open={section === "Solutions"}
+        onToggle={() =>
+          setSection((value) => (value === "Solutions" ? null : "Solutions"))
+        }
+      >
+        Solutions
+      </MobileSection>
+      {section === "Solutions" && (
+        <div className="px-0 py-2 pb-3.5">
+          {nav.solutions.map((solution) => (
+            <Link
+              key={solution.name}
+              href={solution.href}
+              onClick={onClose}
+              className="block px-2 py-2 font-sans text-[14.5px] text-white/66 no-underline"
+            >
+              {solution.name} — {solution.tagline}
+            </Link>
+          ))}
+        </div>
+      )}
+
       <MobileSection
         open={section === "Services"}
         onToggle={() =>

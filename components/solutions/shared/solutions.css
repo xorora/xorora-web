@@ -1,0 +1,144 @@
+.solution-card-lift-subtle {
+  transition:
+    box-shadow 0.18s,
+    transform 0.18s;
+}
+
+.solution-card-lift-subtle:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.solution-card-hover-lift-bg {
+  transition:
+    background 0.15s,
+    transform 0.15s;
+}
+
+.solution-card-hover-lift-bg:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-2px);
+}
+
+.solution-card-hover-bg {
+  transition: background 0.15s;
+}
+
+.solution-card-hover-bg:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.cb-event-row:first-child {
+  border-top: none;
+}
+
+.solution-card-lift {
+  transition:
+    box-shadow 0.18s,
+    transform 0.18s;
+}
+
+.solution-card-lift:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.le-zoom:hover {
+  transform: scale(1.01);
+}
+
+.le-zoom:hover .le-zoom-hint {
+  opacity: 1;
+}
+
+@keyframes leFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lePop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .cb-hero-grid,
+  .lo-contact-grid,
+  .cb-contact-grid,
+  .le-contact-grid,
+  .le-ws-grid,
+  .lo-flow-panels,
+  .cb-dash-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .cb-hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lo-prob-grid,
+  .lo-uc-grid,
+  .lo-ind-grid,
+  .lo-ov-legend,
+  .lo-stats-grid,
+  .lo-life-grid,
+  .cb-prob-grid,
+  .cb-uc-grid,
+  .cb-metrics-grid,
+  .cb-persona-grid,
+  .le-pain-grid,
+  .le-uc-grid,
+  .le-ovfeat-grid,
+  .le2-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lo-feat-row,
+  .cb-feat-row,
+  .le2-feature-row {
+    flex-direction: column;
+  }
+
+  .cb-steps,
+  .le-steps {
+    flex-direction: column;
+  }
+
+  .cb-step-arrow,
+  .le-step-arrow,
+  .lo-flow-arrow {
+    display: none;
+  }
+
+  .lo-cmp-head,
+  .lo-cmp-row,
+  .cb-ba-grid,
+  .le-ba-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lo-form-row,
+  .cb-form-row,
+  .le-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .lo-hero-widget,
+  .lo-hero-float,
+  .cb-hero-behind,
+  .cb-hero-float,
+  .le2-hero-float {
+    display: none;
+  }
+}

@@ -17,6 +17,9 @@ export const ROUTES = {
   ourWork: "/our-work",
   caseStudy: (slug: string) => `/case-studies/${slug}`,
   industry: (slug: string) => `/industries/${slug}`,
+  losono: "/solutions/losono",
+  clearbeam: "/solutions/clearbeam",
+  leadem: "/solutions/leadem",
 } as const;
 
 export type NavIconName =
@@ -37,7 +40,10 @@ export type NavIconName =
   | "palmtree"
   | "building"
   | "newspaper"
-  | "git-branch";
+  | "git-branch"
+  | "kanban-square"
+  | "mail-check"
+  | "bot";
 
 export interface NavServiceItem {
   label: string;
@@ -74,8 +80,17 @@ export interface NavFeaturedCaseStudy {
   stats: [string, string][];
 }
 
+export interface NavSolution {
+  name: string;
+  tagline: string;
+  icon: NavIconName;
+  href: string;
+  live: boolean;
+}
+
 export interface SiteNavigation {
   caseStudiesHref: string;
+  solutions: NavSolution[];
   services: NavServiceCategory[];
   industries: NavIndustry[];
   company: NavCompanyLink[];
@@ -84,6 +99,29 @@ export interface SiteNavigation {
 
 export const XO_NAV: SiteNavigation = {
   caseStudiesHref: ROUTES.ourWork,
+  solutions: [
+    {
+      name: "Lead'em",
+      tagline: "AI-Powered Sales CRM for Google Workspace Teams",
+      icon: "kanban-square",
+      href: ROUTES.leadem,
+      live: true,
+    },
+    {
+      name: "Clearbeam",
+      tagline: "Real-Time SaaS Insights, Delivered to Your Email",
+      icon: "mail-check",
+      href: ROUTES.clearbeam,
+      live: true,
+    },
+    {
+      name: "Losono",
+      tagline: "Build AI Agents that Chat, Speak, Listen, and Answer",
+      icon: "bot",
+      href: ROUTES.losono,
+      live: true,
+    },
+  ],
   services: [
     {
       name: "Consulting",

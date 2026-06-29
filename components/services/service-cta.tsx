@@ -65,7 +65,11 @@ export function ServiceCta({
                 aria-hidden
               />
               <a
-                href={value.includes("@") ? `mailto:${value}` : `tel:${value.replace(/[^\d+]/g, "")}`}
+                href={
+                  value.includes("@")
+                    ? `mailto:${value}`
+                    : `tel:${value.replace(/[^\d+]/g, "")}`
+                }
                 className="transition-colors hover:text-tangerine-400"
               >
                 {value}
