@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { CaseStudyLayout } from "@/components/case-study/case-study-layout";
 import { type CaseStudy, getCaseStudyBySlug } from "@/lib/case-studies";
 
-const SITE_URL = "https://xorora.vercel.app";
+import { SITE_URL } from "@/lib/site-url";
 
 /** Fetch from Neon on every request so new slugs/IDs appear without rebuild. */
 export const dynamic = "force-dynamic";

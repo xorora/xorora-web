@@ -11,6 +11,7 @@ import {
 } from "@/components/managed-services";
 import { MGS_FAQS } from "@/components/managed-services/mgs-data";
 import { listIndustryNavItems } from "@/lib/navigation/server";
+import { SITE_URL } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "IT Managed Services — 24/7 Managed IT Support | Xorora",
@@ -59,7 +60,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "Organization",
     name: "Xorora",
-    url: "https://xorora.vercel.app",
+    url: SITE_URL,
   },
   areaServed: ["North America", "Europe", "Asia"],
   hasOfferCatalog: {

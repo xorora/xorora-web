@@ -8,6 +8,7 @@ import {
   EmModels,
 } from "@/components/engagement-models";
 import { FAQS } from "@/components/engagement-models/em-sections";
+import { SITE_URL } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "Engagement Models | IT Staff Augmentation Services | Xorora",
@@ -46,7 +47,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "Organization",
     name: "Xorora",
-    url: "https://xorora.vercel.app",
+    url: SITE_URL,
   },
   areaServed: ["North America", "Europe", "Asia"],
   hasOfferCatalog: {
@@ -81,13 +82,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://xorora.vercel.app",
+      item: SITE_URL,
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Engagement Models",
-      item: "https://xorora.vercel.app/engagement-models",
+      item: `${SITE_URL}/engagement-models`,
     },
   ],
 };

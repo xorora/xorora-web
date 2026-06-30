@@ -9,7 +9,7 @@ import {
 } from "@/components/about";
 import { type FaqItem, requireSiteContent } from "@/lib/content";
 
-const SITE_URL = "https://xorora.vercel.app";
+import { SITE_URL } from "@/lib/site-url";
 
 export const dynamic = "force-dynamic";
 

@@ -4,7 +4,7 @@ import { IndustryLayout } from "@/components/industry-page";
 import { getAllIndustrySlugs, getIndustryBySlug } from "@/lib/industries";
 import type { Industry } from "@/lib/industries/types";
 
-const SITE_URL = "https://xorora.vercel.app";
+import { SITE_URL } from "@/lib/site-url";
 
 interface IndustryPageProps {
   params: Promise<{ slug: string }>;

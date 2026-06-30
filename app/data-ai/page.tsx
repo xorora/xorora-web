@@ -10,6 +10,7 @@ import {
   DaiTools,
 } from "@/components/data-ai";
 import { DAI_FAQS } from "@/components/data-ai/dai-data";
+import { SITE_URL } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "AI & Data Services — Data Modernization & Analytics | Xorora",
@@ -61,7 +62,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "Organization",
     name: "Xorora",
-    url: "https://xorora.vercel.app",
+    url: SITE_URL,
   },
   areaServed: ["United States", "North America", "Europe", "Asia"],
   hasOfferCatalog: {
@@ -92,13 +93,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://xorora.vercel.app",
+      item: SITE_URL,
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "AI & Data Services",
-      item: "https://xorora.vercel.app/data-ai",
+      item: `${SITE_URL}/data-ai`,
     },
   ],
 };

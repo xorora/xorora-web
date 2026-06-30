@@ -8,7 +8,7 @@ import {
 } from "@/components/how-we-work";
 import { type HwwFlows, requireSiteContent } from "@/lib/content";
 
-const SITE_URL = "https://xorora.vercel.app";
+import { SITE_URL } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "How We Work — Our Software Development Process | Xorora",

@@ -8,6 +8,7 @@ import {
   MktRule,
   MktServices,
 } from "@/components/marketing-services";
+import { SITE_URL } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Services — SEO, Paid Ads & Social | Xorora",
@@ -58,7 +59,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "Organization",
     name: "Xorora",
-    url: "https://xorora.vercel.app",
+    url: SITE_URL,
   },
   areaServed: ["North America", "Europe", "Asia"],
   hasOfferCatalog: {
@@ -79,13 +80,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://xorora.vercel.app",
+      item: SITE_URL,
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Digital Marketing Services",
-      item: "https://xorora.vercel.app/marketing-services",
+      item: `${SITE_URL}/marketing-services`,
     },
   ],
 };

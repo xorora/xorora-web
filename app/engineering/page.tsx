@@ -10,6 +10,7 @@ import {
   EngTechStack,
 } from "@/components/engineering";
 import { SERVICES } from "@/components/engineering/eng-sections";
+import { SITE_URL } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "Software Product Engineering Services Company | Xorora",
@@ -51,7 +52,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "Organization",
     name: "Xorora",
-    url: "https://xorora.vercel.app",
+    url: SITE_URL,
   },
   areaServed: ["North America", "Europe", "Asia"],
   hasOfferCatalog: {
@@ -72,13 +73,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://xorora.vercel.app",
+      item: SITE_URL,
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Software Product Engineering Services",
-      item: "https://xorora.vercel.app/engineering",
+      item: `${SITE_URL}/engineering`,
     },
   ],
 };

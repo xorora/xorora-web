@@ -9,8 +9,7 @@ import {
   V2Services,
   V2Statement,
 } from "@/components/home";
-
-const SITE_URL = "https://xorora.vercel.app";
+import { SITE_URL } from "@/lib/site-url";
 
 export const dynamic = "force-dynamic";
 

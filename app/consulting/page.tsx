@@ -8,6 +8,7 @@ import {
   ConServices,
 } from "@/components/consulting";
 import { FAQS, SERVICES } from "@/components/consulting/con-sections";
+import { SITE_URL } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "IT Consulting Services — AI & Digital Transformation | Xorora",
@@ -46,7 +47,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "Organization",
     name: "Xorora",
-    url: "https://xorora.vercel.app",
+    url: SITE_URL,
   },
   areaServed: ["North America", "Europe", "Asia"],
   hasOfferCatalog: {
@@ -77,13 +78,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://xorora.vercel.app",
+      item: SITE_URL,
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "IT Consulting Services",
-      item: "https://xorora.vercel.app/consulting",
+      item: `${SITE_URL}/consulting`,
     },
   ],
 };
