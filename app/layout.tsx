@@ -9,6 +9,8 @@ import {
   buildSiteNavigation,
 } from "@/lib/navigation/server";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://xorora.vercel.app"),
@@ -44,6 +46,8 @@ export default async function RootLayout({
           data-agent="emma"
           strategy="afterInteractive"
         />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

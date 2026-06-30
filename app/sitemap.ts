@@ -50,11 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
 
   const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.map((study) =>
-    entry(
-      ROUTES.caseStudy(study.slug),
-      0.7,
-      study.publishedAt ?? undefined,
-    ),
+    entry(ROUTES.caseStudy(study.slug), 0.7, study.publishedAt ?? undefined),
   );
 
   return [...staticRoutes, ...industryRoutes, ...caseStudyRoutes];
