@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     description:
       "Your AI development partner — production AI and software, built by a partner who ships.",
   },
+  verification: {
+    google: "RsJWqjpnVMIU3SqHpcB0q1hBtYQMJ8-4hKhd0ipmfjU",
+  },
 };
 
 const organizationJsonLd = {
