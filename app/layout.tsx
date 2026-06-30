@@ -3,15 +3,15 @@ import Script from "next/script";
 import { Footer } from "@/components/layout/footer";
 import { ConnectedMegaNav, LetsTalkModalProvider } from "@/components/modals";
 import { VoiceWidget } from "@/components/voice/voice-widget";
+import { GA_MEASUREMENT_ID } from "@/lib/analytics";
+import { CLARITY_PROJECT_ID } from "@/lib/clarity";
 import { jetbrainsMono, poppins } from "@/lib/fonts";
 import {
   buildFooterColumns,
   buildSiteNavigation,
 } from "@/lib/navigation/server";
-import { GA_MEASUREMENT_ID } from "@/lib/analytics";
-import { CLARITY_PROJECT_ID } from "@/lib/clarity";
-import { GOOGLE_SITE_VERIFICATION } from "@/lib/site-verification";
 import { SITE_URL } from "@/lib/site-url";
+import { GOOGLE_SITE_VERIFICATION } from "@/lib/site-verification";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
