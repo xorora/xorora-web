@@ -15,24 +15,28 @@ export const BEST_AI_ANALYTICS_AMAZON_SLUG =
 
 export const BEST_AI_ANALYTICS_AMAZON_FAQS = [
   {
-    q: "What is the best AI analytics tool for Amazon sellers?",
-    a: "There's no single best tool for every seller. Helium 10 offers the broadest analytics feature set for most sellers, Jungle Scout leads on AI-generated performance summaries, SmartScout is strongest for category and market-share intelligence, and Sellerboard is the better choice for sellers who want a focused, lightweight profit dashboard without a full suite subscription.",
+    q: "What is an AI analytics and decision support system?",
+    a: "It's software that goes beyond a static dashboard, using AI to analyze business data and actively recommend or trigger actions — adjusting an ad bid, flagging a reorder point, surfacing an anomaly — rather than just displaying historical numbers for someone to interpret manually. The strongest AI analytics and decision support systems combine deep, accurate data with genuinely prescriptive recommendations, not just AI-generated summaries of the same old dashboard.",
   },
   {
-    q: "Do I need more than one analytics tool?",
-    a: "Often, yes. Analytics, product research, and PPC optimization genuinely benefit from different, specialized tools rather than one suite trying to do all three well. Many experienced sellers run 3–4 specialized tools together rather than relying on a single all-in-one platform.",
+    q: "What's the difference between business intelligence and a decision support system?",
+    a: "Business intelligence tells you what happened: revenue, margin, traffic, broken down and visualized. A decision support system goes a step further, using that data to recommend or automate a next action. Most Amazon seller tools sit somewhere on that spectrum; Jungle Scout and Perpetua/Quartile lean furthest toward genuine decision support among the tools compared here.",
   },
   {
-    q: "How much do Amazon seller analytics tools cost?",
+    q: "What's the best SMB analytics solution for a small Amazon brand?",
+    a: "For most small teams without a dedicated analyst, Jungle Scout's AI-generated reporting or Sellerboard's lightweight profit dashboard are the most accessible starting points. Helium 10 and SmartScout offer more depth but come with a steeper learning curve, better suited to teams with more bandwidth to dedicate to the platform.",
+  },
+  {
+    q: "How much do AI analytics tools for Amazon sellers cost?",
     a: "Pricing varies widely by category. Broad analytics suites typically start around $99/month on an annual plan. Specialist advertising analytics platforms range from roughly $49 to several hundred dollars a month depending on ad spend and feature tier. Lighter, single-purpose profit trackers are generally more affordable than full research-and-listing suites.",
   },
   {
-    q: "When does a custom analytics dashboard make more sense than a subscription tool?",
+    q: "When does a custom decision support system make more sense than a subscription tool?",
     a: "When your data needs span multiple brands or marketplaces, need to combine Amazon data with internal systems a generic tool doesn't integrate with, or require forecasting and anomaly detection built specifically around your own SKUs and margins rather than a generic dashboard view.",
   },
   {
-    q: "Can Xorora build a custom Amazon analytics dashboard?",
-    a: "Yes. Xorora builds custom analytics and dashboard systems that pull data from Amazon's Selling Partner API and other business systems into a single, purpose-built view, rather than requiring sellers to reconcile data across multiple subscription tools manually. Projects start at $10,000, with pricing quoted directly against your data sources and reporting requirements.",
+    q: "Can Xorora build a custom AI analytics and decision support system?",
+    a: "Yes. Xorora builds custom analytics and decision-support systems that pull data from Amazon's Selling Partner API and other business systems into a single, purpose-built view designed to support data-driven decision making, not just reporting. Projects start at $10,000, with pricing quoted directly against your data sources and reporting requirements.",
   },
 ] as const;
 
@@ -40,15 +44,17 @@ export const BEST_AI_ANALYTICS_AMAZON_META: BlogArticleMeta = {
   slug: BEST_AI_ANALYTICS_AMAZON_SLUG,
   seoTitle: "Best AI Analytics Tools for Amazon Sellers Compared (2026)",
   seoDescription:
-    "The best AI analytics tools for Amazon sellers in 2026, compared on data depth, pricing, and what each one actually does well, plus when a custom dashboard beats an off-the-shelf tool.",
+    "Compare AI analytics and decision support systems for Amazon and e-commerce sellers on data depth, decision-support intelligence, and SMB fit.",
   keywords: [
-    "best ai analytics tools for amazon sellers",
-    "amazon seller analytics tools",
-    "ai tools for amazon sellers",
-    "amazon analytics software",
+    "AI analytics and decision support systems",
+    "AI-powered analytics",
+    "business intelligence",
+    "decision support software",
+    "SMB analytics solutions",
+    "data-driven decision making",
   ],
   aiSummary:
-    "This 2026 comparison covers Helium 10, Jungle Scout, SmartScout, SellerApp, Perpetua, Quartile, and Sellerboard on Amazon analytics strengths rather than all-in-one marketing claims. Helium 10 is the broadest suite, Jungle Scout leads AI-generated reports, SmartScout wins category intelligence, Perpetua/Quartile excel at PPC analytics, and Sellerboard is the focused profit tracker — plus when a custom Xorora dashboard beats stacking subscriptions.",
+    "This decision-stage comparison scores Helium 10, Jungle Scout, SmartScout, SellerApp, Perpetua/Quartile, and Sellerboard on data depth, decision-support intelligence, and SMB fit. Jungle Scout and Perpetua/Quartile lean furthest toward genuine decision support; Sellerboard wins lightweight profit clarity; and a custom Xorora build beats stacked subscriptions when multi-brand or internal-system data needs outgrow off-the-shelf tools.",
   companies: [
     "Helium 10",
     "Jungle Scout",
@@ -60,8 +66,9 @@ export const BEST_AI_ANALYTICS_AMAZON_META: BlogArticleMeta = {
   ],
   faqs: [...BEST_AI_ANALYTICS_AMAZON_FAQS],
   toc: [
-    { id: "all-in-one-problem", label: "The all-in-one problem" },
-    { id: "quick-comparison", label: "Quick comparison" },
+    { id: "who-this-is-for", label: "Who this is for" },
+    { id: "three-criteria", label: "Three decision criteria" },
+    { id: "decision-scorecard", label: "Decision scorecard" },
     { id: "helium-10", label: "Helium 10" },
     { id: "jungle-scout", label: "Jungle Scout" },
     { id: "smartscout", label: "SmartScout" },
@@ -74,12 +81,20 @@ export const BEST_AI_ANALYTICS_AMAZON_META: BlogArticleMeta = {
   ],
 };
 
+interface ScorecardRow {
+  id: string;
+  name: string;
+  dataDepth: string;
+  decisionSupport: string;
+  smbFit: string;
+}
+
 interface ToolProfile {
   id: string;
   name: string;
-  strength: string;
-  bestFor: string;
-  price: string;
+  dataDepth: string;
+  decisionSupport: string;
+  smbFit: string;
   snapshot?: string;
   snapshots?: Array<{ src: string; alt: string }>;
   paragraphs: ReactNode[];
@@ -98,65 +113,154 @@ function TextLink({ href, children }: { href: string; children: ReactNode }) {
   );
 }
 
-const TOOLS: ToolProfile[] = [
+const CRITERIA = [
+  {
+    title: "1. Data depth",
+    body: "How complete is the underlying data, and how current is it? A dashboard built on delayed or partial data produces confident-looking numbers that are quietly wrong, which is worse than no dashboard at all.",
+  },
+  {
+    title: "2. Decision-support intelligence",
+    body: "This is the difference between business intelligence (a dashboard that shows you what happened) and a genuine decision support system (a tool that tells you what to do about it — reorder now, cut this ad group, raise this price). Most \"AI-powered\" tools are still BI with a chatbot bolted on. A smaller number actually generate recommendations you can act on directly.",
+  },
+  {
+    title: "3. SMB fit",
+    body: "Can a small team run this without hiring a data analyst? Pricing, setup complexity, and the learning curve all matter more for a 5-person brand than a 500-person one. A tool built for enterprise complexity can be objectively powerful and still be the wrong choice for a small operation.",
+  },
+];
+
+const SCORECARD: ScorecardRow[] = [
   {
     id: "helium-10",
     name: "Helium 10",
-    strength: "Profits, Market Tracker, Keyword Tracker in one suite",
-    bestFor: "Sellers wanting the broadest analytics feature set in one platform",
-    price: "~$99/month (annual)",
-    snapshot: "/assets/blog/tools/helium-10.png",
-    paragraphs: [
-      "Helium 10 is generally considered the most complete Amazon analytics suite available, bundling Profits, Market Tracker, and Keyword Tracker into one platform with a genuinely navigable dashboard. It pulls together sales volume, gross revenue, expenses, and net profit across marketplaces in one place, which is exactly the kind of consolidated view that otherwise requires stitching together spreadsheets manually.",
-    ],
-    strengths:
-      "Broadest single-platform analytics coverage, strong keyword and market tracking layered in alongside profit data.",
-    tradeoff:
-      "Pricing runs higher than lighter-weight, analytics-only tools, and much of that cost pays for features (listing tools, PPC automation) outside analytics specifically.",
+    dataDepth: "Strong — multi-module data across profit, keywords, and market",
+    decisionSupport:
+      "Moderate — strong reporting, lighter on prescriptive recommendations",
+    smbFit: "Moderate — powerful but has a real learning curve",
   },
   {
     id: "jungle-scout",
     name: "Jungle Scout",
-    strength: "AI-generated business and profit reports",
-    bestFor:
-      "Sellers who want AI to summarize performance, not just display it",
-    price: "Varies by plan",
-    snapshot: "/assets/blog/tools/jungle-scout.png",
-    paragraphs: [
-      "Jungle Scout differentiates itself by using AI to actually generate business reports, not just display raw numbers. Its sales analytics cover revenue, profit margin, ROI, and COGS broken down per marketplace, and its AI layer produces a written summary of performance along with suggested next steps — closer to an analyst's report than a raw dashboard.",
-    ],
-    strengths:
-      "AI-generated summaries save real time compared to manually interpreting a dashboard; strong for sellers who want insight, not just data.",
-    tradeoff:
-      "As with most suite tools, deeper category-level competitive intelligence isn't Jungle Scout's core strength.",
+    dataDepth: "Strong — revenue, margin, ROI, COGS per marketplace",
+    decisionSupport:
+      "Strong — AI generates written summaries and suggested next steps",
+    smbFit: "Strong — built to be readable without a data background",
   },
   {
     id: "smartscout",
     name: "SmartScout",
-    strength:
-      "Category and market-share intelligence across 43,000+ subcategories",
-    bestFor:
-      "Larger brands needing category-level competitive visibility",
-    price: "Varies by plan",
-    snapshot: "/assets/blog/tools/smartscout.png",
-    paragraphs: [
-      "SmartScout's differentiator is scale of market intelligence: historical market-share data spanning more than 43,000 subcategories, giving brand managers visibility into category trends and competitor movement over time. For wholesale and arbitrage sellers, its UPC scanner and geographic seller map add a research layer most pure analytics tools don't attempt.",
-    ],
-    strengths:
-      "Category and competitive intelligence depth that smaller, single-brand-focused tools can't match.",
-    tradeoff:
-      "Its strength is market-level visibility more than granular, day-to-day profit tracking for a single seller account.",
+    dataDepth: "Strong — 43,000+ subcategories of market data",
+    decisionSupport:
+      "Moderate — excellent visibility, fewer prescriptive actions",
+    smbFit: "Weak-to-moderate — built more for brand managers than solo sellers",
   },
   {
     id: "sellerapp",
     name: "SellerApp",
-    strength: "Combined research, listing, and analytics dashboard",
-    bestFor:
-      "Sellers wanting a mid-tier all-rounder with solid analytics",
-    price: "Varies by plan",
+    dataDepth: "Moderate — solid but less deep than specialist tools",
+    decisionSupport: "Moderate — dashboard-first, decision support is secondary",
+    smbFit: "Strong — accessible mid-tier pricing and simpler setup",
+  },
+  {
+    id: "perpetua-quartile",
+    name: "Perpetua / Quartile",
+    dataDepth: "Strong — deep, ad-spend-specific data",
+    decisionSupport: "Strong — actively adjusts bids based on recommendations",
+    smbFit: "Moderate — genuinely useful but scoped to advertising only",
+  },
+  {
+    id: "sellerboard",
+    name: "Sellerboard",
+    dataDepth:
+      "Strong for profit-specific data — weaker outside margin/expense tracking",
+    decisionSupport: "Moderate — surfaces real numbers, limited forecasting",
+    smbFit: "Strong — lightweight, affordable, fast to set up",
+  },
+];
+
+const CHOOSE = [
+  {
+    title: "Start with what decision you're actually trying to make better",
+    body: '"What\'s my real profit per SKU" points toward Sellerboard or Helium 10\'s Profits module. "How\'s my category performing against competitors" points toward SmartScout. "Is my ad spend working, and should it change automatically" points toward Perpetua or Quartile.',
+  },
+  {
+    title: "Weigh BI against genuine decision support",
+    body: "If you want a platform that tells you what happened, most of these tools qualify. If you want one that tells you what to do next and can act on it, Jungle Scout's AI reporting and Perpetua/Quartile's automated bid adjustment are the closer fit.",
+  },
+  {
+    title: "Be honest about your team's capacity",
+    body: "A powerful, feature-dense platform that nobody has time to fully learn produces less value than a simpler tool your team actually opens every day. Data-driven decision making only works if the data gets looked at.",
+  },
+  {
+    title: "Weigh subscription cost against your order volume",
+    body: "A $99–$695/month tool makes obvious sense once you're processing enough orders that the time saved outweighs the cost. For a smaller catalog, a lighter, cheaper tool — or a custom-built system scoped to exactly what you need — can be the more rational choice.",
+  },
+];
+
+const CUSTOM_TRIGGERS = [
+  "You're running multiple brands or marketplaces and need one unified view, not several tool logins",
+  "Your data needs to combine Amazon data with internal systems (accounting, inventory, CRM) that off-the-shelf tools don't integrate with",
+  "You've outgrown what a generic dashboard shows and need AI-driven forecasting or anomaly detection built specifically around your SKUs and margins — real decision support, not just reporting",
+  "You're paying for three overlapping subscriptions and still assembling the real picture manually in a spreadsheet",
+];
+
+const TOOLS: ToolProfile[] = [
+  {
+    id: "helium-10",
+    name: "Helium 10",
+    dataDepth: "Strong — multi-module data across profit, keywords, and market",
+    decisionSupport:
+      "Moderate — strong reporting, lighter on prescriptive recommendations",
+    smbFit: "Moderate — powerful but has a real learning curve",
+    snapshot: "/assets/blog/tools/helium-10.png",
+    paragraphs: [
+      "Helium 10 is generally considered the most complete Amazon analytics suite available, bundling Profits, Market Tracker, and Keyword Tracker into one platform. It pulls together sales volume, gross revenue, expenses, and net profit across marketplaces in one place, which is exactly the kind of consolidated view that otherwise requires stitching together spreadsheets manually.",
+    ],
+    strengths:
+      "Broadest single-platform data coverage, strong keyword and market tracking layered in alongside profit data.",
+    tradeoff:
+      "More reporting than active decision support, and the depth of features means a real onboarding curve for a small team.",
+  },
+  {
+    id: "jungle-scout",
+    name: "Jungle Scout",
+    dataDepth: "Strong — revenue, margin, ROI, COGS per marketplace",
+    decisionSupport:
+      "Strong — AI generates written summaries and suggested next steps",
+    smbFit: "Strong — built to be readable without a data background",
+    snapshot: "/assets/blog/tools/jungle-scout.png",
+    paragraphs: [
+      "Jungle Scout differentiates itself by using AI to actually generate business reports, not just display raw numbers — closer to genuine decision support software than a static dashboard. Its analytics cover revenue, profit margin, ROI, and COGS broken down per marketplace, with a written performance summary and suggested next steps layered on top.",
+    ],
+    strengths:
+      "AI-generated summaries save real analysis time and translate well for teams without a dedicated analyst.",
+    tradeoff:
+      "Deeper category-level competitive intelligence isn't Jungle Scout's core strength.",
+  },
+  {
+    id: "smartscout",
+    name: "SmartScout",
+    dataDepth: "Strong — 43,000+ subcategories of market data",
+    decisionSupport:
+      "Moderate — excellent visibility, fewer prescriptive actions",
+    smbFit: "Weak-to-moderate — built more for brand managers than solo sellers",
+    snapshot: "/assets/blog/tools/smartscout.png",
+    paragraphs: [
+      "SmartScout's differentiator is scale of market intelligence: historical market-share data spanning more than 43,000 subcategories, giving brand managers visibility into category trends and competitor movement over time.",
+    ],
+    strengths:
+      "Category and competitive intelligence depth that smaller, single-brand-focused tools can't match.",
+    tradeoff:
+      "Built more for brand-level strategic visibility than day-to-day, prescriptive decision-making for a small team.",
+  },
+  {
+    id: "sellerapp",
+    name: "SellerApp",
+    dataDepth: "Moderate — solid but less deep than specialist tools",
+    decisionSupport: "Moderate — dashboard-first, decision support is secondary",
+    smbFit: "Strong — accessible mid-tier pricing and simpler setup",
     snapshot: "/assets/blog/tools/sellerapp.png",
     paragraphs: [
-      "SellerApp positions itself as a mid-tier all-rounder, combining product research, listing support, and analytics in one dashboard. For sellers who don't need Helium 10's full feature depth but want more than a single-purpose profit tracker, it's a reasonable middle ground.",
+      "SellerApp positions itself as a mid-tier all-rounder, combining product research, listing support, and analytics in one dashboard — a reasonable pick among SMB analytics solutions for sellers who don't need Helium 10's full depth but want more than a single-purpose tracker.",
     ],
     strengths:
       "Balanced feature set without the premium pricing of the largest suites.",
@@ -166,9 +270,9 @@ const TOOLS: ToolProfile[] = [
   {
     id: "perpetua-quartile",
     name: "Perpetua and Quartile",
-    strength: "AI-driven PPC performance analytics and bid optimization",
-    bestFor: "Sellers whose main analytics need is advertising ROI",
-    price: "$49–$695/month",
+    dataDepth: "Strong — deep, ad-spend-specific data",
+    decisionSupport: "Strong — actively adjusts bids based on recommendations",
+    smbFit: "Moderate — genuinely useful but scoped to advertising only",
     snapshots: [
       {
         src: "/assets/blog/tools/perpetua.png",
@@ -182,12 +286,11 @@ const TOOLS: ToolProfile[] = [
     paragraphs: [
       <>
         For sellers whose main analytics gap is advertising performance
-        specifically, Perpetua and Quartile are purpose-built AI platforms for
-        PPC analytics and bid automation. Third-party advertising specialists in
-        this category typically run $49 to several hundred dollars a month
-        depending on ad spend and feature tier, reflecting how directly they tie
-        into revenue-driving campaigns rather than general reporting. If you
-        also need hands-on campaign management, Xorora&apos;s{" "}
+        specifically, Perpetua and Quartile are purpose-built AI platforms that
+        don&apos;t just report ad performance — they actively adjust bids based
+        on it, arguably the clearest example of real decision-support
+        intelligence on this list. If you also need hands-on campaign
+        management, Xorora&apos;s{" "}
         <TextLink href={AMAZON_PPC_ADVERTISING_PATH}>
           Amazon PPC advertising services
         </TextLink>{" "}
@@ -202,46 +305,19 @@ const TOOLS: ToolProfile[] = [
   {
     id: "sellerboard",
     name: "Sellerboard",
-    strength:
-      "Real-time profit and expense tracking, including hidden fees",
-    bestFor:
-      "Sellers who want a dedicated, lightweight profit dashboard",
-    price: "Lower-cost, seller-focused pricing",
+    dataDepth:
+      "Strong for profit-specific data — weaker outside margin/expense tracking",
+    decisionSupport: "Moderate — surfaces real numbers, limited forecasting",
+    smbFit: "Strong — lightweight, affordable, fast to set up",
     snapshot: "/assets/blog/tools/sellerboard.png",
     paragraphs: [
-      "Sellerboard has built a following as a lightweight, dedicated profit and expense dashboard, tracking real-time profitability including the hidden fees (returns, storage, advertising costs) that inflate-looking revenue numbers often hide. It's a common choice for sellers who specifically want profit clarity without paying for a full research-and-listing suite they won't use.",
+      "Sellerboard has built a following as a lightweight, dedicated profit and expense dashboard, tracking real-time profitability including the hidden fees (returns, storage, advertising costs) that inflate-looking revenue numbers often hide.",
     ],
     strengths:
-      "Focused, affordable, and genuinely good at the one thing it's built for: knowing your real margin per SKU.",
+      "Focused, affordable, and genuinely good at the one thing it's built for: knowing your real margin per SKU, with minimal setup effort.",
     tradeoff:
-      "Doesn't attempt product research or PPC optimization — it's analytics-only by design.",
+      "Doesn't attempt product research, PPC optimization, or forward-looking forecasting — it's retrospective analytics by design.",
   },
-];
-
-const CHOOSE = [
-  {
-    title: "Start with what you're actually trying to answer",
-    body: '"What\'s my real profit per SKU" points toward Sellerboard or Helium 10\'s Profits module. "How\'s my category performing against competitors" points toward SmartScout. "Is my ad spend working" points toward Perpetua or Quartile.',
-  },
-  {
-    title: "Resist the all-in-one instinct",
-    body: "Most experienced sellers running 3–4 specialized tools together get better results than one suite tool trying to do everything at once, because analytics, research, and advertising genuinely need different data models to do well.",
-  },
-  {
-    title: "Weigh subscription cost against your order volume",
-    body: "A $99–$695/month tool makes obvious sense once you're processing enough orders that the time saved outweighs the cost. For a smaller catalog, a lighter, cheaper tool (or a custom-built dashboard scoped to exactly what you need) can be the more rational choice.",
-  },
-  {
-    title: "Check how the tool actually uses AI",
-    body: "Some platforms use AI meaningfully (generating written performance summaries, predictive forecasting); others use the term loosely for what's really a static dashboard. Ask specifically what the AI layer does before assuming it saves you analysis time.",
-  },
-];
-
-const CUSTOM_TRIGGERS = [
-  "You're running multiple brands or marketplaces and need one unified view, not several tool logins",
-  "Your data needs to combine Amazon data with internal systems (accounting, inventory, CRM) that off-the-shelf tools don't integrate with",
-  "You've outgrown what a generic dashboard shows and need AI-driven forecasting or anomaly detection built specifically around your SKUs and margins",
-  "You're paying for three overlapping subscriptions and still assembling the real picture manually in a spreadsheet",
 ];
 
 const bodyClass = "m-0 font-sans text-[16.5px] text-fg2 leading-[1.75]";
@@ -252,62 +328,85 @@ export function BestAiAnalyticsAmazonArticle() {
   return (
     <div>
       <p className={cn(bodyClass, "mb-10")}>
-        <strong className="font-semibold text-fg1">Quick answer:</strong> No
-        single AI analytics tool covers everything an Amazon seller needs well.
-        Helium 10 offers the broadest analytics suite for most sellers, Jungle
-        Scout leads on AI-generated business reports, SmartScout is the
-        strongest for category and market-share intelligence, and Perpetua or
-        Quartile are the better choice specifically for AI-driven PPC analytics.
-        This guide compares each, plus when a custom-built dashboard makes more
-        sense than stacking three or four subscriptions.
+        <strong className="font-semibold text-fg1">Quick answer:</strong> The
+        strongest{" "}
+        <strong className="font-semibold text-fg1">
+          AI analytics and decision support systems
+        </strong>{" "}
+        for Amazon and e-commerce sellers score well on three things: data depth
+        (how complete and accurate the underlying numbers actually are),
+        decision-support intelligence (whether the tool tells you what to do
+        next, or just shows you a dashboard), and SMB fit (whether a small team
+        without a dedicated data analyst can actually run it day to day). Helium
+        10, Jungle Scout, SmartScout, SellerApp, Perpetua/Quartile, and
+        Sellerboard are scored against all three below, alongside when a
+        custom-built system outperforms all of them.
       </p>
 
-      <h2 id="all-in-one-problem" className={h2Class}>
-        The real problem with &quot;all-in-one&quot; Amazon analytics tools
+      <h2 id="who-this-is-for" className={h2Class}>
+        Who this comparison is for
+      </h2>
+      <p className={cn(bodyClass, "mb-10")}>
+        This is written for e-commerce and digital retail brands — mostly Amazon
+        sellers — evaluating{" "}
+        <strong className="font-semibold text-fg1">
+          AI-powered analytics
+        </strong>{" "}
+        platforms to replace spreadsheets, guesswork, or a patchwork of
+        half-used tools. If you&apos;re a founder or ops lead trying to make
+        faster, better-informed calls on pricing, inventory, and ad spend, this
+        comparison is built around the decision you&apos;re actually making:
+        which platform, if any, is worth paying for.
+      </p>
+
+      <h2 id="three-criteria" className={h2Class}>
+        The three criteria that actually matter
       </h2>
       <p className={cn(bodyClass, "mb-5")}>
-        Most Amazon sellers eventually run into the same issue: a suite tool
-        that does product research, listing optimization, PPC, and analytics all
-        does each of those things at a fraction of the depth a specialist tool
-        would. Analytics and sales tracking work best as their own category,
-        separate from your keyword research tool and your ad optimizer, because
-        the data models, refresh rates, and reporting needs are genuinely
-        different. A tool built primarily for PPC bid automation is rarely also
-        the best tool for profit and margin analytics, even if its dashboard
-        claims to cover both.
+        Most &quot;best tools&quot; roundups list features. Features don&apos;t
+        tell you whether a platform will actually change how your business makes
+        decisions. Three criteria do:
       </p>
-      <p className={cn(bodyClass, "mb-10")}>
-        That&apos;s the lens this comparison uses: which{" "}
-        <strong className="font-semibold text-fg1">
-          Amazon seller analytics tools
-        </strong>{" "}
-        are actually strong at Amazon analytics specifically, not just
-        &quot;AI-powered&quot; somewhere in their feature list.
-      </p>
+      <div className="mb-10 flex flex-col gap-4">
+        {CRITERIA.map((item) => (
+          <div
+            key={item.title}
+            className="rounded-(--r-lg) border border-border bg-white px-5 py-5"
+          >
+            <h3 className="m-0 mb-2 font-sans font-semibold text-[17px] text-fg1">
+              {item.title}
+            </h3>
+            <p className={cn(bodyClass, "text-[15.5px]")}>{item.body}</p>
+          </div>
+        ))}
+      </div>
 
-      <h2 id="quick-comparison" className={h2Class}>
-        Quick comparison
+      <h2 id="decision-scorecard" className={h2Class}>
+        Decision scorecard
       </h2>
-      <div className="mb-10 overflow-x-auto rounded-(--r-xl) border border-border">
-        <table className="w-full min-w-[760px] border-collapse text-left">
+      <div className="mb-5 overflow-x-auto rounded-(--r-xl) border border-border">
+        <table className="w-full min-w-[860px] border-collapse text-left">
           <thead>
             <tr className="bg-indigo-50">
-              {["Tool", "Core analytics strength", "Best for", "Starting price"].map(
-                (col) => (
-                  <th
-                    key={col}
-                    className="px-4 py-3.5 font-sans font-semibold text-[12.5px] text-fg3"
-                  >
-                    {col}
-                  </th>
-                ),
-              )}
+              {[
+                "Tool",
+                "Data depth",
+                "Decision-support intelligence",
+                "SMB fit",
+              ].map((col) => (
+                <th
+                  key={col}
+                  className="px-4 py-3.5 font-sans font-semibold text-[12.5px] text-fg3"
+                >
+                  {col}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
-            {TOOLS.map((tool, index) => (
+            {SCORECARD.map((row, index) => (
               <tr
-                key={tool.id}
+                key={row.id}
                 className={cn(
                   "border-border border-t",
                   index % 2 === 0 ? "bg-surface" : "bg-slate-50",
@@ -315,33 +414,38 @@ export function BestAiAnalyticsAmazonArticle() {
               >
                 <td className="px-4 py-3.5 font-sans font-semibold text-[14.5px] text-fg1">
                   <a
-                    href={`#${tool.id}`}
+                    href={`#${row.id}`}
                     className="text-fg1 no-underline hover:text-xo-indigo"
                   >
-                    {tool.name}
+                    {row.name}
                   </a>
                 </td>
                 <td className="px-4 py-3.5 font-sans text-[13.5px] text-fg2">
-                  {tool.strength}
+                  {row.dataDepth}
                 </td>
                 <td className="px-4 py-3.5 font-sans text-[13.5px] text-fg2">
-                  {tool.bestFor}
+                  {row.decisionSupport}
                 </td>
                 <td className="px-4 py-3.5 font-sans text-[13.5px] text-fg2">
-                  {tool.price}
+                  {row.smbFit}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <p className={cn(bodyClass, "mb-10")}>
+        Use this as a starting filter, not a final verdict. A tool that&apos;s
+        &quot;weak&quot; on SMB fit isn&apos;t a bad tool — it&apos;s built for
+        a different size of operation than yours might be.
+      </p>
 
       {TOOLS.map((tool) => (
         <ToolSection key={tool.id} tool={tool} />
       ))}
 
       <h2 id="how-to-choose" className={h2Class}>
-        How to choose the right tool for your business
+        How to choose the right system for your business
       </h2>
       <div className="mb-10 flex flex-col gap-4">
         {CHOOSE.map((item) => (
@@ -358,16 +462,16 @@ export function BestAiAnalyticsAmazonArticle() {
       </div>
 
       <h2 id="custom-dashboard" className={h2Class}>
-        When an off-the-shelf tool isn&apos;t enough
+        When off-the-shelf isn&apos;t enough: custom decision support systems
       </h2>
       <p className={cn(bodyClass, "mb-5")}>
         For most sellers, one or two of the tools above genuinely cover the
-        need. But sellers running multiple brands, multiple marketplaces, or a
-        business intelligence stack that has to sit alongside internal systems
-        (ERP, custom reporting, a proprietary pricing model) often hit a ceiling
-        with subscription tools: the dashboard shows what the vendor decided to
-        build, not necessarily what your specific business actually needs to
-        see.
+        need. But brands running multiple marketplaces, multiple product lines,
+        or a business intelligence stack that has to sit alongside internal
+        systems (ERP, custom reporting, a proprietary pricing model) often hit a
+        ceiling with subscription tools: the dashboard shows what the vendor
+        decided to build, not necessarily the decision support your specific
+        business actually needs.
       </p>
       <p className={cn(bodyClass, "mb-5")}>
         That&apos;s where a{" "}
@@ -380,12 +484,12 @@ export function BestAiAnalyticsAmazonArticle() {
         <TextLink href={ROUTES.customAppDevelopment}>
           custom application and dashboard development
         </TextLink>{" "}
-        for businesses whose data needs don&apos;t fit a generic seller tool,
-        pulling data directly from Amazon&apos;s Selling Partner API, your
-        accounting system, and any other source into one unified, purpose-built
-        dashboard rather than three logins and three exports you have to
-        reconcile manually. Sellers who also need ongoing account operations can
-        pair that with{" "}
+        for e-commerce and digital retail brands whose data needs don&apos;t fit
+        a generic seller tool, pulling data directly from Amazon&apos;s Selling
+        Partner API, your accounting system, and any other source into one
+        unified, purpose-built system rather than three logins and three exports
+        you have to reconcile manually. Sellers who also need ongoing account
+        operations can pair that with{" "}
         <TextLink href={AMAZON_ACCOUNT_MANAGEMENT_PATH}>
           Amazon account management
         </TextLink>
@@ -397,19 +501,21 @@ export function BestAiAnalyticsAmazonArticle() {
           real-time SaaS event monitoring system
         </TextLink>{" "}
         built for instant, full-context alerting — exactly the kind of
-        infrastructure that powers a live profit-and-inventory dashboard rather
+        infrastructure that powers a live profit-and-inventory system rather
         than a report you have to remember to check. Publicly cited results
-        across Xorora&apos;s broader engineering work include a 3.5x median
-        speed-up compared to building the same system in-house and 99.9% uptime
-        across deployed systems. For forecasting and anomaly detection layered
-        on top of seller data, see also{" "}
+        across Xorora&apos;s broader{" "}
+        <TextLink href={ROUTES.engineering}>engineering</TextLink> work include
+        a 3.5x median speed-up compared to building the same system in-house and
+        99.9% uptime across deployed systems. For forecasting and anomaly
+        detection layered on top of seller data, see also{" "}
         <TextLink href={ROUTES.mlDataScience}>
           ML &amp; data science services
         </TextLink>
         .
       </p>
       <h3 className="mt-6 mb-3 font-sans font-semibold text-[17px] text-fg1">
-        When a custom build makes more sense than another subscription
+        When a custom decision support system makes more sense than another
+        subscription
       </h3>
       <ul className="mb-6 list-disc space-y-2 pl-5 font-sans text-[15.5px] text-fg2 leading-relaxed">
         {CUSTOM_TRIGGERS.map((item) => (
@@ -417,10 +523,12 @@ export function BestAiAnalyticsAmazonArticle() {
         ))}
       </ul>
       <p className={cn(bodyClass, "mb-5")}>
-        A scoped analytics build starts at $10,000, with pricing quoted against
-        your actual data sources and reporting needs. If you want to see whether
-        a custom dashboard would actually save you money against your current
-        tool stack,{" "}
+        A scoped build starts at $10,000, with pricing quoted against your
+        actual data sources and reporting needs. Teams that already have
+        engineers or analysts in place can also bring in extra capacity through{" "}
+        <TextLink href={ROUTES.staffAugmentation}>staff augmentation</TextLink>{" "}
+        rather than a full build handoff. If you want to see whether a custom
+        system would actually beat your current tool stack,{" "}
         <TextLink href={ROUTES.contact}>get in touch</TextLink> for a scoping
         conversation.
       </p>
@@ -483,9 +591,12 @@ function ToolSection({ tool }: { tool: ToolProfile }) {
       ))}
 
       <dl className="mb-6 grid gap-3 sm:grid-cols-2">
-        <MetaItem label="Core analytics strength" value={tool.strength} />
-        <MetaItem label="Best for" value={tool.bestFor} />
-        <MetaItem label="Starting price" value={tool.price} />
+        <MetaItem label="Data depth" value={tool.dataDepth} />
+        <MetaItem
+          label="Decision-support intelligence"
+          value={tool.decisionSupport}
+        />
+        <MetaItem label="SMB fit" value={tool.smbFit} />
       </dl>
 
       {tool.paragraphs.map((paragraph, index) => (

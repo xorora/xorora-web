@@ -15,7 +15,7 @@ export const BLOG_POSTS: BlogSeedPost[] = [
     cat: "Software Development",
     title: "Best AI Analytics Tools for Amazon Sellers Compared (2026)",
     excerpt:
-      "The best AI analytics tools for Amazon sellers in 2026, compared on data depth, pricing, and what each one actually does well — plus when a custom dashboard beats an off-the-shelf tool.",
+      "Compare AI analytics and decision support systems for Amazon and e-commerce sellers on data depth, decision-support intelligence, and SMB fit.",
     read: "11 min",
     date: "Sep 7, 2026",
     img: "/assets/blog/best-ai-analytics-tools-amazon-sellers-2026.png",
