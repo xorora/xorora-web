@@ -5,6 +5,11 @@ import {
   BestAiAgentSaasArticle,
 } from "@/components/blog/posts/best-ai-agent-development-companies-saas-2026";
 import {
+  BEST_AI_ANALYTICS_AMAZON_META,
+  BEST_AI_ANALYTICS_AMAZON_SLUG,
+  BestAiAnalyticsAmazonArticle,
+} from "@/components/blog/posts/best-ai-analytics-tools-amazon-sellers-2026";
+import {
   PYTHON_APP_GUIDE_META,
   PYTHON_APP_GUIDE_SLUG,
   PythonAppGuideArticle,
@@ -57,6 +62,10 @@ export interface BlogArticleDefinition extends BlogArticleMeta {
 }
 
 const BLOG_ARTICLES: Record<string, BlogArticleDefinition> = {
+  [BEST_AI_ANALYTICS_AMAZON_SLUG]: {
+    ...BEST_AI_ANALYTICS_AMAZON_META,
+    Article: BestAiAnalyticsAmazonArticle,
+  },
   [BEST_AI_AGENT_SAAS_SLUG]: {
     ...BEST_AI_AGENT_SAAS_META,
     Article: BestAiAgentSaasArticle,

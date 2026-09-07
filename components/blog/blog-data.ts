@@ -11,6 +11,17 @@ export interface BlogSeedPost {
 
 export const BLOG_POSTS: BlogSeedPost[] = [
   {
+    slug: "best-ai-analytics-tools-amazon-sellers-2026",
+    cat: "Software Development",
+    title: "Best AI Analytics Tools for Amazon Sellers Compared (2026)",
+    excerpt:
+      "The best AI analytics tools for Amazon sellers in 2026, compared on data depth, pricing, and what each one actually does well — plus when a custom dashboard beats an off-the-shelf tool.",
+    read: "11 min",
+    date: "Sep 7, 2026",
+    img: "/assets/blog/best-ai-analytics-tools-amazon-sellers-2026.png",
+    featured: true,
+  },
+  {
     slug: "best-ai-agent-development-companies-saas-2026",
     cat: "Software Development",
     title: "Best AI Agent Development Companies for SaaS (2026)",
@@ -19,7 +30,6 @@ export const BLOG_POSTS: BlogSeedPost[] = [
     read: "12 min",
     date: "Sep 7, 2026",
     img: "/assets/blog/best-ai-agent-development-companies-saas-2026.png",
-    featured: true,
   },
   {
     slug: "python-application-development-guide-2026",
