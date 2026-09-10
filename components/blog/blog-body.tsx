@@ -6,6 +6,10 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { LightSection } from "@/components/case-study/light-section";
 import { BLOG_CATEGORIES, type BlogCategory, type BlogPost } from "@/lib/blog";
+import {
+  BLOG_CARD_IMAGE_SIZES,
+  BLOG_FEATURE_IMAGE_QUALITY,
+} from "@/lib/blog/image";
 import { blogImageAlt, blogImageTitle } from "@/lib/image-seo";
 import { ROUTES } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
@@ -128,8 +132,9 @@ function BlogCard({ post }: { post: BlogPost }) {
           alt={blogImageAlt(post.title)}
           title={blogImageTitle(post.excerpt, post.cat)}
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
-          className="object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+          quality={BLOG_FEATURE_IMAGE_QUALITY}
+          sizes={BLOG_CARD_IMAGE_SIZES}
+          className="object-cover object-center transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
         />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[rgba(8,12,30,0.1)] to-[rgba(8,12,30,0.45)]" />
         <span className="absolute top-3.5 left-3.5 rounded-pill border border-white/18 bg-[rgba(8,12,30,0.55)] px-[11px] py-[5px] font-mono text-[10.5px] text-white tracking-[0.08em] backdrop-blur-sm">

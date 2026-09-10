@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { BlogNewsletter } from "@/components/blog/blog-newsletter";
 import type { BlogArticleMeta } from "@/lib/blog/article-types";
+import {
+  BLOG_FEATURE_IMAGE_QUALITY,
+  BLOG_HERO_IMAGE_SIZES,
+} from "@/lib/blog/image";
 import type { BlogPost } from "@/lib/blog/types";
 import { blogImageAlt, blogImageTitle } from "@/lib/image-seo";
 import { SITE_URL } from "@/lib/site-url";
@@ -57,15 +61,16 @@ export function BlogPostLayout({
               title={blogImageTitle(post.excerpt, post.cat)}
               fill
               priority
-              sizes="(max-width: 1180px) 100vw, 1180px"
-              className="object-cover"
+              quality={BLOG_FEATURE_IMAGE_QUALITY}
+              sizes={BLOG_HERO_IMAGE_SIZES}
+              className="object-cover object-center"
             />
           </div>
         </div>
 
         <div className="px-8 pb-[clamp(48px,6vw,80px)]">
           <div className="blog-post-grid mx-auto grid max-w-[1180px] grid-cols-[240px_1fr] items-start gap-[clamp(28px,4vw,56px)]">
-            <aside className="blog-post-toc sticky top-[110px] z-30 isolate">
+            <aside className="blog-post-toc sticky top-[110px] isolate z-30">
               <BlogToc items={article.toc} />
               <div className="blog-post-toc-desktop">
                 <BlogShare url={url} title={article.seoTitle} />
