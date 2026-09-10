@@ -1,5 +1,10 @@
 import type { ComponentType } from "react";
 import {
+  BEST_AI_AGENT_COPILOTS_META,
+  BEST_AI_AGENT_COPILOTS_SLUG,
+  BestAiAgentCopilotsArticle,
+} from "@/components/blog/posts/best-ai-agent-services-agency-copilots-2026";
+import {
   BEST_AI_AGENT_SAAS_META,
   BEST_AI_AGENT_SAAS_SLUG,
   BestAiAgentSaasArticle,
@@ -67,6 +72,10 @@ export interface BlogArticleDefinition extends BlogArticleMeta {
 }
 
 const BLOG_ARTICLES: Record<string, BlogArticleDefinition> = {
+  [BEST_AI_AGENT_COPILOTS_SLUG]: {
+    ...BEST_AI_AGENT_COPILOTS_META,
+    Article: BestAiAgentCopilotsArticle,
+  },
   [BEST_AI_PARTNERS_AGENCIES_SLUG]: {
     ...BEST_AI_PARTNERS_AGENCIES_META,
     Article: BestAiPartnersAgenciesArticle,

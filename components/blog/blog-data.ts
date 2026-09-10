@@ -11,6 +11,17 @@ export interface BlogSeedPost {
 
 export const BLOG_POSTS: BlogSeedPost[] = [
   {
+    slug: "best-ai-agent-services-agency-copilots-2026",
+    cat: "Software Development",
+    title: "Best AI Agent Services for Agency Copilots (2026)",
+    excerpt:
+      "Compare AI agent development services for agency copilots on white-label readiness, client-facing reliability, and delivery/customization strength.",
+    read: "12 min",
+    date: "Sep 10, 2026",
+    img: "/assets/blog/best-ai-agent-services-agency-copilots-2026.png",
+    featured: true,
+  },
+  {
     slug: "best-ai-development-partners-marketing-agencies-2026",
     cat: "Software Development",
     title: "Best AI Development Partners for Marketing Agencies (2026)",
@@ -19,7 +30,6 @@ export const BLOG_POSTS: BlogSeedPost[] = [
     read: "12 min",
     date: "Sep 10, 2026",
     img: "/assets/blog/best-ai-development-partners-marketing-agencies-2026.png",
-    featured: true,
   },
   {
     slug: "best-ai-analytics-tools-amazon-sellers-2026",
