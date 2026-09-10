@@ -126,7 +126,7 @@ function BlogCard({ post }: { post: BlogPost }) {
         "hover:translate-y-[-3px] hover:border-border-strong hover:shadow-md",
       )}
     >
-      <div className="blog-card-media relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-[#080C1E]">
+      <div className="blog-card-media relative aspect-video w-full shrink-0 overflow-hidden bg-white">
         <Image
           src={post.img}
           alt={blogImageAlt(post.title)}
@@ -134,9 +134,9 @@ function BlogCard({ post }: { post: BlogPost }) {
           fill
           quality={BLOG_FEATURE_IMAGE_QUALITY}
           sizes={BLOG_CARD_IMAGE_SIZES}
-          className="object-cover object-center transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+          className="object-cover object-center transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
         />
-        <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[rgba(8,12,30,0.1)] to-[rgba(8,12,30,0.45)]" />
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-[rgba(8,12,30,0.04)] to-[rgba(8,12,30,0.18)]" />
         <span className="absolute top-3.5 left-3.5 rounded-pill border border-white/18 bg-[rgba(8,12,30,0.55)] px-[11px] py-[5px] font-mono text-[10.5px] text-white tracking-[0.08em] backdrop-blur-sm">
           {post.cat}
         </span>

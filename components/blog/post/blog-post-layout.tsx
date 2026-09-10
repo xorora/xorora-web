@@ -54,7 +54,7 @@ export function BlogPostLayout({
         </header>
 
         <div className="px-8 pb-10">
-          <div className="relative z-0 mx-auto aspect-[16/9] max-w-[1180px] overflow-hidden rounded-(--r-xl) border border-border bg-navy-950">
+          <div className="relative z-0 mx-auto aspect-video max-w-[1180px] overflow-hidden rounded-(--r-xl) border border-border bg-white">
             <Image
               src={post.img}
               alt={blogImageAlt(post.title)}
